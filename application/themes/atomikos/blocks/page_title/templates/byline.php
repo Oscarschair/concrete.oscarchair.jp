@@ -9,9 +9,9 @@ $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
 $response = $page->getAttribute('thumbnail', 'display');
-//   echo '<script>';
-//   echo 'console.log('. $response .')';
-//   echo '</script>';
+   echo '<script>';
+   echo 'console.log('. $response .')';
+   echo '</script>';
 
 ?>
 <div>
