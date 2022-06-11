@@ -39,4 +39,4 @@ $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
     </div>
 </div>
-<img class="img-fluid mb-md-0 mb-3" src="<?=$thumbnail->getThumbnailURL('blog_entry_thumbnail')?>">
+
