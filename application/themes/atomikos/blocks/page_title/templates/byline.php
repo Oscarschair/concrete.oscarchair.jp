@@ -11,10 +11,8 @@ $img = $page->getAttribute('blogimage');
 ?>
 <div>
 <?php
-if ($img !== null) {
-    $imgVersion = $img->getVersion();
-    $thumbnailURL = $imgVersion->getThumbnailURL('small');
-    ?><img src="<?= $thumbnailURL ?>" /><?php
+if ($og_image_url !== null) {
+    ?><img src="<?= $og_image_url ?>" /><?php
 }
 ?>
 </div>
