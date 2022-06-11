@@ -9,7 +9,7 @@ $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
 
-$check = $page->getAttribute('thumbnail', 'display');
+$check = $page->getAttribute('thumbnail');
 // "small" サイズの画像サムネイルを取得
 $src = $check->getThumbnailURL('small');
 // alt属性にページ名を指定して表示
