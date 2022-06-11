@@ -10,6 +10,11 @@ $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
 
 $check = $page->getAttribute('thumbnail', 'display');
+// "small" サイズの画像サムネイルを取得
+$src = $check->getThumbnailURL('small');
+// alt属性にページ名を指定して表示
+echo \HtmlObject\Image::create($src)->alt($title);
+
 ?>
 <div>
 
