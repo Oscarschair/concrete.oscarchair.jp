@@ -8,13 +8,16 @@ $site = app('site')->getSite();
 $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
 $img = $page->getAttribute('blogimage');
-
+?>
+<div>
+<?php
 if ($img !== null) {
     $imgVersion = $img->getVersion();
     $thumbnailURL = $imgVersion->getThumbnailURL('small');
     ?><img src="<?= $thumbnailURL ?>" /><?php
 }
 ?>
+</div>
 <div class="ccm-block-page-title-byline">
     <h1 class="page-title"><?=h($title)?></h1>
 
