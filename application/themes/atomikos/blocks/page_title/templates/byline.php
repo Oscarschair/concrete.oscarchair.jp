@@ -7,7 +7,7 @@ $avatarService = app(\Concrete\Core\User\Avatar\AvatarService::class);
 $site = app('site')->getSite();
 $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
-
+$img = $page->getAttribute('blogimage');
 ?>
 <div class="ccm-block-page-title-byline">
     <h1 class="page-title"><?=h($title)?></h1>
