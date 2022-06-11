@@ -6,10 +6,10 @@ $view->setViewTheme('atomik');
 <div class="ccm-summary-template-blog-image-left mb-3 mb-md-0">
     <div class="row">
         <div class="col-md-6">
-            <img class="img-fluid mb-md-0 mb-3" src="<?=$thumbnail->getThumbnailURL('blog_entry_thumbnail')?>">
+            <a href="<?=$link?>"><img class="img-fluid mb-md-0 mb-3" src="<?=$thumbnail->getThumbnailURL('blog_entry_thumbnail')?>"></a>
         </div>
         <div class="col-md-6">
-            <h5 class=""><a href="<?=$link?>"><?=$title?></a></h5>
+            <h4 class=""><a href="<?=$link?>"><?=$title?></a></h4>
             <?php
             $view->inc('elements/byline.php', ['author' => $author, 'date' => $date]);
             ?>
