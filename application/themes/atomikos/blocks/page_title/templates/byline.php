@@ -8,14 +8,9 @@ $site = app('site')->getSite();
 $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
-$response = $page->getAttribute('thumbnail', 'display');
-   echo '<script>';
-   echo 'console.log('. $response .')';
-   echo '</script>';
-
 ?>
 <div>
-
+<?=$page->getAttribute('thumbnail', 'display')?>
 </div>
 <div class="ccm-block-page-title-byline">
     <h1 class="page-title"><?=h($title)?></h1>
