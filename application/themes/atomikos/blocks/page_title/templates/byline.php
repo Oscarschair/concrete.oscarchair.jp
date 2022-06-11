@@ -8,12 +8,8 @@ $site = app('site')->getSite();
 $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
-$thumbnail = $page->getAttribute('thumbnail');
 
-// "small" サイズの画像サムネイルを取得
-$src = $f->getThumbnailURL('small');
-// alt属性にページ名を指定して表示
-echo \HtmlObject\Image::create($src)->alt($title);
+$check = $page->getAttribute('thumbnail', 'display');
 ?>
 <div>
 
