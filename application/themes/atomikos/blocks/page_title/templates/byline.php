@@ -8,7 +8,7 @@ $site = app('site')->getSite();
 $config = $site->getConfigRepository();
 $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
-//$response = $c->getAttribute('thumbnail');
+$response = $page->getAttribute('thumbnail');
 //   echo '<script>';
 //   echo 'console.log('. $response .')';
 //   echo '</script>';
