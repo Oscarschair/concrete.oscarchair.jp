@@ -39,4 +39,10 @@ $img = $page->getAttribute('blogimage');
 
     </div>
 </div>
+<?php 
+if ($img !== null) {
+    $imgVersion = $img->getVersion();
+    $thumbnailURL = $imgVersion->getThumbnailURL('small');
+    ?><img src="<?= $thumbnailURL ?>" /><?php
+}?>
 
