@@ -45,9 +45,8 @@ $src = $check->getThumbnailURL('small');
 
     </div>
 </div>
-<div>
+<div class="blog-entry-hero">
 <?php 
-// alt属性にページ名を指定して表示
 echo \HtmlObject\Image::create($src)->alt($title);
 ?>
 </div>
