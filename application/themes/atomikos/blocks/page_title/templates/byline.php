@@ -12,14 +12,9 @@ $publicProfilesEnabled = $config->get('user.profiles_enabled');
 $check = $page->getAttribute('thumbnail');
 // "small" サイズの画像サムネイルを取得
 $src = $check->getThumbnailURL('small');
-// alt属性にページ名を指定して表示
-echo \HtmlObject\Image::create($src)->alt($title);
 
 ?>
-<div>
 
-
-</div>
 <div class="ccm-block-page-title-byline">
     <h1 class="page-title"><?=h($title)?></h1>
 
@@ -50,5 +45,10 @@ echo \HtmlObject\Image::create($src)->alt($title);
 
     </div>
 </div>
-
+<div>
+<?php 
+// alt属性にページ名を指定して表示
+echo \HtmlObject\Image::create($src)->alt($title);
+?>
+</div>
 
