@@ -55,6 +55,5 @@ $src = $check->getThumbnailURL('small');
     </div>
 </div>
 <div class="blog-entry-hero">
-<?php echo \HtmlObject\Image::create($src);?>
 </div>
 
