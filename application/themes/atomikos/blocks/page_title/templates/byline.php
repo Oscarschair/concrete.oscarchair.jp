@@ -17,10 +17,6 @@ $thumbnail = \HtmlObject\Image::create($src);
 $thumbnail->alt($title); // オプション: Alt テキストを設定する
 $thumbnail->addClass('blog-entry-hero-img'); // オプション: Class 名を加える
 
-
-
-//    echo \HtmlObject\Image::create($src)->alt($title);
-
 ?>
 
 <div class="ccm-block-page-title-byline">
