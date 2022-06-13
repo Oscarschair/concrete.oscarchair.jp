@@ -13,14 +13,14 @@ $check = $page->getAttribute('thumbnail');
 // "small" サイズの画像サムネイルを取得
 $src = $check->getThumbnailURL('small');
 
-$thumbnail = \HtmlObject\Image::create($src);
+//$thumbnail = \HtmlObject\Image::create($src);
 //$thumbnail->alt($title); // オプション: Alt テキストを設定する
 //$thumbnail->title('Title テキスト'); // オプション: Title テキストを設定する
 //$thumbnail->addClass('blog-entry-hero-img'); // オプション: Class 名を加える
 
 
 
-//    echo \HtmlObject\Image::create($src)->alt($title);
+//    
 
 ?>
 
@@ -55,6 +55,6 @@ $thumbnail = \HtmlObject\Image::create($src);
     </div>
 </div>
 <div class="blog-entry-hero">
-<?php echo $thumbnail;?>
+<?php echo \HtmlObject\Image::create($src);?>
 </div>
 
