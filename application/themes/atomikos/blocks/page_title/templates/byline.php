@@ -11,6 +11,7 @@ $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
 $check = $page->getAttribute('thumbnail');
 // "small" サイズの画像サムネイルを取得
+<<<<<<< HEAD
 if ($check) {
     $src = $check->getThumbnailURL('small');
 
@@ -22,6 +23,13 @@ if ($check) {
 
 
 //    echo \HtmlObject\Image::create($src)->alt($title);
+=======
+$src = $check->getThumbnailURL('small');
+
+$thumbnail = \HtmlObject\Image::create($src);
+$thumbnail->alt($title); // オプション: Alt テキストを設定する
+$thumbnail->addClass('blog-entry-hero-img'); // オプション: Class 名を加える
+>>>>>>> cca69e1c86e53a2b435939b595f8072361a7fcb2
 
 ?>
 
