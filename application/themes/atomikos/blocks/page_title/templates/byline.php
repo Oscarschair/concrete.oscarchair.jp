@@ -10,9 +10,9 @@ $publicProfilesEnabled = $config->get('user.profiles_enabled');
 
 
 $check = $page->getAttribute('thumbnail');
-// "small" サイズの画像サムネイルを取得
-<<<<<<< HEAD
+
 if ($check) {
+    // "small" サイズの画像サムネイルを取得
     $src = $check->getThumbnailURL('small');
 
     $thumbnail = \HtmlObject\Image::create($src);
@@ -20,17 +20,6 @@ if ($check) {
     //$thumbnail->title('Title テキスト'); // オプション: Title テキストを設定する
     $thumbnail->addClass('blog-entry-hero-img'); // オプション: Class 名を加える
 }
-
-
-//    echo \HtmlObject\Image::create($src)->alt($title);
-=======
-$src = $check->getThumbnailURL('small');
-
-$thumbnail = \HtmlObject\Image::create($src);
-$thumbnail->alt($title); // オプション: Alt テキストを設定する
-$thumbnail->addClass('blog-entry-hero-img'); // オプション: Class 名を加える
->>>>>>> cca69e1c86e53a2b435939b595f8072361a7fcb2
-
 ?>
 
 <div class="ccm-block-page-title-byline">
