@@ -109,7 +109,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
         updateHeroImageHeight(document.getElementById('heroImageHeight').value)
 
         updateHeroImageHeight2 = function (value) {
-            document.querySelector('span[data-value=height]').innerHTML = value
+            document.querySelector('span[data-value=height2]').innerHTML = value
         }
         updateHeroImageHeight2(document.getElementById('heroImageHeight2').value)
 
