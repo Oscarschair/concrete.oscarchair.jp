@@ -23,10 +23,12 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
             <?=t('Current Value:')?> <code><span data-value="height"></span></code>
         </div>
     </div>
-
+</fieldset>
+<fieldset class="mb-3">
+    <legend><?=t('Image for mobile')?></legend>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Image for mobile')?></label>
-        <?php echo $fileManager->image('image2', 'image2', t('Choose Image'), $image2 ?? null); ?>
+        <?php echo $fileManager->image('image2', 'image2', t('Choose Image for mobile'), $image2 ?? null); ?>
     </div>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Height')?></label>
