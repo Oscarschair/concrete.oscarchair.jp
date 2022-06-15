@@ -70,7 +70,7 @@ if ($image2 === null) {
          }
          if ($button !== null) {
              ?>
-             <div class="mt-4"><?= $button ?></div>
+             <div class="mt-4 os-upper-70"><?= $button ?></div>
              <?php
          }
          ?>

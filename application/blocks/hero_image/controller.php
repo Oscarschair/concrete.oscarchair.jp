@@ -140,7 +140,7 @@ class Controller extends HeroImageBlockController implements FileTrackableInterf
     public function view()
     {
         $this->set('image', File::getByID($this->image));
-        $this->set('image2', File::getByID($this->image2));//change to file
+        $this->set('image2', File::getByID($this->image2));
         
         if ((string) $this->buttonText === '') {
             $button = null;
