@@ -26,8 +26,10 @@ defined('C5_EXECUTE') or die('Access Denied.');
  * @var Concrete\Core\Entity\File\File|null $image
  * @var HtmlObject\Link|null $button
  */
-
 if ($image === null) {
+    return;
+}
+if ($image2 === null) {
     return;
 }
 ?>
