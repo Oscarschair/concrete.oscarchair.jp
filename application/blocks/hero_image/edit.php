@@ -32,7 +32,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     </div>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Height')?></label>
-        <input class="form-range" type="range" name="height" id="heroImageHeight" min="20" max="100" onchange="updateHeroImageHeight(this.value)" value="<?=$height?>">
+        <input class="form-range" type="range" name="height" id="heroImageHeight2" min="20" max="100" onchange="updateHeroImageHeight2(this.value)" value="<?=$height?>">
         <div class="alert alert-info">
             <?=t('Current Value:')?> <code><span data-value="height"></span></code>
         </div>
@@ -108,6 +108,11 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
         }
         updateHeroImageHeight(document.getElementById('heroImageHeight').value)
 
+        updateHeroImageHeight2 = function (value) {
+            document.querySelector('span[data-value=height]').innerHTML = value
+        }
+        updateHeroImageHeight2(document.getElementById('heroImageHeight2').value)
+        
         Concrete.Vue.activateContext('cms', function (Vue, config) {
             new Vue({
                 el: 'div[data-vue=hero-image]',
