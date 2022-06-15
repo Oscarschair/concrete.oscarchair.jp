@@ -38,7 +38,7 @@ if ($image === null) {
         <?php
         if ((string) $title !== '' ) {
             ?>
-            <h1><?= $title ?></h1>
+            <h1 style="display:none;"><?= $title ?></h1>
             <?php
          }
          if ((string) $body !== '') {
