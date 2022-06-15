@@ -55,3 +55,24 @@ if ($image2 === null) {
          ?>
     </div>
 </div>
+<div data-transparency="element" class="ccm-block-hero-image sp" <?php if ($height2) { ?>style="min-height: <?=$height2?>vh"<?php } ?>>
+    <div class="ccm-block-hero-image-cover" <?php if ($height2) { ?>style="min-height: <?=$height2?>vh"<?php } ?>></div>
+    <div style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height2) { ?>min-height: <?=$height2?>vh<?php } ?>" class="ccm-block-hero-image-image"></div>
+    <div class="ccm-block-hero-image-text" <?php if ($height2) { ?>style="min-height: <?=$height2?>vh"<?php } ?>>
+        <?php
+        if ((string) $title !== '' ) {
+            ?>
+            <h1 style="display:none;"><?= $title ?></h1>
+            <?php
+         }
+         if ((string) $body !== '') {
+            echo $body;
+         }
+         if ($button !== null) {
+             ?>
+             <div class="mt-4"><?= $button ?></div>
+             <?php
+         }
+         ?>
+    </div>
+</div>
