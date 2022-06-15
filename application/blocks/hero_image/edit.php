@@ -32,7 +32,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     </div>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Height')?></label>
-        <input class="form-range" type="range" name="height" id="heroImageHeight2" min="20" max="100" onchange="updateHeroImageHeight2(this.value)" value="<?=$height2?>">
+        <input class="form-range" type="range" name="height2" id="heroImageHeight2" min="20" max="100" onchange="updateHeroImageHeight2(this.value)" value="<?=$height2?>">
         <div class="alert alert-info">
             <?=t('Current Value:')?> <code><span data-value="height2"></span></code>
         </div>
