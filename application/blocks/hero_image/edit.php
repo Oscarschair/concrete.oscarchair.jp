@@ -14,7 +14,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     <legend><?=t('Basics')?></legend>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Image')?></label>
-        <?php echo $fileManager->image('image', 'image', t('Choose Image'), $image ?? null); ?>
+        <?php echo $fileManager->image('image', 'image', t('Choose Image2'), $image ?? null); ?>
     </div>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Height')?></label>
