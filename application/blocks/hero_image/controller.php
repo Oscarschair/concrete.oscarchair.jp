@@ -196,6 +196,9 @@ class Controller extends HeroImageBlockController implements FileTrackableInterf
         if (isset($this->image)) {
             return [$this->image];
         }
+        if (isset($this->image2)) {
+            return [$this->image2];
+        }
         return [];
     }
 
