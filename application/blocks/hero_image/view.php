@@ -24,6 +24,7 @@ defined('C5_EXECUTE') or die('Access Denied.');
  * @var string|null $buttonSize
  *
  * @var Concrete\Core\Entity\File\File|null $image
+ * @var Concrete\Core\Entity\File\File|null $image2
  * @var HtmlObject\Link|null $button
  */
 if ($image === null) {
@@ -36,7 +37,7 @@ if ($image2 === null) {
 <div data-transparency="element" class="ccm-block-hero-image" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
     <div class="ccm-block-hero-image-cover" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>></div>
     <div style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>" class="ccm-block-hero-image-image"></div>
-<!-- <?= h("\"{$image->getURL()}\"") ?> -->
+<!-- <?= h("\"{$image2->getURL()}\"") ?> -->
     <div class="ccm-block-hero-image-text" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
         <?php
         if ((string) $title !== '' ) {
