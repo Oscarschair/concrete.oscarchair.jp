@@ -36,7 +36,10 @@
             "@id": "<?=$fullPath?>"
         },
         "headline": "<?=$title?>",
-<?=$thumbnail_url?>
+        "image": [
+            "<?=$thumbnail_url?>"
+        ],
+        "datePublished":"",
     }
     </script>
     <?php       
