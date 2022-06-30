@@ -19,7 +19,7 @@
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "\/blog\/");
 
-        echo"\/blog\/";
+        echo"/blog/";
         if ($pos !== false) {//blog配下かをチェック
             echo '<script>';
             echo "'$find'は位置「'$pos'」にありました。";
