@@ -17,7 +17,7 @@ if ($check) {
 
     $thumbnail = \HtmlObject\Image::create($src);
     $thumbnail->alt($title); // オプション: Alt テキストを設定する
-    $thumbnail->title('Title テキスト'); // オプション: Title テキストを設定する
+    $thumbnail->title($title); // オプション: Title テキストを設定する
     $thumbnail->addClass('blog-entry-hero-img'); // オプション: Class 名を加える
 }
 ?>
