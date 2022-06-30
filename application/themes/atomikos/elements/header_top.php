@@ -43,6 +43,11 @@
         ],
         "datePublished":"<?=$datePublished?>",
         "dateModified": "<?=$dateModified?>",
+        "author": [{
+          "@type": "Person",
+          "name": "Oscar Chair",
+          "url": "https://oscarchair.jp/"
+        }]
     }
     </script>
     <?php       
