@@ -2,6 +2,28 @@
 <!DOCTYPE html>
 <html lang="<?php echo Localization::activeLanguage() ?>">
 <head>
+    <?php
+        $c = Page::getCurrentPage();
+        $thumbnail = $c->getAttribute('thumbnail');
+        if ($thumbnail) {
+            // "small" サイズの画像サムネイルを取得
+            $thumbnail_url = $thumbnail->getThumbnailURL('small');
+        }
+        $datePublished =$c->getCollectionDateAdded('F j, Y');
+        $dateModified =$c->getCollectionDateLastModified('F j, Y');
+        $title = $c->getCollectionName();
+        $fullPath = $c->getCollectionLink();
+        $pos = strpos($fullPath, "/blog/");
+    ?>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        dataLayer.push({
+        'event': 'Pageview',
+        'pagePath': '<?=$fullPath?>',
+        'pageTitle': '<?=$title?>'
+        });
+    </script>
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,18 +37,6 @@
     ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-        $c = Page::getCurrentPage();
-        $thumbnail = $c->getAttribute('thumbnail');
-        if ($thumbnail) {
-            // "small" サイズの画像サムネイルを取得
-            $thumbnail_url = $thumbnail->getThumbnailURL('small');
-        }
-        $datePublished =$c->getCollectionDateAdded('F j, Y');
-        $dateModified =$c->getCollectionDateLastModified('F j, Y');
-        $title = $c->getCollectionName();
-        $fullPath = $c->getCollectionLink();
-        $pos = strpos($fullPath, "/blog/");
-        
         if ($pos !== false) {//blog配下かをチェック
     ?>
     <script type="application/ld+json">
