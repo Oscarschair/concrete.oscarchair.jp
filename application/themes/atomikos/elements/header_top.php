@@ -16,12 +16,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
         $c = Page::getCurrentPage();
-        // $f = File::getByID($this->fID);
-        // $fullPath = $f->getURL();
-
-        //echo '<script>';
-        //echo 'console.log('.$c.')';
-        //echo '</script>';
+        $fullPath = $c->getCollectionLink();
+        
+        echo '<script>';
+        echo 'console.log('.$fullPath.')';
+        echo '</script>';
     ?>
 </head>
 <body>
