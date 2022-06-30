@@ -196,12 +196,10 @@ if (!empty($alternateHreflangTags)) {
     $fullPath = $c->getCollectionLink();
     $pos = strpos($fullPath, "/blog/");
     if ($pos !== false) {//blog配下かをチェック
+        echo "herenow";
 ?>   
     <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    }
+
     </script>
 <?php
     } 
