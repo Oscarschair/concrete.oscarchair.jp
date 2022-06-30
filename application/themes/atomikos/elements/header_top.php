@@ -15,8 +15,8 @@
     ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
-        $f = File::getByID($this->fID);
-        $fullPath = $f->getURL();
+        // $f = File::getByID($this->fID);
+        // $fullPath = $f->getURL();
 
         echo '<script>';
         echo 'console.log('.$fullPath.')';
