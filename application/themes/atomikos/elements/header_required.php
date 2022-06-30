@@ -193,6 +193,21 @@ if (!empty($alternateHreflangTags)) {
 </script>
 
 <?php
+    $fullPath = $c->getCollectionLink();
+    $pos = strpos($fullPath, "/blog/");
+    if ($pos !== false) {//blog配下かをチェック
+?>   
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    }
+    </script>
+<?php
+    } 
+?>
+
+<?php
 $v = View::getRequestInstance();
 if ($cp) {
     View::element('page_controls_header', ['cp' => $cp, 'c' => $c]);
