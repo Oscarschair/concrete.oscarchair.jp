@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
         $c = Page::getCurrentPage();
+        $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "/blog/");
         
@@ -29,7 +30,7 @@
             "@type": "WebPage",
             "@id": "<?=$fullPath?>"
         },
-        "headline": "<?=$pageTitle?>",
+        "headline": "<?=$title?>",
 
     }
     </script>
