@@ -19,6 +19,7 @@
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "/blog/");
         if ($pos !== false) {//blog配下かをチェック
+            echo "check ".$linkTags['canonical'];
     ?>
     <script type="application/ld+json">
     {
