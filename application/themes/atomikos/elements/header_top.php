@@ -29,7 +29,7 @@
             "@type": "WebPage",
             "@id": "<?=$fullPath?>"
         },
-        "headline": "<?=$title?>",
+        "headline": "<?=pageTitle?>",
 
     }
     </script>
