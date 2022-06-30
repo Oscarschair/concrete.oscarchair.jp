@@ -19,7 +19,7 @@
         // $fullPath = $f->getURL();
 
         echo '<script>';
-        echo 'console.log('.$this.')';
+        echo 'console.log('.$fullPath.')';
         echo '</script>';
     ?>
 </head>
