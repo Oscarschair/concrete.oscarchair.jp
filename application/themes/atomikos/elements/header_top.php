@@ -17,9 +17,9 @@
     <?php
         $c = Page::getCurrentPage();
         $fullPath = $c->getCollectionLink();
-        $pos = strpos($fullPath, "\/blog\/");
+        $pos = strpos($fullPath, "/blog/");
 
-        echo"/blog/";
+        echo $pos;
         if ($pos !== false) {//blog配下かをチェック
             echo '<script>';
             echo "'$find'は位置「'$pos'」にありました。";
