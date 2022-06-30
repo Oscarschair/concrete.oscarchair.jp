@@ -195,6 +195,7 @@ if (!empty($alternateHreflangTags)) {
 <?php
     $fullPath = $c->getCollectionLink();
     $pos = strpos($fullPath, "/blog/");
+    echo "herenow".$pos;
     if ($pos !== false) {//blog配下かをチェック
         echo "herenow";
 ?>   
