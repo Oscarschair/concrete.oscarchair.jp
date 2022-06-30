@@ -26,7 +26,7 @@
         "@type": "NewsArticle",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "<?php (string) $canonicalLink;?>"
+            "@id": "<?=$linkTags['canonical']?>"
         },
     }
     </script>
