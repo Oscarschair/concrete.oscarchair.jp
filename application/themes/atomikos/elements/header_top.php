@@ -19,9 +19,9 @@
         // $f = File::getByID($this->fID);
         // $fullPath = $f->getURL();
 
-        echo '<script>';
-        echo 'console.log('.$c.')';
-        echo '</script>';
+        //echo '<script>';
+        //echo 'console.log('.$c.')';
+        //echo '</script>';
     ?>
 </head>
 <body>
