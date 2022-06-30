@@ -22,7 +22,12 @@
     ?>
     <script type="application/ld+json">
     {
-        
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "<?php (string) $canonicalLink;?>"
+        },
     }
     </script>
     <?php       
