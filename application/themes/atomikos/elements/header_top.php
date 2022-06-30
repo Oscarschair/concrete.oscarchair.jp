@@ -19,7 +19,7 @@
         window.dataLayer = window.dataLayer || [];
 
         dataLayer.push({
-        'event': 'Pageview',
+        'event': 'page_view',
         'pagePath': '<?=$fullPath?>',
         'pageTitle': '<?=$title?>'
         });
