@@ -28,6 +28,8 @@
             "@type": "WebPage",
             "@id": "<?=$fullPath?>"
         },
+        "headline": "<?=isset($pageTitle) ? $pageTitle ?>",
+
     }
     </script>
     <?php       
