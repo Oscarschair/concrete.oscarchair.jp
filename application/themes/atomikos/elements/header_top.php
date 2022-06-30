@@ -18,6 +18,7 @@
         $c = Page::getCurrentPage();
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "/blog/");
+        
         if ($pos !== false) {//blog配下かをチェック
     ?>
     <script type="application/ld+json">
@@ -28,7 +29,7 @@
             "@type": "WebPage",
             "@id": "<?=$fullPath?>"
         },
-        "headline": "<?=$pageTitle?>",
+        "headline": "<?=$title?>",
 
     }
     </script>
