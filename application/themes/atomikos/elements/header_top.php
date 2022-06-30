@@ -21,6 +21,8 @@
             // "small" サイズの画像サムネイルを取得
             $thumbnail_url = $thumbnail->getThumbnailURL('small');
         }
+        $datePublished =$c->getCollectionDateAdded('F j, Y');
+        $dateModified =$c->getCollectionDateLastModified('F j, Y');
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "/blog/");
@@ -39,7 +41,8 @@
         "image": [
             "<?=$thumbnail_url?>"
         ],
-        "datePublished":"",
+        "datePublished":"<?=$datePublished?>",
+        "dateModified": "<?=$dateModified?>",
     }
     </script>
     <?php       
