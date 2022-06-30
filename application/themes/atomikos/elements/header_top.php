@@ -28,7 +28,7 @@
             "@type": "WebPage",
             "@id": "<?=$fullPath?>"
         },
-        "headline": "<?=isset($pageTitle) ? $pageTitle ?>",
+        "headline": "<?=$pageTitle?>",
 
     }
     </script>
