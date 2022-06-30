@@ -17,10 +17,13 @@
     <?php
         $c = Page::getCurrentPage();
         $fullPath = $c->getCollectionLink();
-        
-        echo '<script>';
-        echo 'console.log('.$fullPath.')';
-        echo '</script>';
+        $pos = strpos($fullPath, "\/blog\/");
+
+        if ($pos !== false) {//blog配下かをチェック
+            echo '<script>';
+            echo "'$find'は位置「'$pos'」にありました。";
+            echo '</script>';
+        } 
     ?>
 </head>
 <body>
