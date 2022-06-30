@@ -16,6 +16,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
         $c = Page::getCurrentPage();
+        $thumbnail = $c->getAttribute('thumbnail');
+        if ($thumbnail) {
+            // "small" サイズの画像サムネイルを取得
+            $thumbnail_url = $thumbnail->getThumbnailURL('small');
+        }
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "/blog/");
@@ -31,7 +36,7 @@
             "@id": "<?=$fullPath?>"
         },
         "headline": "<?=$title?>",
-
+<?=$thumbnail_url?>
     }
     </script>
     <?php       
