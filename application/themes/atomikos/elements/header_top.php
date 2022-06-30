@@ -15,15 +15,6 @@
         $fullPath = $c->getCollectionLink();
         $pos = strpos($fullPath, "/blog/");
     ?>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        dataLayer.push({
-        'event': 'page_view',
-        'pagePath': '<?=$fullPath?>',
-        'pageTitle': '<?=$title?>'
-        });
-    </script>
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
