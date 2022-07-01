@@ -9,7 +9,7 @@
         <div class="card-body">
             <?php
                 if(strlen($title)>20){
-                    $title = substr($title,0,20)."…";
+                    $title = substr($title,0,30)."…";
                 }
             ?>
             <h3 class="card-title"><?=$title?></h3>
