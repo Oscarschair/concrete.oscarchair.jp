@@ -3,7 +3,7 @@
 $view = new \Concrete\Core\View\View();
 $view->setViewTheme('atomik');
 ?>
-<div class="ccm-summary-template-blog-image-right mb-3 mb-md-0">
+<div class="ccm-summary-template-blog-image-right mb-3 mb-md-0 blog-box">
     <div class="row">
         <div class="col-md-6 order-2 order-md-1">
             <h5 class=""><a href="<?=$link?>"><?=$title?></a></h5>
