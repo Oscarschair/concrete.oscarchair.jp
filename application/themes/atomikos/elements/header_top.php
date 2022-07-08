@@ -14,6 +14,9 @@
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $topics = $c->getAttribute($this->topicAttributeKeyHandle);
+        if (is_array($topics)) {
+            $this->set('topics', $topics);
+        }
         $pos = strpos($fullPath, "/blog/");
     ?>
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
@@ -34,10 +37,16 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
-            // if (is_array($topics)) {
-            //     $this->set('topics', $topics);
-            // }
-            'blog_topic' : '<?=$topics?>'
+            <?php
+            count($topics);
+            foreach ($topics as $topic) {
+            ?>
+
+                'blog_topic' : '<?=$topic?>'
+
+            <?php
+            }
+            ?>
         });
     </script>
     <script type="application/ld+json">
