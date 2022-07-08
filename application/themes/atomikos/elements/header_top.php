@@ -13,6 +13,7 @@
         $dateModified =$c->getCollectionDateLastModified('F j, Y');
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
+        $topics = $page->getAttribute($this->topicAttributeKeyHandle);
         $pos = strpos($fullPath, "/blog/");
     ?>
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
@@ -30,6 +31,15 @@
     <?php
         if ($pos !== false) {//blog配下かをチェック
     ?>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            // if (is_array($topics)) {
+            //     $this->set('topics', $topics);
+            // }
+            'blog_topic' : '<?=$topics?>'
+        });
+    </script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
