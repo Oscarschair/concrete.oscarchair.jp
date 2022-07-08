@@ -39,13 +39,13 @@
         dataLayer.push({
             <?php
 //            count($topics);
-            foreach ($topics as $topic) {
+//            foreach ($topics as $topic) {
             ?>
 
                 'blog_topic' : '<?=$topic?>'
 
             <?php
-            }
+//            }
             ?>
         });
     </script>
