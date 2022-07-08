@@ -38,7 +38,7 @@
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
             <?php
-            count($topics);
+//            count($topics);
             foreach ($topics as $topic) {
             ?>
 
