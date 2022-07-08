@@ -42,7 +42,7 @@
 //            foreach ($topics as $topic) {
             ?>
 
-                'blog_topic' : '<?=$topic?>'
+                'blog_topic' : '<?=$topics?>'
 
             <?php
 //            }
