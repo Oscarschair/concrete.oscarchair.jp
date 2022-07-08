@@ -13,7 +13,7 @@
         $dateModified =$c->getCollectionDateLastModified('F j, Y');
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
-//        $topics = $page->getAttribute($this->topicAttributeKeyHandle);
+        $topics = $c->getAttribute($this->topicAttributeKeyHandle);
         $pos = strpos($fullPath, "/blog/");
     ?>
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
