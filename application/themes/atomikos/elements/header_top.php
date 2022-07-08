@@ -13,10 +13,10 @@
         $dateModified =$c->getCollectionDateLastModified('F j, Y');
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
-        $topics = $c->getAttribute($this->topicAttributeKeyHandle);
+        $topics = $c->getAttribute('blog_entry_topics');
         if (is_array($topics)) {
             $this->set('topics', $topics);
-        }echo "asd";
+        }
         if (isset($topics) && count($topics)) {
             foreach ($topics as $topic) {
                 echo $topic->getTreeNodeDisplayName();
