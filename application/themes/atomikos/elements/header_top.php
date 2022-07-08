@@ -15,7 +15,7 @@
         $fullPath = $c->getCollectionLink();
         $topics = $c->getAttribute('blog_entry_topics');
         if (is_array($topics)) {
-            $this->set('topics', $topics);
+//            $this->set('topics', $topics);
         }
         if (isset($topics) && count($topics)) {
             foreach ($topics as $topic) {
