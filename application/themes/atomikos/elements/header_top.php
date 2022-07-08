@@ -39,11 +39,11 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
-            'blog_topic' : 
-            <?php
+            'blog_topic' : <?php
             if (isset($topics) && count($topics)) {
                 foreach ($topics as $topic) {
-            ?>'<?=$topic->getTreeNodeDisplayName()?>'<?php
+            ?>'<?=$topic->getTreeNodeDisplayName()?>'
+            <?php
                 }
             }
             ?>
