@@ -14,13 +14,23 @@
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $topics = $c->getAttribute('blog_entry_topics');
-
-    //    $topics = $topics[0]->getTreeNodeName();
-        // if (is_array($topics)) {
-        //     $this->set('topics', $topics);
-        // }
         $pos = strpos($fullPath, "/blog/");
     ?>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'blog_topic' : <?php
+            if (isset($topics) && count($topics)) {
+                foreach ($topics as $topic) {
+            ?>'<?=$topic->getTreeNodeDisplayName()?>'
+            <?php
+                }
+            }
+            ?>
+        });
+    </script>
+
+
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,19 +46,7 @@
     <?php
         if ($pos !== false) {//blog配下かをチェック
     ?>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        dataLayer.push({
-            'blog_topic' : <?php
-            if (isset($topics) && count($topics)) {
-                foreach ($topics as $topic) {
-            ?>'<?=$topic->getTreeNodeDisplayName()?>'
-            <?php
-                }
-            }
-            ?>
-        });
-    </script>
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
