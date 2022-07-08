@@ -16,7 +16,7 @@
         $topics = $c->getAttribute($this->topicAttributeKeyHandle);
         if (is_array($topics)) {
             $this->set('topics', $topics);
-        }
+        }echo "asd";
         if (isset($topics) && count($topics)) {
             foreach ($topics as $topic) {
                 echo $topic->getTreeNodeDisplayName();
