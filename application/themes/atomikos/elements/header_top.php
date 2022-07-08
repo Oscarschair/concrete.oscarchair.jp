@@ -13,7 +13,7 @@
         $dateModified =$c->getCollectionDateLastModified('F j, Y');
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
-        $topics = $c->getAttribute('blog_category');
+    //    $topics = $c->getAttribute('blog_category');
     //    $topics = $topics[0]->getTreeNodeName();
         // if (is_array($topics)) {
         //     $this->set('topics', $topics);
