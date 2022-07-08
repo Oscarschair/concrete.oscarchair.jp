@@ -14,9 +14,9 @@
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $topics = $c->getAttribute($this->topicAttributeKeyHandle);
-        if (is_array($topics)) {
-            $this->set('topics', $topics);
-        }
+        // if (is_array($topics)) {
+        //     $this->set('topics', $topics);
+        // }
         $pos = strpos($fullPath, "/blog/");
     ?>
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
