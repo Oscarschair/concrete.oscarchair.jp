@@ -14,14 +14,6 @@
         $title = $c->getCollectionName();
         $fullPath = $c->getCollectionLink();
         $topics = $c->getAttribute('blog_entry_topics');
-        if (is_array($topics)) {
-//            $this->set('topics', $topics);
-        }
-        if (isset($topics) && count($topics)) {
-            foreach ($topics as $topic) {
-                echo $topic->getTreeNodeDisplayName();
-            }
-        }
 
     //    $topics = $topics[0]->getTreeNodeName();
         // if (is_array($topics)) {
@@ -47,15 +39,17 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
+            'blog_topic' : 
             <?php
-//            count($topics);
-//            foreach ($topics as $topic) {
+            if (isset($topics) && count($topics)) {
+                foreach ($topics as $topic) {
             ?>
 
-                'blog_topic' : '<?=$topics?>'
+                '<?=$topic->getTreeNodeDisplayName()?>'
 
             <?php
-//            }
+                }
+            }
             ?>
         });
     </script>
