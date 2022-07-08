@@ -43,11 +43,7 @@
             <?php
             if (isset($topics) && count($topics)) {
                 foreach ($topics as $topic) {
-            ?>
-
-                '<?=$topic->getTreeNodeDisplayName()?>'
-
-            <?php
+            ?>'<?=$topic->getTreeNodeDisplayName()?>'<?php
                 }
             }
             ?>
