@@ -1,7 +1,7 @@
 <?php
 
-namespace Application\Block\HeroImage;
-//use Concrete\Block\HeroImage\Controller as HeroSplitBlockController;
+namespace Application\Block\HeroSplit;
+use Concrete\Block\HeroImage\Controller as HeroSplitBlockController;
 
 use Concrete\Core\Application\Service\FileManager;
 //use Concrete\Core\Block\BlockController;
@@ -17,7 +17,7 @@ use HtmlObject\Link;
 
 defined('C5_EXECUTE') or die('Access Denied.');
 
-class Controller implements FileTrackableInterface, UsesFeatureInterface
+class Controller extends HeroSplitBlockController implements FileTrackableInterface, UsesFeatureInterface
 {
     public $helpers = ['form'];
 
