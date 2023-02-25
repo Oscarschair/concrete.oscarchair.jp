@@ -1,20 +1,20 @@
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
-const container = document.querySelector(".split");
+const split = document.querySelector(".split");
 
 left.addEventListener("mouseenter", () => {
-  container.classList.add("hover-left");
+  split.classList.add("hover-left");
 });
 
 left.addEventListener("mouseleave", () => {
-  container.classList.remove("hover-left");
+  split.classList.remove("hover-left");
 });
 
 right.addEventListener("mouseenter", () => {
-  container.classList.add("hover-right");
+  split.classList.add("hover-right");
 });
 
 right.addEventListener("mouseleave", () => {
-  container.classList.remove("hover-right");
+  split.classList.remove("hover-right");
 });
 
