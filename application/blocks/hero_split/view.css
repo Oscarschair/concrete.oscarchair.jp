@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Rock+Salt');
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Zen+Antique');
 
 :root {
   --container-bg-color: #333;
@@ -12,12 +11,10 @@
   --speed: 2200ms;
 }
 /* fonts */
-#left-font{
-  font-family: 'Julius Sans One', sans-serif;
-  font-weight: lighter;
-
+#left-font, #right-font{
+  font-family: 'Zen Antique', sans-serif;
 }
-.left-btn{
+.left-btn, .right-btn{
   font-size: 20px !important;
   border: #fff solid 0.1rem !important;
   width: 12rem !important;
@@ -27,14 +24,6 @@
   border: rgba(43, 43, 43, 0.8) solid 0.1rem !important;
 }
 
-#right-font{
-  font-family: 'Rock Salt', cursive;
-  line-height: 1;
-
-}
-.right-btn{
-  width: 13rem !important;
-}
 html, body {
   padding:0;
   margin:0;
