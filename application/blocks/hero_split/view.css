@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Zen+Antique');
 
 :root {
-  --container-bg-color: #333;
+  --container-bg-color: rgba(43, 43, 43, 0.8);
   --container-hover-color: #fff;
 
   --left-button-hover-color: rgba(43, 43, 43, 0.8);
