@@ -34,45 +34,13 @@ if ($image2 === null) {
     return;
 }
 ?>
-<div data-transparency="element" class="ccm-block-hero-image pc" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
-    <div class="ccm-block-hero-image-cover" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>></div>
-    <div style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>" class="ccm-block-hero-image-image"></div>
-    <div class="ccm-block-hero-image-text" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
-        <?php
-        if ((string) $title !== '' ) {
-            ?>
-            <h1 style="display:none;"><?= $title ?></h1>
-            <?php
-         }
-         if ((string) $body !== '') {
-            echo $body;
-         }
-         if ($button !== null) {
-             ?>
-             <div class="mt-4"><?= $button ?></div>
-             <?php
-         }
-         ?>
+    <div class="container">
+      <div class="split left">
+        <h1 id="business-font">Your Business</h1>
+        <a href="#" id="business-font " class="button business-btn"> Learn More </a>
+      </div>
+      <div class="split right">
+        <h1 id="design-font">Your Designs</h1>
+        <a href="#" class="button design-btn" id="design-font">Design More</a>
+      </div>
     </div>
-</div>
-<div data-transparency="element" class="ccm-block-hero-image sp" <?php if ($height2) { ?>style="min-height: <?=$height2?>vh"<?php } ?>>
-    <div class="ccm-block-hero-image-cover" <?php if ($height2) { ?>style="min-height: <?=$height2?>vh"<?php } ?>></div>
-    <div style="background-image: url(<?= h("\"{$image2->getURL()}\"") ?>); <?php if ($height2) { ?>min-height: <?=$height2?>vh<?php } ?>" class="ccm-block-hero-image-image"></div>
-    <div class="ccm-block-hero-image-text" <?php if ($height2) { ?>style="min-height: <?=$height2?>vh"<?php } ?>>
-        <?php
-        if ((string) $title !== '' ) {
-            ?>
-            <h1 style="display:none;"><?= $title ?></h1>
-            <?php
-         }
-         if ((string) $body !== '') {
-            echo $body;
-         }
-         if ($button !== null) {
-             ?>
-             <div class="mt-4 os-upper-70"><?= $button ?></div>
-             <?php
-         }
-         ?>
-    </div>
-</div>
