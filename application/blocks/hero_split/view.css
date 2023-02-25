@@ -40,6 +40,17 @@ h1 {
   white-space: nowrap;
 }
 
+.split-desc {
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    text-align: center;
+}
+
 .button {
   font-size: 1rem;
   display: block;
