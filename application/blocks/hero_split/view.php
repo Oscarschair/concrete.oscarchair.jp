@@ -34,13 +34,42 @@ if ($image2 === null) {
     return;
 }
 ?>
-    <div class="container">
-      <div class="split left">
-        <h1 id="business-font">Your Business</h1>
-        <a href="#" id="business-font " class="button business-btn"> Learn More </a>
+
+    <div data-transparency="element" class="ccm-block-hero-split" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
+      <div class="split left" style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>">
+      <?php
+        if ((string) $title !== '' ) {
+            ?>
+            <h1 id="left-font"><?= $title ?></h1>
+            <?php
+         }
+         if ((string) $body !== '') {
+            echo $body;
+         }
+         if ($button !== null) {
+             ?>
+             <div class="mt-4"><?= $button ?></div>
+             <a href="#" id="left-font " class="button left-btn"> Learn More </a>
+             <?php
+         }
+         ?>
       </div>
-      <div class="split right">
-        <h1 id="design-font">Your Designs</h1>
-        <a href="#" class="button design-btn" id="design-font">Design More</a>
+      <div class="split right" style="background-image: url(<?= h("\"{$image2->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>">
+      <?php
+        if ((string) $title !== '' ) {
+            ?>
+            <h1 id="right-font"><?= $title ?></h1>
+            <?php
+         }
+         if ((string) $body !== '') {
+            echo $body;
+         }
+         if ($button !== null) {
+             ?>
+             <div class="mt-4"><?= $button ?></div>
+             <a href="#" id="right-font " class="button right-btn"> Learn More </a>
+             <?php
+         }
+         ?>
       </div>
     </div>

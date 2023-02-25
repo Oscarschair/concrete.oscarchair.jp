@@ -12,27 +12,27 @@
   --speed: 2200ms;
 }
 /* fonts */
-#business-font{
+#left-font{
   font-family: 'Julius Sans One', sans-serif;
   font-weight: lighter;
 
 }
-.business-btn{
+.left-btn{
   font-size: 20px !important;
   border: #fff solid 0.1rem !important;
   width: 12rem !important;
 
 }
-.business-btn:hover{
+.left-btn:hover{
   border: rgba(43, 43, 43, 0.8) solid 0.1rem !important;
 }
 
-#design-font{
+#right-font{
   font-family: 'Rock Salt', cursive;
   line-height: 1;
 
 }
-.design-btn{
+.right-btn{
   width: 13rem !important;
 }
 html, body {
@@ -80,7 +80,7 @@ h1 {
   border-color: var(--right-button-hover-color);
 }
 
-.container {
+.ccm-block-hero-split {
   position: relative;
   width: 100%;
   height: 100%;
@@ -96,7 +96,6 @@ h1 {
 
 .split.left {
   left:0;
-  background: url('https://images.pexels.com/photos/421927/pexels-photo-421927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center center no-repeat;
   background-size: cover;
 }
 
@@ -110,7 +109,6 @@ h1 {
 
 .split.right {
   right:0;
-  background: url('https://images.pexels.com/photos/409701/pexels-photo-409701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') center center no-repeat;
   background-size: cover;
 }
 
