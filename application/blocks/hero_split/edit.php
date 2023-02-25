@@ -50,13 +50,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     </div>
     <div class="mb-3">
         <?php echo $form->label('buttonLink', t('Button Link')) ?>
-        <?php echo $destinationPicker->generate(
-            'imageLink',
-            $imageLinkPickers,
-            $imageLinkHandle,
-            $imageLinkValue
-        )
-        ?>
+        <input type="text" name="buttonLink" class="form-control" value="<?=$buttonLink ?? null ?>">
     </div>
 </fieldset>
 
@@ -69,7 +63,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     <div class="mb-3">
         <label class="form-label" for="body2"><?=t('Body')?></label>
         <?php
-        echo $editor->outputBlockEditModeEditor('body', isset($body2) ? LinkAbstractor::translateFromEditMode($body2) : null);
+        echo $editor->outputBlockEditModeEditor('body2', isset($body2) ? LinkAbstractor::translateFromEditMode($body2) : null);
         ?>
     </div>
     <div class="mb-3">
@@ -81,13 +75,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     </div>
     <div class="mb-3">
         <?php echo $form->label('buttonLink', t('Button Link')) ?>
-        <?php echo $destinationPicker->generate(
-            'imageLink',
-            $imageLinkPickers,
-            $imageLinkHandle,
-            $imageLinkValue
-        )
-        ?>
+        <input type="text" name="buttonLink2" class="form-control" value="<?=$buttonLink2 ?? null ?>">
     </div>
 </fieldset>
 

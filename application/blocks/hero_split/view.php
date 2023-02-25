@@ -46,30 +46,28 @@ if ($image2 === null) {
          if ((string) $body !== '') {
             echo $body;
          }
-         if ($button !== null) {
+         if ($buttonText !== null) {
              ?>
-             <div class="mt-4"><?= $button ?></div>
-             <a href="#" id="left-font " class="button left-btn"> Learn More </a>
+             <a href="<?= $buttonLink2 ?>" id="left-font " class="button left-btn"> <?= $buttonText ?> </a>
              <?php
          }
          ?>
       </div>
       <div class="split right" style="background-image: url(<?= h("\"{$image2->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>">
       <?php
-        if ((string) $title !== '' ) {
+        if ((string) $title2 !== '' ) {
             ?>
-            <h1 id="right-font"><?= $title ?></h1>
+            <h1 id="right-font"><?= $title2 ?></h1>
             <?php
          }
-         if ((string) $body !== '') {
-            echo $body;
+         if ((string) $body2 !== '') {
+            echo $body2;
          }
-         if ($button !== null) {
-             ?>
-             <div class="mt-4"><?= $button ?></div>
-             <a href="#" id="right-font " class="button right-btn"> Learn More </a>
-             <?php
-         }
+         if ($buttonText2 !== null) {
+            ?>
+            <a href="<?= $buttonLink2 ?>" id="right-font " class="button right-btn"> <?= $buttonText2 ?> </a>
+            <?php
+        }
          ?>
       </div>
     </div>
