@@ -15,7 +15,6 @@
   font-family: 'Zen Antique', sans-serif;
 }
 .left-btn, .right-btn{
-  font-size: 20px !important;
   border: #fff solid 0.1rem !important;
   width: 12rem !important;
 }
@@ -32,7 +31,7 @@ html, body {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: #fff;
   position: absolute;
   left: 50%;

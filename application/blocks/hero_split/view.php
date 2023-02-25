@@ -44,7 +44,9 @@ if ($image2 === null) {
             <?php
          }
          if ((string) $body !== '') {
-            echo $body;
+            ?>
+            <div class="split-desc"><?= $body ?></div>
+            <?php
          }
          if ($buttonText !== null) {
              ?>
@@ -61,7 +63,9 @@ if ($image2 === null) {
             <?php
          }
          if ((string) $body2 !== '') {
-            echo $body2;
+            ?>
+            <div class="split-desc"><?= $body2 ?></div>
+            <?php
          }
          if ($buttonText2 !== null) {
             ?>
