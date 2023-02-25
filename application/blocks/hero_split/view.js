@@ -1,6 +1,6 @@
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
-const container = document.querySelector(".container");
+const container = document.querySelector(".split");
 
 left.addEventListener("mouseenter", () => {
   container.classList.add("hover-left");
