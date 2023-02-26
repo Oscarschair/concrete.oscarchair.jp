@@ -36,7 +36,7 @@ if ($image2 === null) {
 ?>
 
     <div data-transparency="element" class="ccm-block-hero-split" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
-      <div class="split left" style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>">
+      <div class="split left" style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>;background-repeat: no-repeat;background-size: cover;background-position: center;">
       <?php
         if ((string) $title !== '' ) {
             ?>
@@ -55,7 +55,7 @@ if ($image2 === null) {
          }
          ?>
       </div>
-      <div class="split right" style="background-image: url(<?= h("\"{$image2->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>">
+      <div class="split right" style="background-image: url(<?= h("\"{$image2->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>;background-repeat: no-repeat;background-size: cover;background-position: center;">
       <?php
         if ((string) $title2 !== '' ) {
             ?>
