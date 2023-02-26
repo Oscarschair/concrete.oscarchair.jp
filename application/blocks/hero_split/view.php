@@ -50,7 +50,7 @@ if ($image2 === null) {
          }
          if ($buttonText !== null) {
              ?>
-             <a href="<?= $buttonLink2 ?>" id="left-font " class="button left-btn"> <?= $buttonText ?> </a>
+             <a href="<?= $buttonLink ?>" id="left-font " class="button left-btn"> <?= $buttonText ?> </a>
              <?php
          }
          ?>
