@@ -143,13 +143,15 @@ h1 {
   h1 {
     font-size: 2rem;
   }
-
   .button {
     width: 12rem;
   }
 }
 
 @media(max-height: 700px) {
+  .split-desc {
+    top: 50%;
+  }
   .button {
     top: 70%;
   }
