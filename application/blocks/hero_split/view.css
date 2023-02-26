@@ -97,25 +97,21 @@ h1 {
   background-size: cover;
 }
 
-.split.left:before {
+.split.left:before,.split.right:before {
   position:absolute;
   content: "";
   width: 100%;
   height: 100%;
   background: var(--split-bg-color);
+}
+
+.split.left.hover-left:before,.split.right.hover-left:before {
+  background: var(--split-hover-bg-color);
 }
 
 .split.right {
   right:0;
   background-size: cover;
-}
-
-.split.right:before {
-  position:absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: var(--split-bg-color);
 }
 
 .split.left, .split.right, .split.right:before, .split.left:before {
