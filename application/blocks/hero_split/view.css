@@ -129,6 +129,7 @@ h1 {
 
 .hover-left .right {
   width: var(--other-width);
+  color: #fff;
 }
 
 .hover-left .right:before {
@@ -138,10 +139,12 @@ h1 {
 
 .hover-right .right {
   width: var(--hover-width);
+  color: #000;
 }
 
 .hover-right .left {
   width: var(--other-width);
+  color: #fff;
 }
 
 .hover-right .left:before {
