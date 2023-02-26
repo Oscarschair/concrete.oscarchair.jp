@@ -75,3 +75,27 @@ if ($image2 === null) {
          ?>
       </div>
     </div>
+    
+<script type="text/javascript">
+    $(function() {
+        const left = document.querySelector(".left");
+        const right = document.querySelector(".right");
+        const split = document.querySelector(".split");
+
+        left.addEventListener("mouseenter", () => {
+        split.classList.add("hover-left");
+        });
+
+        left.addEventListener("mouseleave", () => {
+        split.classList.remove("hover-left");
+        });
+
+        right.addEventListener("mouseenter", () => {
+        split.classList.add("hover-right");
+        });
+
+        right.addEventListener("mouseleave", () => {
+        split.classList.remove("hover-right");
+        });
+    })
+</script>
