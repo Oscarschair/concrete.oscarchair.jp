@@ -78,38 +78,48 @@ if ($image2 === null) {
     
 <script type="text/javascript">
     $(function() {
+        var windowSize = window.innerWidth;
+
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
         const split = document.querySelectorAll(".split");
 
         left.addEventListener("mouseenter", () => {
-            for(let i in split){
-                if (split.hasOwnProperty(i)) {
-                    split[i].classList.add("hover-left");
+            if (windowSize < 800) {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.add("hover-left");
+                    }
                 }
             }
         });
 
         left.addEventListener("mouseleave", () => {
-            for(let i in split){
-                if (split.hasOwnProperty(i)) {
-                    split[i].classList.remove("hover-left");
+            if (windowSize < 800) {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.remove("hover-left");
+                    }
                 }
             }
         });
 
         right.addEventListener("mouseenter", () => {
-            for(let i in split){
-                if (split.hasOwnProperty(i)) {
-                    split[i].classList.add("hover-right");
+            if (windowSize < 800) {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.add("hover-right");
+                    }
                 }
             }
         });
 
         right.addEventListener("mouseleave", () => {
-            for(let i in split){
-                if (split.hasOwnProperty(i)) {
-                    split[i].classList.remove("hover-right");
+            if (windowSize < 800) {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.remove("hover-right");
+                    }
                 }
             }
         });
