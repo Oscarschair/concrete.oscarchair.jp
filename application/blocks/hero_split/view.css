@@ -140,7 +140,7 @@ h1 {
 }
 
 @media(max-width: 800px) {
-  #left-font {
+  #left-font, #right-font{
     font-size: 1.5rem;
   }
   .button {
