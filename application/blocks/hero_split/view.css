@@ -124,6 +124,7 @@ h1 {
 
 .hover-left .left {
   width: var(--hover-width);
+  color: #000;
 }
 
 .hover-left .right {
