@@ -4,12 +4,10 @@ const split = document.querySelector(".split");
 
 left.addEventListener("mouseenter", () => {
   split.classList.add("hover-left");
-  right.classList.add("hover-left");
 });
 
 left.addEventListener("mouseleave", () => {
   split.classList.remove("hover-left");
-  right.classList.remove("hover-left");
 });
 
 right.addEventListener("mouseenter", () => {
