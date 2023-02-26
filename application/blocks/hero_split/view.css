@@ -122,32 +122,32 @@ h1 {
   transition: var(--speed) all ease-in-out;
 }
 
-.hover-left .left {
+.hover-left.left {
   width: var(--hover-width);
   color: #000;
 }
 
-.hover-left .right {
+.hover-left.right {
   width: var(--other-width);
   color: #fff;
 }
 
-.hover-left .right:before {
+.hover-left.right:before {
   z-index: 2;
 }
 
 
-.hover-right .right {
+.hover-right.right {
   width: var(--hover-width);
   color: #000;
 }
 
-.hover-right .left {
+.hover-right.left {
   width: var(--other-width);
   color: #fff;
 }
 
-.hover-right .left:before {
+.hover-right.left:before {
   z-index: 2;
 }
 
