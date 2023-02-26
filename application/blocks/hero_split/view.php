@@ -91,15 +91,27 @@ if ($image2 === null) {
         });
 
         left.addEventListener("mouseleave", () => {
-            split.classList.remove("hover-left");
+            for(let i in split){
+                if (split.hasOwnProperty(i)) {
+                    split[i].classList.remove("hover-left");
+                }
+            }
         });
 
         right.addEventListener("mouseenter", () => {
-            split.classList.add("hover-right");
+            for(let i in split){
+                if (split.hasOwnProperty(i)) {
+                    split[i].classList.add("hover-right");
+                }
+            }
         });
 
         right.addEventListener("mouseleave", () => {
-            split.classList.remove("hover-right");
+            for(let i in split){
+                if (split.hasOwnProperty(i)) {
+                    split[i].classList.remove("hover-right");
+                }
+            }
         });
     })
 </script>
