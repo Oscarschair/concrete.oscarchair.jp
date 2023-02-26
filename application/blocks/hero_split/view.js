@@ -11,12 +11,10 @@ left.addEventListener("mouseleave", () => {
 });
 
 right.addEventListener("mouseenter", () => {
-  left.classList.add("hover-right");
-  right.classList.add("hover-right");
+  split.classList.add("hover-right");
 });
 
 right.addEventListener("mouseleave", () => {
-  left.classList.remove("hover-right");
-  right.classList.remove("hover-right");
+  split.classList.remove("hover-right");
 });
 
