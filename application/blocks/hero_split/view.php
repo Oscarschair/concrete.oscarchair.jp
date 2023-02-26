@@ -84,44 +84,38 @@ if ($image2 === null) {
         const right = document.querySelector(".right");
         const split = document.querySelectorAll(".split");
 
-        left.addEventListener("mouseenter", () => {
-            if (windowSize > 799) {
+        if (windowSize > 799) {
+           left.addEventListener("mouseenter", () => {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.add("hover-left");
                     }
                 }
-            }
-        });
+            });
 
-        left.addEventListener("mouseleave", () => {
-            if (windowSize > 799) {
+            left.addEventListener("mouseleave", () => {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.remove("hover-left");
                     }
                 }
-            }
-        });
+            });
 
-        right.addEventListener("mouseenter", () => {
-            if (windowSize > 799) {
+            right.addEventListener("mouseenter", () => {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.add("hover-right");
                     }
                 }
-            }
-        });
+            });
 
-        right.addEventListener("mouseleave", () => {
-            if (windowSize > 799) {
+            right.addEventListener("mouseleave", () => {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.remove("hover-right");
                     }
                 }
-            }
-        });
+            });
+        }
     })
 </script>
