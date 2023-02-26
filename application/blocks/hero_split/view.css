@@ -4,8 +4,7 @@
   --container-bg-color: #333;
   --split-bg-color: rgba(43, 43, 43, 0.8);
   --split-hover-bg-color: rgba(255, 255, 255, 0.8);
-  --left-button-hover-color: rgba(43, 43, 43, 0.8);
-  --right-button-hover-color: rgba(6, 2, 243, 0.507);
+  --button-hover-color: rgba(43, 43, 43, 0.8);
   --hover-width: 70%;
   --other-width: 30%;
   --speed: 2200ms;
@@ -68,14 +67,11 @@ h1 {
   transform: translateX(-50%);
 }
 
-.split.left .button:hover {
-  background-color: var(--left-button-hover-color);
-  border-color: var(--left-button-hover-color);
-}
-
-.split.right .button:hover {
-  background-color: var(--right-button-hover-color);
-  border-color: var(--right-button-hover-color);
+.split.left .button:hover ,.split.right .button:hover {
+  color: #fff;
+  font-weight: bold;
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
 }
 
 .ccm-block-hero-split {
@@ -103,10 +99,6 @@ h1 {
   width: 100%;
   height: 100%;
   background: var(--split-bg-color);
-}
-
-.left.hover-left:before,.right.hover-right:before {
-  background: var(--split-hover-bg-color);
 }
 
 .split.right {
