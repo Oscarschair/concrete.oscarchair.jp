@@ -80,20 +80,12 @@ if ($image2 === null) {
     $(function() {
         var windowSize = $(window).width();
 
-    if (windowSize < 376) {
-    console.log('Small!');
-    } else if (windowSize < 768) {
-    console.log('Medium!');
-    } else {
-    console.log('Large!');
-    }
-
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
         const split = document.querySelectorAll(".split");
 
         left.addEventListener("mouseenter", () => {
-            if (windowSize < 800) {
+            if (windowSize > 799) {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.add("hover-left");
@@ -103,7 +95,7 @@ if ($image2 === null) {
         });
 
         left.addEventListener("mouseleave", () => {
-            if (windowSize < 800) {
+            if (windowSize > 799) {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.remove("hover-left");
@@ -113,7 +105,7 @@ if ($image2 === null) {
         });
 
         right.addEventListener("mouseenter", () => {
-            if (windowSize < 800) {
+            if (windowSize > 799) {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.add("hover-right");
@@ -123,7 +115,7 @@ if ($image2 === null) {
         });
 
         right.addEventListener("mouseleave", () => {
-            if (windowSize < 800) {
+            if (windowSize > 799) {
                 for(let i in split){
                     if (split.hasOwnProperty(i)) {
                         split[i].classList.remove("hover-right");
