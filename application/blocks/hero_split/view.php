@@ -80,22 +80,26 @@ if ($image2 === null) {
     $(function() {
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
-        const split = document.querySelector(".split");
+        const split = document.querySelectorAll(".split");
 
         left.addEventListener("mouseenter", () => {
-        split.classList.add("hover-left");
+            for(let i in split){
+                if (split.hasOwnProperty(i)) {
+                    split[i].classList.add("hover-left");
+                }
+            }
         });
 
         left.addEventListener("mouseleave", () => {
-        split.classList.remove("hover-left");
+            split.classList.remove("hover-left");
         });
 
         right.addEventListener("mouseenter", () => {
-        split.classList.add("hover-right");
+            split.classList.add("hover-right");
         });
 
         right.addEventListener("mouseleave", () => {
-        split.classList.remove("hover-right");
+            split.classList.remove("hover-right");
         });
     })
 </script>
