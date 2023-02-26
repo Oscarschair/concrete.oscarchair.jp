@@ -146,6 +146,9 @@ h1 {
   .button {
     width: 12rem;
   }
+  .ccm-block-hero-split{
+    min-height: auto!important;
+  }
   .split {
     position: relative;
     width: 100%;
