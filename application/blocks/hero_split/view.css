@@ -140,11 +140,17 @@ h1 {
 }
 
 @media(max-width: 800px) {
-  h1 {
-    font-size: 2rem;
+  #left-font {
+    font-size: 1.5rem;
   }
   .button {
     width: 12rem;
+  }
+  .split {
+    position: relative;
+    width: 100%;
+    min-height: 20vh!important;
+    overflow: hidden;
   }
 }
 
