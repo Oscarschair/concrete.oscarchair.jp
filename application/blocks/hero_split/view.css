@@ -155,6 +155,9 @@ h1 {
     min-height: 20vh!important;
     overflow: hidden;
   }
+  .split.left {
+    margin-top: 70px;
+  }
 }
 
 @media(max-height: 700px) {
