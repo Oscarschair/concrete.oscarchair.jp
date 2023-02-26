@@ -79,6 +79,7 @@ if ($image2 === null) {
 <script type="text/javascript">
     $(function() {
         var windowSize = window.innerWidth;
+        console.log(windowSize);
 
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
