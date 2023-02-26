@@ -3,12 +3,12 @@ const right = document.querySelector(".right");
 const split = document.querySelector(".split");
 
 left.addEventListener("mouseenter", () => {
-  left.classList.add("hover-left");
+  split.classList.add("hover-left");
   right.classList.add("hover-left");
 });
 
 left.addEventListener("mouseleave", () => {
-  left.classList.remove("hover-left");
+  split.classList.remove("hover-left");
   right.classList.remove("hover-left");
 });
 
