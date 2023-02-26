@@ -105,7 +105,7 @@ h1 {
   background: var(--split-bg-color);
 }
 
-.split.left.hover-left:before,.split.right.hover-left:before {
+.left.hover-left:before,.right.hover-right:before {
   background: var(--split-hover-bg-color);
 }
 
