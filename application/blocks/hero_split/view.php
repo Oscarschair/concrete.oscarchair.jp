@@ -78,8 +78,15 @@ if ($image2 === null) {
     
 <script type="text/javascript">
     $(function() {
-        var windowSize = window.innerWidth;
-        console.log(windowSize);
+        var windowSize = $(window).width();
+
+    if (windowSize < 376) {
+    console.log('Small!');
+    } else if (windowSize < 768) {
+    console.log('Medium!');
+    } else {
+    console.log('Large!');
+    }
 
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
