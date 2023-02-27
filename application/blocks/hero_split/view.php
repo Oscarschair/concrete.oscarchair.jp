@@ -7,7 +7,3 @@ if ($image2 === null) {
     return;
 }
 ?>
-
-    <div class="hero-split" style="<?php if ($height) { ?>min-height: <?=$height?>vh;<?php }?>">
-      
-    </div>
