@@ -186,6 +186,8 @@
                     var o = t.next();
                     o.length && o.is("[data-transparency=element]") && 0 === n.length && (
                         t.addClass("transparency-enabled"),
+                        console.log("iamhere"),
+                        console.log(i.hasClass("fixed-top")),
                         i.hasClass("fixed-top") && e(window).scroll((
                             function () {
                                 e(document).scrollTop() > 5 ? t.removeClass("transparency-enabled") : t.addClass("transparency-enabled");
