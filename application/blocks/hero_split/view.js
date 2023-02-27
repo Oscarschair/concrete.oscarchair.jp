@@ -1,9 +1,9 @@
     $(function() {
-        var windowSize = $(window).width();
+        // var windowSize = $(window).width();
 
-        const left = document.querySelector(".left");
-        const right = document.querySelector(".right");
-        const split = document.querySelectorAll(".split");
+        // const left = document.querySelector(".left");
+        // const right = document.querySelector(".right");
+        // const split = document.querySelectorAll(".split");
 
         if (windowSize > 799) {
            left.addEventListener("mouseenter", () => {
