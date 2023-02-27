@@ -5,7 +5,7 @@ if(t.length){
     i.hasClass("fixed-top")&&n.length>0&&i.removeClass("fixed-top");
     var o=t.next();
     o.length&&o.is("[data-transparency=element]")&&0===n.length&&(
-       // t.addClass("transparency-enabled"),
+        t.addClass("transparency-enabled"),
         console.log(i),
         console.log(i.hasClass("fixed-top")),
         i.hasClass("fixed-top")&&e(window).scroll((function(){
