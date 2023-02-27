@@ -6927,7 +6927,7 @@
                         this.uiDialogTitlebar = t("<div>"), this._addClass(this.uiDialogTitlebar, "ui-dialog-titlebar", "ui-widget-header ui-helper-clearfix"), this._on(this.uiDialogTitlebar, { mousedown: function (e) { t(e.target).closest(".ui-dialog-titlebar-close") || this.uiDialog.trigger("focus") } }), this.uiDialogTitlebarClose = t("<button type='button'></button>").button({ label: t("<a>").text(this.options.closeText).html(), icon: "ui-icon-closethick", showLabel: !1 }).appendTo(this.uiDialogTitlebar), this._addClass(this.uiDialogTitlebarClose, "ui-dialog-titlebar-close"), this._on(this.uiDialogTitlebarClose, { click: function (t) { t.preventDefault(), this.close(t) } }), e = t("<span>").uniqueId().prependTo(this.uiDialogTitlebar), this._addClass(e, "ui-dialog-title"), this._title(e), this.uiDialogTitlebar.prependTo(this.uiDialog), this.uiDialog.attr({ "aria-labelledby": e.attr("id") })
                     }, _title: function (t) {
                         this.options.title ? t.text(this.options.title) : t.html("&#160;")
-                    }, _createButtonPane: function () { this.uiDialogButtonPane = t(" < div > "), this._addClass(this.uiDialogButtonPane, "ui - dialog - buttonpane", "ui - widget - content ui - helper - clearfix"), this.uiButtonSet = t(" < div > ").appendTo(this.uiDialogButtonPane), this._addClass(this.uiButtonSet, "ui - dialog - buttonset"), this._createButtons() }, _createButtons: function () {
+                    }, _createButtonPane: function () { this.uiDialogButtonPane = t("<div>"), this._addClass(this.uiDialogButtonPane, "ui - dialog - buttonpane", "ui - widget - content ui - helper - clearfix"), this.uiButtonSet = t("<div>").appendTo(this.uiDialogButtonPane), this._addClass(this.uiButtonSet, "ui - dialog - buttonset"), this._createButtons() }, _createButtons: function () {
                         var e = this, n = this.options.buttons;
                         this.uiDialogButtonPane.remove(), this.uiButtonSet.empty(), t.isEmptyObject(n) || Array.isArray(n) && !n.length ? this._removeClass(this.uiDialog, "ui-dialog-buttons") : (t.each(n, (function (n, i) {
                             var o, r;
@@ -6938,7 +6938,7 @@
                         function i(t) { return { position: t.position, offset: t.offset } } this.uiDialog.draggable({
                             cancel: ".ui-dialog-content, .ui-dialog-titlebar-close", handle: ".ui-dialog-titlebar", containment: "document", start: function (n, o) { e._addClass(t(this), "ui-dialog-dragging"), e._blockFrames(), e._trigger("dragStart", n, i(o)) }, drag: function (t, n) { e._trigger("drag", t, i(n)) }, stop: function (o, r) {
                                 var a = r.offset.left - e.document.scrollLeft(), s = r.offset.top - e.document.scrollTop();
-                                n.position = { my: "left top", at: "left" + (a >= 0 ? "+" : "") + a + " top" + (s >= 0 ? "+" : "") + s, of: e.window }, e._removeClass(t(this), "ui-dialog-dragging"), e._unblockFrames(), e._trigger("dragStop", o, i(r))
+                                n.position = { my: "left top", at: "left" + (a >= 0 ? "+" : "") + a + "top" + (s >= 0 ? "+" : "") + s, of: e.window }, e._removeClass(t(this), "ui-dialog-dragging"), e._unblockFrames(), e._trigger("dragStop", o, i(r))
                             }
                         })
                     }, _makeResizable: function () {
