@@ -35,7 +35,7 @@ if ($image2 === null) {
 }
 ?>
 
-    <div data-transparency="element" class="ccm-block-hero-split" style="<?php if ($height) { ?>min-height: <?=$height?>vh;<?php }?>">
+    <div class="ccm-block-hero-split" style="<?php if ($height) { ?>min-height: <?=$height?>vh;<?php }?>">
       <div class="split left" style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>;background-repeat: no-repeat;background-size: cover;background-position: center;">
       <?php
         if ((string) $title !== '' ) {
@@ -75,4 +75,47 @@ if ($image2 === null) {
          ?>
       </div>
     </div>
- 
+    
+<script type="text/javascript">
+    $(function() {
+        var windowSize = $(window).width();
+
+        const left = document.querySelector(".left");
+        const right = document.querySelector(".right");
+        const split = document.querySelectorAll(".split");
+
+        if (windowSize > 799) {
+           left.addEventListener("mouseenter", () => {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.add("hover-left");
+                    }
+                }
+            });
+
+            left.addEventListener("mouseleave", () => {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.remove("hover-left");
+                    }
+                }
+            });
+
+            right.addEventListener("mouseenter", () => {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.add("hover-right");
+                    }
+                }
+            });
+
+            right.addEventListener("mouseleave", () => {
+                for(let i in split){
+                    if (split.hasOwnProperty(i)) {
+                        split[i].classList.remove("hover-right");
+                    }
+                }
+            });
+        }
+    })
+</script>
