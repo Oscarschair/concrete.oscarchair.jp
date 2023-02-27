@@ -4,7 +4,6 @@
         const left = document.querySelector(".left");
         const right = document.querySelector(".right");
         const split = document.querySelectorAll(".split");
-
         if (windowSize > 799) {
            left.addEventListener("mouseenter", () => {
                 for(let i in split){
