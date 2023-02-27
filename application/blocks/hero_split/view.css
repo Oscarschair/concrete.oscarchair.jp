@@ -74,7 +74,7 @@ h1 {
   border-color: var(--button-hover-color);
 }
 
-.ccm-block-hero-split {
+.hero-split {
   position: relative;
   width: 100%;
   height: 100%;
@@ -146,7 +146,7 @@ h1 {
   .button {
     width: 12rem;
   }
-  .ccm-block-hero-split{
+  .hero-split{
     min-height: auto!important;
   }
   .split {
