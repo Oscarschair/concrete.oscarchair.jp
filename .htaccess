@@ -7,9 +7,11 @@
 	RewriteCond %{REQUEST_FILENAME}/index.php !-f
 	RewriteRule . index.php [L]
 
-
 	RewriteCond %{HTTPS} off
-	RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+	RewriteRule ^(.*)$ https://oscarchair.jp%{REQUEST_URI} [R=301,L]
+
+	RewriteCond %{HTTP_HOST} ^www\.oscarchair\.jp
+	RewriteRule ^(.*)$ https://oscarchair.jp%{REQUEST_URI} [R=301,L]
 
 </IfModule>
 
