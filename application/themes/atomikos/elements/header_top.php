@@ -15,10 +15,12 @@
         $fullPath = $c->getCollectionLink();
         $topics = $c->getAttribute('blog_entry_topics');
         $pos = strpos($fullPath, "/blog/");
+        $get_ip = $_SERVER["REMOTE_ADDR"];
     ?>
     <script>
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
+            'ip_address' : $get_ip,
             'blog_topic' : <?php
             if (isset($topics) && count($topics)) {
                 foreach ($topics as $topic) {
