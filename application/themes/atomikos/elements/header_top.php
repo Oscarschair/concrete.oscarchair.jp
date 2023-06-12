@@ -20,6 +20,7 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
+            'ip_address' : '<?=$get_ip?>',
             'blog_topic' : <?php
             if (isset($topics) && count($topics)) {
                 foreach ($topics as $topic) {
