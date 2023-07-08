@@ -42,7 +42,16 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
 
 <fieldset class="mb-3">
     <legend><?=t('フィルター')?></legend>
-
+    <?php if ($themeColorCollection) { ?>
+        <label class="form-label" for="filterColor"><?=t('Filter Color')?></label>
+        <div data-vue="hero-image-filter">
+            <concrete-theme-color-input
+                :color-collection='<?=json_encode($themeColorCollection)?>'
+                <?php if ($filterColor) { ?> color="<?=$filterColor ?? null?>"<?php } ?>
+                input-name="filterColor">
+            </concrete-theme-color-input>
+        </div>
+    <?php } ?>
     <div class="mb-3">
         <label class="form-label" for="image"><?=t('Filter Opacity')?></label>
         <input class="form-range" type="range" name="filterOpacity" id="heroImageOpacity" min="0" max="100" onchange="updateHeroImageOpacity(this.value)" value="<?=$filterOpacity?>">
