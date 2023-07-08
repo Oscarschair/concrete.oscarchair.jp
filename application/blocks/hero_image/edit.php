@@ -139,7 +139,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
         updateHeroImageOpacity = function (value) {
             document.querySelector('span[data-value=filterOpacity]').innerHTML = value/100
         }
-        updateHeroImageOpacity(document.getElementById('heroImageOpacity').value/100)
+        updateHeroImageOpacity(document.getElementById('heroImageOpacity').value)
 
 
         Concrete.Vue.activateContext('cms', function (Vue, config) {
