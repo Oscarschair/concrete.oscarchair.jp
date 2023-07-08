@@ -137,7 +137,7 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
         updateHeroImageHeight2(document.getElementById('heroImageHeight2').value)
 
         updateHeroImageOpacity = function (value) {
-            document.querySelector('span[data-value=filterOpacity]').innerHTML = value
+            document.querySelector('span[data-value=filterOpacity]').innerHTML = value/100
         }
         updateHeroImageOpacity(document.getElementById('heroImageOpacity').value/100)
 
