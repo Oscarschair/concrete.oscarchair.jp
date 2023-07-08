@@ -39,6 +39,29 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
     </div>
 </fieldset>
 
+
+<fieldset class="mb-3">
+    <legend><?=t('フィルター')?></legend>
+    <?php if ($themeColorCollection) { ?>
+        <label class="form-label" for="filterColor"><?=t('Filter Color')?></label>
+        <div data-vue="hero-image">
+            <concrete-theme-color-input
+                :color-collection='<?=json_encode($themeColorCollection)?>'
+                <?php if ($filterColor) { ?> color="<?=$filterColor ?? null?>"<?php } ?>
+                input-name="filterColor">
+            </concrete-theme-color-input>
+        </div>
+    <?php } ?>
+    <div class="mb-3">
+        <label class="form-label" for="image"><?=t('Filter Opacity')?></label>
+        <input class="form-range" type="range" name="filterOpacity" id="heroImageOpacity" min="0" max="100" onchange="updateHeroImageOpacity(this.value)" value="<?=$filterOpacity?>">
+        <div class="alert alert-info">
+            <?=t('Current Value:')?> <code><span data-value="filterOpacity"></span></code>
+        </div>
+    </div>
+</fieldset>
+
+
 <fieldset class="mb-3">
     <legend><?=t('Text')?></legend>
     <div class="mb-3">
@@ -112,6 +135,12 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
             document.querySelector('span[data-value=height2]').innerHTML = value
         }
         updateHeroImageHeight2(document.getElementById('heroImageHeight2').value)
+
+        updateHeroImageOpacity = function (value) {
+            document.querySelector('span[data-value=filterOpacity]').innerHTML = value
+        }
+        updateHeroImageOpacity(document.getElementById('heroImageOpacity').value/100)
+
 
         Concrete.Vue.activateContext('cms', function (Vue, config) {
             new Vue({

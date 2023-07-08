@@ -35,7 +35,7 @@ if ($image2 === null) {
 }
 ?>
 <div data-transparency="element" class="ccm-block-hero-image pc" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
-    <div class="ccm-block-hero-image-cover" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>></div>
+    <div class="ccm-block-hero-image-cover" style="<?php if ($height) { ?>min-height: <?=$height?>vh;<?php } ?><?php if ($filterColor) { ?>background: <?=$filterColor?> !important;<?php } ?><?php if ($filterOpacity) { ?>opacity: <?=$filterOpacity?>;<?php } ?>"></div>
     <div style="background-image: url(<?= h("\"{$image->getURL()}\"") ?>); <?php if ($height) { ?>min-height: <?=$height?>vh<?php } ?>" class="ccm-block-hero-image-image"></div>
     <div class="ccm-block-hero-image-text" <?php if ($height) { ?>style="min-height: <?=$height?>vh"<?php } ?>>
         <?php

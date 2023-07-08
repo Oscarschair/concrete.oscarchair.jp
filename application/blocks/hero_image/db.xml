@@ -26,5 +26,7 @@
         <field name="buttonColor" type="string" />
         <field name="buttonStyle" type="string" />
         <field name="buttonSize" type="string" />
+        <field name="filterColor" type="string" />
+        <field name="filterOpacity" type="string" />
     </table>
 </schema>
