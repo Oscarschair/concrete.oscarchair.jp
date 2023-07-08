@@ -147,6 +147,10 @@ use Concrete\Core\Form\Service\DestinationPicker\DestinationPicker;
                 el: 'div[data-vue=hero-image]',
                 components: config.components
             })
+            new Vue({
+                el: 'div[data-vue=hero-image-filter]',
+                components: config.components
+            })
         })
 
     })
