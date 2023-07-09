@@ -48,7 +48,7 @@ Licensed under the MIT license
 			g = h.scrollTop(), d = c ? l.scrollTop() : s(document).scrollTop(), p = (d / (n) * 100).toFixed(2), s(t.el).css({
 				width: p + "%"
 			}), s(window).scrollTop() + s(window).height() == s(document).height() && t.complete.call(this), u = g;
-			console.log(p);
+			console.log(d);
 		}), t.success.call(this)
 	}
 }(jQuery);
