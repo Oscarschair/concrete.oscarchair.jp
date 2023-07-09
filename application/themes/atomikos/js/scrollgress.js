@@ -23,10 +23,10 @@ Licensed under the MIT license
 			l = s(this),
 			e = l.css("overflow"),
 			i = l.css("overflow-y"),
-			c = "auto" === e || "scroll" === e || "auto" === i || "scroll" === i,
-			r = s(window).outerHeight(),
-			n = c ? l[0].scrollHeight : l.height(),
-			h = c ? l : s(window);
+			c = "auto" === e || "scroll" === e || "auto" === i || "scroll" === i;
+		r = s(window).outerHeight();
+		n = c ? l[0].scrollHeight : l.height();
+		h = c ? l : s(window);
 		console.log(n);
 		console.log(l.height());
 		console.log(l.offset().top);
