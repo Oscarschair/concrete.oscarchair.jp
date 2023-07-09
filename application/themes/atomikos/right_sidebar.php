@@ -10,7 +10,7 @@ $a->enableGridContainer();
 $a->display($c);
 ?>
 
-<div class="container">
+<div id="contents" class="container">
     <div class="row">
         <div class="col-md-8">
         <?php
