@@ -6,7 +6,7 @@
     use Concrete\Core\Page\Type\Composer\OutputControl as PageTypeComposerOutputControl;
 ?>
 
-Contents
+<p>Contents</p>
 <?php
     $control = PageTypeComposerOutputControl::getByID($ptComposerOutputControlID);
     if (is_object($control)) {
