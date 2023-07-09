@@ -51,7 +51,7 @@ Licensed under the MIT license
 			console.log(d);
 			console.log(l.height());
 			console.log(l.offset().top);
-			n = l.height();
+			n = l.height()+l.offset().top;
 		}), t.success.call(this)
 	}
 }(jQuery);
