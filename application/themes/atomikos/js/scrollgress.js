@@ -25,15 +25,11 @@ Licensed under the MIT license
 			i = l.css("overflow-y"),
 			c = "auto" === e || "scroll" === e || "auto" === i || "scroll" === i,
 			r = s(window).outerHeight(),
-			n = c ? l[0].scrollHeight : l.height()+l.top,
+			n = c ? l[0].scrollHeight : l.height(),
 			h = c ? l : s(window);
-		console.log(l);
-		console.log(e);
-		console.log(i);
-		console.log(c);
-		console.log(r);
 		console.log(n);
-		console.log(h);
+		console.log(l.height());
+		console.log(l.top);
 		let g, d, p, u = 0;
 		t.el || (s("body").prepend('<div class="scrollgress"><div class="scrollgress__progress"></div></div>'), s(".scrollgress").css({
 			position: "fixed",
