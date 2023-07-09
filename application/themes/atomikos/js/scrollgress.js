@@ -29,7 +29,7 @@ Licensed under the MIT license
 			h = c ? l : s(window);
 		console.log(n);
 		console.log(l.height());
-		console.log(l.top);
+		console.log(l.offset().top);
 		//console.log(l.top);
 		let g, d, p, u = 0;
 		t.el || (s("body").prepend('<div class="scrollgress"><div class="scrollgress__progress"></div></div>'), s(".scrollgress").css({
@@ -48,7 +48,7 @@ Licensed under the MIT license
 			g = h.scrollTop(), d = c ? l.scrollTop() : s(document).scrollTop(), p = (d / (n) * 100).toFixed(2), s(t.el).css({
 				width: p + "%"
 			}), s(window).scrollTop() + s(window).height() == s(document).height() && t.complete.call(this), u = g;
-			console.log(d);
+			//console.log(d);
 		}), t.success.call(this)
 	}
 }(jQuery);
