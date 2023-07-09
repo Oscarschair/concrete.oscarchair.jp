@@ -13,7 +13,7 @@
 <script type="text/javascript">$(function() {
     $('#contents').scrollgress({//バーの高さの基準となるエリア指定
 		height: '5px',//バーの高さ
-		color: '#000',//バーの色var(--bs-primary)
+		color: 'var(--bs-primary)',//バーの色var(--bs-primary)
 	});	
 });
 </script>
