@@ -29,7 +29,8 @@ Licensed under the MIT license
 			h = c ? l : s(window);
 		console.log(n);
 		console.log(l.height());
-		console.log(l.top());
+		console.log(l.y);
+		//console.log(l.top);
 		let g, d, p, u = 0;
 		t.el || (s("body").prepend('<div class="scrollgress"><div class="scrollgress__progress"></div></div>'), s(".scrollgress").css({
 			position: "fixed",
