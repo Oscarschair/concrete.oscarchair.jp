@@ -56,8 +56,8 @@ Licensed under the MIT license
 }(jQuery);
 
 $(function () {
-	$('#contents').scrollgress({//バーの高さの基準となるエリア指定
+	setTimeout($('#contents').scrollgress({//バーの高さの基準となるエリア指定
 		height: '5px',//バーの高さ
 		color: 'var(--bs-primary)',//バーの色
-	});
+	}),1000);
 });
