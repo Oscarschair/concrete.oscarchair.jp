@@ -49,6 +49,8 @@ Licensed under the MIT license
 				width: p + "%"
 			}), s(window).scrollTop() + s(window).height() == s(document).height() && t.complete.call(this), u = g;
 			console.log(d);
+			console.log(l.height());
+			console.log(l.offset().top);
 		}), t.success.call(this)
 	}
 }(jQuery);
