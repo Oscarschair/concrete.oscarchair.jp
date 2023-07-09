@@ -59,5 +59,5 @@ $(function () {
 	setTimeout($('#contents').scrollgress({//バーの高さの基準となるエリア指定
 		height: '5px',//バーの高さ
 		color: 'var(--bs-primary)',//バーの色
-	}),1000);
+	}),2000);
 });
