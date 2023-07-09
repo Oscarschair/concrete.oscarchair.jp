@@ -26,4 +26,4 @@
         }
         ?>
 <?php
-    } ?><div content="compose">.</div>
+    } ?>
