@@ -5,7 +5,8 @@
     use Concrete\Core\Page\Type\Composer\FormLayoutSetControl as PageTypeComposerFormLayoutSetControl;
     use Concrete\Core\Page\Type\Composer\OutputControl as PageTypeComposerOutputControl;
 ?>
-    <div id="contents_container">contents:</div>
+
+Contents
 <?php
     $control = PageTypeComposerOutputControl::getByID($ptComposerOutputControlID);
     if (is_object($control)) {
