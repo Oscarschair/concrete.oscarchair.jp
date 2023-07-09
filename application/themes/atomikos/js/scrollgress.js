@@ -51,13 +51,14 @@ Licensed under the MIT license
 			console.log(d);
 			console.log(l.height());
 			console.log(l.offset().top);
+			n = l.height();
 		}), t.success.call(this)
 	}
 }(jQuery);
 
 $(function () {
-	setTimeout($('#contents').scrollgress({//バーの高さの基準となるエリア指定
+	$('#contents').scrollgress({//バーの高さの基準となるエリア指定
 		height: '5px',//バーの高さ
 		color: 'var(--bs-primary)',//バーの色
-	}),5000);
+	})
 });
