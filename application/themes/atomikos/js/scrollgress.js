@@ -25,7 +25,7 @@ Licensed under the MIT license
 			i = l.css("overflow-y"),
 			c = "auto" === e || "scroll" === e || "auto" === i || "scroll" === i,
 			r = s(window).outerHeight(),
-			n = c ? l[0].scrollHeight : l.height(),
+			n = c ? l[0].scrollHeight : l.height()+l.top,
 			h = c ? l : s(window);
 		console.log(l);
 		console.log(e);
