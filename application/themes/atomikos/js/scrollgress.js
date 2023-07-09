@@ -48,7 +48,7 @@ Licensed under the MIT license
 			width: "0%",
 			height: t.height
 		}), t.el = ".scrollgress__progress"), h.scroll(function (o) {
-			g = h.scrollTop(), d = c ? l.scrollTop() : s(document).scrollTop(), p = (d / (n - r) * 100).toFixed(2), s(t.el).css({
+			g = h.scrollTop(), d = c ? l.scrollTop() : s(document).scrollTop(), p = (d / (n) * 100).toFixed(2), s(t.el).css({
 				width: p + "%"
 			}), s(window).scrollTop() + s(window).height() == s(document).height() && t.complete.call(this), u = g
 		}), t.success.call(this)
