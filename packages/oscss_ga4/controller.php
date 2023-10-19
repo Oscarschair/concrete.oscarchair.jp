@@ -35,9 +35,9 @@ class Controller extends Package
 
     public function on_start()
     {
-        $manager = $this->app->make(TaskManager::class);
-        $manager->extend('get_statics_from_ga4', function () {
-            return new GetStaticsFromGa4Controller();
-        });
+        // $manager = $this->app->make(TaskManager::class);
+        // $manager->extend('get_statics_from_ga4', function () {
+        //     return new GetStaticsFromGa4Controller();
+        // });
     }
 }
