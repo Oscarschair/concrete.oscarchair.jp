@@ -26,7 +26,7 @@ class GaDataController extends AbstractController
     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
     {
         $command = new GetStaticsFromGaCommand();
-        return new CommandTaskRunner($task, $command, t('Log cleared successfully.'));
+        return new CommandTaskRunner($task, $command, t('success.'));
     }
 
 }
