@@ -9,7 +9,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'oscss_ga';
     protected $appVersionRequired = '9.0';
-    protected $pkgVersion = '0.1.1';
+    protected $pkgVersion = '0.1.2';
     
     public function getPackageName()
     {
