@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\OscssGa;
+namespace Concrete\Package\OscssGa\Src;
 
 //use Concrete\Package\OscssGa\Src\Getting\Command\GetStaticsFromGaCommand;
 use Concrete\Core\Command\Task\Input\InputInterface;

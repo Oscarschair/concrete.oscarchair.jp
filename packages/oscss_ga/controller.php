@@ -2,13 +2,13 @@
 namespace Concrete\Package\OscssGa;
 use Concrete\Core\Package\Package;
 use Concrete\Core\Command\Task\Manager as TaskManager;
-use Concrete\Package\OscssGa\GaDataController;
+use Concrete\Package\OscssGa\Src\GaDataController;
 
 
 class Controller extends Package
 {
     protected $appVersionRequired = '9.0';
-    protected $pkgVersion = '0.1.4';
+    protected $pkgVersion = '0.1.5';
     protected $pkgHandle = 'oscss_ga';
     
     public function getPackageName()
