@@ -2,6 +2,7 @@
 namespace Concrete\Package\OscssGa;
 use Concrete\Core\Package\Package;
 use Concrete\Core\Command\Task\Manager as TaskManager;
+require_once __DIR__ . '/src/GaDataController.php';
 use Concrete\Package\OscssGa\Src\GaDataController;
 
 
