@@ -10,7 +10,7 @@ use Concrete\Core\Command\Task\Controller\AbstractController;
 
 defined('C5_EXECUTE') or die("Access Denied.");
 
-class GaController extends AbstractController
+class GaDataController extends AbstractController
 {
     public function getName(): string
     {
