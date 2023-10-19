@@ -1,4 +1,4 @@
-#!/bin/env php
+#!/usr/local/php/7.4/bin/php
 <?php
 
 if (!defined('DIR_BASE')) {
