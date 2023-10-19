@@ -8,7 +8,7 @@ use Concrete\Package\OscssGa\Src\GaDataController;
 class Controller extends Package
 {
     protected $appVersionRequired = '9.0';
-    protected $pkgVersion = '0.1.5';
+    protected $pkgVersion = '0.1.6';
     protected $pkgHandle = 'oscss_ga';
     
     public function getPackageName()
