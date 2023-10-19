@@ -14,15 +14,15 @@ defined('C5_EXECUTE') or die("Access Denied.");
 class GetStaticsFromGa4Controller //extends AbstractController
 {
 
-//     public function getName(): string
-//     {
-//         return t('Get Statics From Ga4');
-//     }
+    public function getName(): string
+    {
+        return t('Get Statics From Ga4');
+    }
 
-//     public function getDescription(): string
-//     {
-//         return t('Get Statics From Ga4 and write in database.');
-//     }
+    public function getDescription(): string
+    {
+        return t('Get Statics From Ga4 and write in database.');
+    }
 
 //     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
 //     {
