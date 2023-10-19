@@ -14,12 +14,12 @@ class GetStaticsFromGaController extends AbstractController
 {
     public function getName(): string
     {
-        return t('Get Statics From Ga4');
+        return t('TEST');
     }
 
     public function getDescription(): string
     {
-        return t('Get Statics From Ga4 and write in database.');
+        return t('TESTss');
     }
 
     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
