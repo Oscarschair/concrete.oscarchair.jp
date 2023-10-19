@@ -1,6 +1,9 @@
 <?php
 namespace Concrete\Package\OscssGa4;
 use Concrete\Core\Package\Package;
+use Concrete\Core\Command\Task\Manager as TaskManager;
+use Concrete\Package\OscssGa4\Src\Command\Task\Controller\GetStaticsFromGa4Controller;
+
 
 class Controller extends Package
 {
@@ -21,10 +24,21 @@ class Controller extends Package
 
     public function install()
     {
-        $pkg = parent::install();
-        /**
-         * Nothing here yet.
-         */
+        parent::install();
+        $this->installContentFile('tasks.xml');
     }
     
+    public function upgrade()
+    {
+        parent::upgrade();
+        $this->installContentFile('tasks.xml');
+    }
+
+    public function on_start()
+    {
+        $manager = $this->app->make(TaskManager::class);
+        $manager->extend('get_statics_from_ga4', function () {
+            return new GetStaticsFromGa4Controller();
+        });
+    }
 }
