@@ -40,5 +40,8 @@ class Controller extends Package
         $manager->extend('ga_data', function () {
             return new GaDataController();
         });
+        $manager->extend('get_statics_from_ga', function () {
+            return new GaDataController();
+        });
     }
 }
