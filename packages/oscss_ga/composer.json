@@ -16,7 +16,6 @@
     },
     "autoload": {
         "psr-4": {
-            "Src\\": "src/",
             "Concrete\\Package\\OscssGa\\Src\\": "src/"
         }
     }
