@@ -2,7 +2,7 @@
 namespace Concrete\Package\OscssGa4;
 use Concrete\Core\Package\Package;
 use Concrete\Core\Command\Task\Manager as TaskManager;
-use Concrete\Package\OscssGa4\GetStaticsFromGa4Controller;
+use Concrete\Package\Abc\GetStaticsFromGa4Controller;
 
 
 class Controller extends Package
