@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\OscssGa4\Src\Command\Task\Controller;
+namespace Concrete\Package\OscssGa4\Src\Command\Task\Controller\GetStaticsFromGa4Controller;
 
 use Concrete\Core\Command\Task\Input\InputInterface;
 use Concrete\Core\Command\Task\Runner\CommandTaskRunner;
