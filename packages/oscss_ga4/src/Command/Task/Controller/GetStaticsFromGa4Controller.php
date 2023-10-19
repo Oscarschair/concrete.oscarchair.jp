@@ -26,8 +26,8 @@ class GetStaticsFromGa4Controller extends AbstractController
 
     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
     {
-        $command = new GetStaticsFromGa4Command();
-        return new CommandTaskRunner($task, $command, t('Success.'));
+        // $command = new GetStaticsFromGa4Command();
+        // return new CommandTaskRunner($task, $command, t('Success.'));
     }
 
 }
