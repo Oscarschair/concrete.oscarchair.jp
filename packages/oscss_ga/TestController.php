@@ -11,7 +11,7 @@ namespace Concrete\Package\OscssGa;
 
 defined('C5_EXECUTE') or die("Access Denied.");
 
-class TestController //extends AbstractController
+class GetStaticsFromGaController //extends AbstractController
 {
 
     public function getName(): string
