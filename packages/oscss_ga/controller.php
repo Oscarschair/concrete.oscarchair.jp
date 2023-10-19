@@ -7,9 +7,9 @@ use Concrete\Package\OscssGa\GaDataController;
 
 class Controller extends Package
 {
-    protected $pkgHandle = 'oscss_ga';
     protected $appVersionRequired = '9.0';
     protected $pkgVersion = '0.1.3';
+    protected $pkgHandle = 'oscss_ga';
     
     public function getPackageName()
     {
@@ -36,7 +36,7 @@ class Controller extends Package
     public function on_start()
     {
         $manager = $this->app->make(TaskManager::class);
-        $manager->extend('get_statics_from_ga', function () {
+        $manager->extend('ga_data', function () {
             return new GaDataController();
         });
     }

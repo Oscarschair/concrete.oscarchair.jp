@@ -24,7 +24,7 @@ class GaDataController extends AbstractController
 
     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
     {
-        // Nothing here yet.        
+        // Nothing here yet. 
     }
 
 }
