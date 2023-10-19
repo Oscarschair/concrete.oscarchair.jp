@@ -2,11 +2,11 @@
 <concrete5-cif version="1.0">
 
     <tasks>
-        <task handle="ga_data" package="oscss_ga"/>
+        <task handle="get_statics_from_ga" package="oscss_ga"/>
     </tasks>
     <tasksets>
         <taskset handle="maintenance">
-            <task handle="ga_data"/>
+            <task handle="get_statics_from_ga"/>
         </taskset>
     </tasksets>
 </concrete5-cif>
