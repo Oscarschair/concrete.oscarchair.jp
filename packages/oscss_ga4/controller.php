@@ -2,7 +2,7 @@
 namespace Concrete\Package\OscssGa4;
 use Concrete\Core\Package\Package;
 use Concrete\Core\Command\Task\Manager as TaskManager;
-//use Concrete\Package\OscssGa4\Src\Command\Task\Controller\GetStaticsFromGa4Controller;
+use Concrete\Package\OscssGa4\Src\Command\Task\Controller\GetStaticsFromGa4Controller;
 
 
 class Controller extends Package
@@ -37,7 +37,7 @@ class Controller extends Package
     {
         $manager = $this->app->make(TaskManager::class);
         $manager->extend('get_statics_from_ga4', function () {
-return new GetStaticsFromGa4Controller();
+            return new GetStaticsFromGa4Controller();
         });
     }
 }
