@@ -17,6 +17,6 @@ class GetGa4Statistics extends AbstractJob
 
     public function run()
     {
-        
+        return t('processed');
     }
 }
