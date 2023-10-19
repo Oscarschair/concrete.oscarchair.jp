@@ -26,5 +26,4 @@ class GetStaticsFromGaController extends AbstractController
     {
         // Nothing here yet.        
     }
-
 }
