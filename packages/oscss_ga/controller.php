@@ -2,7 +2,7 @@
 namespace Concrete\Package\OscssGa;
 use Concrete\Core\Package\Package;
 use Concrete\Core\Command\Task\Manager as TaskManager;
-use Concrete\Package\OscssGa\GetStaticsFromGaController;
+use Concrete\Package\OscssGa\GaController;
 
 
 class Controller extends Package
@@ -37,7 +37,7 @@ class Controller extends Package
     {
         $manager = $this->app->make(TaskManager::class);
         $manager->extend('get_statics_from_ga', function () {
-            return new GetStaticsFromGaController();
+            return new GaController();
         });
     }
 }
