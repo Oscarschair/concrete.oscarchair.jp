@@ -11,7 +11,6 @@ class Controller extends Package
     protected $appVersionRequired = '5.7.4';
     protected $pkgVersion = '0.1';
     
-
     public function getPackageName()
     {
         return t("Get Ga4 Statistics.");
@@ -24,8 +23,8 @@ class Controller extends Package
 
     public function install()
     {
-        // parent::install();
-        // $this->installContentFile('tasks.xml');
+        parent::install();
+        $this->installContentFile('tasks.xml');
     }
     
     public function upgrade()
