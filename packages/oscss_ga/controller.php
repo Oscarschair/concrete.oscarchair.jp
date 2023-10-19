@@ -36,8 +36,8 @@ class Controller extends Package
     public function on_start()
     {
         $manager = $this->app->make(TaskManager::class);
-        $manager->extend('get_statics_from_ga', function () {
-            return new GetStaticsFromGaController();
-        });
+        // $manager->extend('get_statics_from_ga', function () {
+        //     return new GetStaticsFromGaController();
+        // });
     }
 }
