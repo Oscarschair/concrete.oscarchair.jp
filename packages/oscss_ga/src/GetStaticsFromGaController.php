@@ -8,12 +8,10 @@ use Concrete\Core\Command\Task\Runner\TaskRunnerInterface;
 use Concrete\Core\Command\Task\TaskInterface;
 use Concrete\Core\Command\Task\Controller\AbstractController;
 
-
 defined('C5_EXECUTE') or die("Access Denied.");
 
 class GetStaticsFromGaController extends AbstractController
 {
-
     public function getName(): string
     {
         return t('Get Statics From Ga4');
