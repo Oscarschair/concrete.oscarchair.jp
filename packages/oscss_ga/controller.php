@@ -23,13 +23,13 @@ class Controller extends Package
 
     public function install()
     {
-        parent::install();
+        $pkg = parent::install();
         $this->installContentFile('tasks.xml');
     }
     
     public function upgrade()
     {
-        parent::upgrade();
+        $pkg = parent::upgrade();
         $this->installContentFile('tasks.xml');
     }
 
