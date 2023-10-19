@@ -8,7 +8,7 @@ use Concrete\Core\Package\Package;
 class Controller extends Package
 {
     protected $pkgHandle = 'oscss_ga4';
-    protected $appVersionRequired = '9.0';
+    protected $appVersionRequired = '5.7.4';
     protected $pkgVersion = '0.1';
     
 
