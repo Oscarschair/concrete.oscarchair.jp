@@ -6,7 +6,7 @@ use Concrete\Core\Command\Task\Runner\CommandTaskRunner;
 use Concrete\Core\Command\Task\Runner\TaskRunnerInterface;
 use Concrete\Core\Command\Task\TaskInterface;
 use Concrete\Core\Command\Task\Controller\AbstractController;
-require_once __DIR__ . '/src/GetStaticsFromGaCommand.php';
+//require_once __DIR__ . '/src/GetStaticsFromGaCommand.php';
 use Concrete\Package\OscssGa\Src\GetStaticsFromGaCommand;
 
 defined('C5_EXECUTE') or die("Access Denied.");
