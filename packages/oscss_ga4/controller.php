@@ -37,7 +37,7 @@ class Controller extends Package
     {
         $manager = $this->app->make(TaskManager::class);
         $manager->extend('get_statics_from_ga4', function () {
-            return new GetStaticsFromGa4Controller();
+//            return new GetStaticsFromGa4Controller();
         });
     }
 }
