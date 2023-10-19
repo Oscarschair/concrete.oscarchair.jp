@@ -1,12 +1,12 @@
 <?php
 namespace Concrete\Package\OscssGa\Src;
 
-// use Concrete\Package\OscssGa4\Src\Getting\Command\GetStaticsFromGa4Command;
-// use Concrete\Core\Command\Task\Input\InputInterface;
-// use Concrete\Core\Command\Task\Runner\TaskRunnerInterface;
-// use Concrete\Core\Command\Task\TaskInterface;
+use Concrete\Package\OscssGa\Src\Getting\Command\GetStaticsFromGaCommand;
+use Concrete\Core\Command\Task\Input\InputInterface;
+use Concrete\Core\Command\Task\Runner\TaskRunnerInterface;
+use Concrete\Core\Command\Task\TaskInterface;
 use Concrete\Core\Command\Task\Controller\AbstractController;
-// use Concrete\Core\Command\Task\Runner\CommandTaskRunner;
+use Concrete\Core\Command\Task\Runner\CommandTaskRunner;
 
 
 defined('C5_EXECUTE') or die("Access Denied.");
@@ -26,8 +26,8 @@ class GetStaticsFromGaController extends AbstractController
 
     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
     {
-// //        $command = new GetStaticsFromGa4Command();
-// //        return new CommandTaskRunner($task, $command, t('Success.'));
+       $command = new GetStaticsFromGaCommand();
+       return new CommandTaskRunner($task, $command, t('Success.'));
     }
 
 }
