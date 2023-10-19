@@ -29,8 +29,8 @@ class Controller extends Package
     
     public function upgrade()
     {
-        // parent::upgrade();
-        // $this->installContentFile('tasks.xml');
+        parent::upgrade();
+        $this->installContentFile('tasks.xml');
     }
 
     public function on_start()

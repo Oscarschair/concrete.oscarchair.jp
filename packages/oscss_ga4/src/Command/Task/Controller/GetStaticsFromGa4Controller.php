@@ -1,7 +1,7 @@
 <?php
 namespace Concrete\Package\OscssGa4\Src\Command\Task\Controller;
 
-use Concrete\Package\OscssGa4\Src\Logging\Command\ClearLogCommand;//あとで変える
+use Concrete\Package\OscssGa4\Src\Getting\Command\GetStaticsFromGa4Command;
 use Concrete\Core\Command\Task\Input\InputInterface;
 use Concrete\Core\Command\Task\Runner\TaskRunnerInterface;
 use Concrete\Core\Command\Task\TaskInterface;
@@ -26,8 +26,8 @@ class GetStaticsFromGa4Controller extends AbstractController
 
     public function getTaskRunner(TaskInterface $task, InputInterface $input): TaskRunnerInterface
     {
-        $command = new ClearLogCommand();
-        return new CommandTaskRunner($task, $command, t('Log cleared successfully.'));
+        $command = new GetStaticsFromGa4Command();
+        return new CommandTaskRunner($task, $command, t('Success.'));
     }
 
 }
