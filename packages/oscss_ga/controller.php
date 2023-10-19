@@ -1,5 +1,5 @@
 <?php
-namespace Concrete\Package\OscssGa4;
+namespace Concrete\Package\OscssGa;
 use Concrete\Core\Package\Package;
 use Concrete\Core\Command\Task\Manager as TaskManager;
 use Concrete\Package\OscssGa4\GetStaticsFromGa4Controller;
@@ -7,7 +7,7 @@ use Concrete\Package\OscssGa4\GetStaticsFromGa4Controller;
 
 class Controller extends Package
 {
-    protected $pkgHandle = 'oscss_ga4';
+    protected $pkgHandle = 'oscss_ga';
     protected $appVersionRequired = '9.0';
     protected $pkgVersion = '0.1';
     
@@ -36,7 +36,7 @@ class Controller extends Package
     public function on_start()
     {
         $manager = $this->app->make(TaskManager::class);
-        $manager->extend('get_statics_from_ga4', function () {
+        $manager->extend('get_statics_from_ga', function () {
             return new TestController();
         });
     }
