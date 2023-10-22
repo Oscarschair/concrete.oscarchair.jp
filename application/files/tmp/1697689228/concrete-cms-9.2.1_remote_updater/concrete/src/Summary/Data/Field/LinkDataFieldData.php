@@ -26,9 +26,6 @@ class LinkDataFieldData implements DataFieldDataInterface
     public function setData($link): void
     {
         $this->link = $link;
-        echo '<script>';
-        echo 'console.log("CHECKER4")';
-        echo '</script>';
     }
     
     public function __toString()

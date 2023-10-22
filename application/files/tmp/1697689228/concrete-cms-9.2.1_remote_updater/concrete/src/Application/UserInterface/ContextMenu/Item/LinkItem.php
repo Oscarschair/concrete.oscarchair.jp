@@ -23,9 +23,6 @@ class LinkItem extends AbstractItem
         $this->link = $link;
         $this->value = $value;
         $this->attributes = $attributes;
-        echo '<script>';
-        echo 'console.log("CHECKER2")';
-        echo '</script>';
     }
 
     public function getItemElement()

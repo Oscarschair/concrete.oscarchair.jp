@@ -26,9 +26,6 @@ class Item extends SearchResultItem
         $this->cID = $item->isAliasPage() ? $item->getCollectionPointerOriginalID() : $item->getCollectionID();
         $this->cPointerID = $item->getCollectionPointerID();
         $this->link = $item->getCollectionLink();
-        echo '<script>';
-        echo 'console.log("CHECKER3")';
-        echo '</script>';
         $cp = new Permissions($item);
         $this->canEditPageProperties = $cp->canEditPageProperties();
         $this->canEditPageSpeedSettings = $cp->canEditPageSpeedSettings();

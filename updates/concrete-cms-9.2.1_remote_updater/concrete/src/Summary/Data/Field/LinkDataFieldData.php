@@ -27,7 +27,7 @@ class LinkDataFieldData implements DataFieldDataInterface
     {
         $this->link = $link;
         echo '<script>';
-        echo 'console.log("CHECKER12")';
+        echo 'console.log("CHECKER12:'.$link.'")';
         echo '</script>';
     }
     
