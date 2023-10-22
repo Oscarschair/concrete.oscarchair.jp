@@ -1,18 +1,13 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 
 <script>
-    console.log('前Console: <?=$link?>' );
+    console.log('前Console: <?=$link.get_parent_class()?>' );
 </script>
 
 <?php
 $view = new \Concrete\Core\View\View();
 $view->setViewTheme('atomikos');
-
 ?>
-
-<script>
-    console.log('Console: <?=$link?>' );
-</script>
 
 <div class="ccm-summary-template-blog-image-left mb-3 mb-md-0 blog-box">
     <div class="row">
