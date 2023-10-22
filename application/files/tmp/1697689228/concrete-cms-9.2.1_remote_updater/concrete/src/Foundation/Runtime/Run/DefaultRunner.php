@@ -142,6 +142,9 @@ class DefaultRunner implements RunInterface, ApplicationAwareInterface
      */
     protected function initializeLegacyURLDefinitions()
     {
+        echo '<script>';
+        echo 'console.log("where?")';
+        echo '</script>';
         if (!defined('BASE_URL')) {
             $resolver = $this->getUrlResolver();
 
