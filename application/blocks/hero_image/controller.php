@@ -133,9 +133,6 @@ class Controller extends HeroImageBlockController implements FileTrackableInterf
                 $linkUrl = $fileLinkObject->getRelativePath();
             }
         }
-        echo '<script>';
-        echo 'console.log("linkUrl : '.$linkUrl.'")';
-        echo '</script>';
 
         return $linkUrl;
     }
