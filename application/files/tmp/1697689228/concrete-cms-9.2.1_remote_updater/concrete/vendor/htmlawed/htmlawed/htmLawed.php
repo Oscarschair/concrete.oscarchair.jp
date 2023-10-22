@@ -56,9 +56,6 @@ $C['abs_url'] = isset($C['abs_url']) ? $C['abs_url'] : 0;
 if(!isset($C['base_url']) or !preg_match('`^[a-zA-Z\d.+\-]+://[^/]+/(.+?/)?$`', $C['base_url'])){
  $C['base_url'] = $C['abs_url'] = 0;
 }
-echo '<script>';
-echo 'console.log("where?")';
-echo '</script>';
 // config rest
 $C['and_mark'] = empty($C['and_mark']) ? 0 : 1;
 $C['anti_link_spam'] = (isset($C['anti_link_spam']) && is_array($C['anti_link_spam']) && count($C['anti_link_spam']) == 2 && (empty($C['anti_link_spam'][0]) or hl_regex($C['anti_link_spam'][0])) && (empty($C['anti_link_spam'][1]) or hl_regex($C['anti_link_spam'][1]))) ? $C['anti_link_spam'] : 0;
@@ -363,6 +360,9 @@ if($C['abs_url']){
   }
  }
 }
+echo '<script>';
+echo 'console.log("pppppppppppppppppppppppppppppppppppppppppppppppppppp")';
+echo '</script>';
 return "{$b}{$p}{$a}";
 }
 
