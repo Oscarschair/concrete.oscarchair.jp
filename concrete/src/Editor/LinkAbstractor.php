@@ -104,7 +104,7 @@ class LinkAbstractor extends ConcreteObject
 
         $text = preg_replace(
             [
-                '/{CCM:BASE_URL}/i',
+                '/{CCM:BASE_URL11}/i',
             ],
             [
                 Application::getApplicationURL(),
