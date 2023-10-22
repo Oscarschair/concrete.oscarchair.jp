@@ -1,17 +1,57 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\automation\taskset][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-16T06:12:45+09:00 */
+/* Expiration: 2023-10-25T09:03:35+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655327565;
+$expiration = 1698192215;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czo4OiJUYXNrU2V0cyI7czo2OiJzY2hlbWEiO047czo3OiJpbmRleGVzIjthOjI6e2k6MDtPOjI2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xJbmRleCI6NTp7czo0OiJuYW1lIjtzOjY6ImhhbmRsZSI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjY6ImhhbmRsZSI7fXM6NjoiZmllbGRzIjtOO3M6NToiZmxhZ3MiO047czo3OiJvcHRpb25zIjtOO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5kZXgiOjU6e3M6NDoibmFtZSI7czo1OiJwa2dJRCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjU6InBrZ0lEIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fX1zOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX19'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'TaskSets',
+     'schema' => NULL,
+     'indexes' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'handle',
+         'columns' => 
+        array (
+          0 => 'handle',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      1 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'pkgID',
+         'columns' => 
+        array (
+          0 => 'pkgID',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+    ),
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654902537;
+$data['createdOn'] = 1697782165;

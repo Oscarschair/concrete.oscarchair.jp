@@ -1,17 +1,30 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\express\entry$associations][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T12:52:45+09:00 */
+/* Expiration: 2023-10-25T01:56:38+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655265165;
+$expiration = 1698166598;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzozMDoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcT25lVG9NYW55Ijo2OntzOjg6Im1hcHBlZEJ5IjtzOjU6ImVudHJ5IjtzOjEyOiJ0YXJnZXRFbnRpdHkiO3M6NDc6IlxDb25jcmV0ZVxDb3JlXEVudGl0eVxFeHByZXNzXEVudHJ5XEFzc29jaWF0aW9uIjtzOjc6ImNhc2NhZGUiO2E6MTp7aTowO3M6MzoiYWxsIjt9czo1OiJmZXRjaCI7czo0OiJMQVpZIjtzOjEzOiJvcnBoYW5SZW1vdmFsIjtiOjA7czo3OiJpbmRleEJ5IjtOO319'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\OneToMany::__set_state(array(
+     'mappedBy' => 'entry',
+     'targetEntity' => '\\Concrete\\Core\\Entity\\Express\\Entry\\Association',
+     'cascade' => 
+    array (
+      0 => 'all',
+    ),
+     'fetch' => 'LAZY',
+     'orphanRemoval' => false,
+     'indexBy' => NULL,
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654842680;
+$data['createdOn'] = 1697782165;

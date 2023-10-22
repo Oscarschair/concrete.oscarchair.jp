@@ -1,17 +1,33 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\board\datasource\configuration\calendareventconfiguration][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-16T05:56:10+09:00 */
+/* Expiration: 2023-10-25T15:00:25+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655326570;
+$expiration = 1698213625;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czo1MToiQm9hcmRDb25maWd1cmVkRGF0YVNvdXJjZUNvbmZpZ3VyYXRpb25DYWxlbmRhckV2ZW50IjtzOjY6InNjaGVtYSI7TjtzOjc6ImluZGV4ZXMiO047czoxNzoidW5pcXVlQ29uc3RyYWludHMiO047czo3OiJvcHRpb25zIjthOjA6e319fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'BoardConfiguredDataSourceConfigurationCalendarEvent',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654902537;
+$data['createdOn'] = 1697782165;

@@ -1,17 +1,33 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\file\image\thumbnail\type\typefileset][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-11T16:41:30+09:00 */
+/* Expiration: 2023-10-25T00:04:31+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1654933290;
+$expiration = 1698159871;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czozMDoiRmlsZUltYWdlVGh1bWJuYWlsVHlwZUZpbGVTZXRzIjtzOjY6InNjaGVtYSI7TjtzOjc6ImluZGV4ZXMiO047czoxNzoidW5pcXVlQ29uc3RyYWludHMiO047czo3OiJvcHRpb25zIjthOjA6e319fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'FileImageThumbnailTypeFileSets',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654528227;
+$data['createdOn'] = 1697782165;

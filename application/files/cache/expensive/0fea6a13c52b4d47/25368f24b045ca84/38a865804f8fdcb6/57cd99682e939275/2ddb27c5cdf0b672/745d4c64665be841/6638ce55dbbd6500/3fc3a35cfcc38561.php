@@ -1,17 +1,33 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\board\instanceitem][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-16T07:00:49+09:00 */
+/* Expiration: 2023-10-25T14:49:19+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655330449;
+$expiration = 1698212959;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO3M6MjI6Ikluc3RhbmNlSXRlbVJlcG9zaXRvcnkiO3M6ODoicmVhZE9ubHkiO2I6MDt9aToxO086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXFRhYmxlIjo1OntzOjQ6Im5hbWUiO3M6MTg6IkJvYXJkSW5zdGFuY2VJdGVtcyI7czo2OiJzY2hlbWEiO047czo3OiJpbmRleGVzIjtOO3M6MTc6InVuaXF1ZUNvbnN0cmFpbnRzIjtOO3M6Nzoib3B0aW9ucyI7YTowOnt9fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => 'InstanceItemRepository',
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'BoardInstanceItems',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654914667;
+$data['createdOn'] = 1697782165;

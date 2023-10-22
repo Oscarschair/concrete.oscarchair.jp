@@ -1,17 +1,21 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\attribute\value\expressvalue#updateentrydatemodified][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-08T14:07:08+09:00 */
+/* Expiration: 2023-10-24T21:38:42+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1654664828;
+$expiration = 1698151122;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzozMDoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcUHJlVXBkYXRlIjowOnt9fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\PreUpdate::__set_state(array(
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654242922;
+$data['createdOn'] = 1697782165;

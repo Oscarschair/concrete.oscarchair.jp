@@ -1,17 +1,25 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\page\summary\pagetemplate$template][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T09:41:34+09:00 */
+/* Expiration: 2023-10-25T04:59:00+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655253694;
+$expiration = 1698177540;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzozMDoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcTWFueVRvT25lIjo0OntzOjEyOiJ0YXJnZXRFbnRpdHkiO3M6Mzc6IkNvbmNyZXRlXENvcmVcRW50aXR5XFN1bW1hcnlcVGVtcGxhdGUiO3M6NzoiY2FzY2FkZSI7TjtzOjU6ImZldGNoIjtzOjQ6IkxBWlkiO3M6MTA6ImludmVyc2VkQnkiO047fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\ManyToOne::__set_state(array(
+     'targetEntity' => 'Concrete\\Core\\Entity\\Summary\\Template',
+     'cascade' => NULL,
+     'fetch' => 'LAZY',
+     'inversedBy' => NULL,
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654870731;
+$data['createdOn'] = 1697782165;

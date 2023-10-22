@@ -1,17 +1,40 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\user\usersignup$user][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-13T06:44:12+09:00 */
+/* Expiration: 2023-10-25T03:35:53+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655070252;
+$expiration = 1698172553;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyOToiRG9jdHJpbmVcT1JNXE1hcHBpbmdcT25lVG9PbmUiOjY6e3M6MTI6InRhcmdldEVudGl0eSI7czozMToiXENvbmNyZXRlXENvcmVcRW50aXR5XFVzZXJcVXNlciI7czo4OiJtYXBwZWRCeSI7TjtzOjEwOiJpbnZlcnNlZEJ5IjtzOjY6InNpZ251cCI7czo3OiJjYXNjYWRlIjtOO3M6NToiZmV0Y2giO3M6NDoiTEFaWSI7czoxMzoib3JwaGFuUmVtb3ZhbCI7YjowO31pOjE7TzozMToiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSm9pbkNvbHVtbiI6Nzp7czo0OiJuYW1lIjtzOjM6InVJRCI7czoyMDoicmVmZXJlbmNlZENvbHVtbk5hbWUiO3M6MzoidUlEIjtzOjY6InVuaXF1ZSI7YjowO3M6ODoibnVsbGFibGUiO2I6MTtzOjg6Im9uRGVsZXRlIjtOO3M6MTY6ImNvbHVtbkRlZmluaXRpb24iO047czo5OiJmaWVsZE5hbWUiO047fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\OneToOne::__set_state(array(
+     'targetEntity' => '\\Concrete\\Core\\Entity\\User\\User',
+     'mappedBy' => NULL,
+     'inversedBy' => 'signup',
+     'cascade' => NULL,
+     'fetch' => 'LAZY',
+     'orphanRemoval' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\JoinColumn::__set_state(array(
+     'name' => 'uID',
+     'referencedColumnName' => 'uID',
+     'unique' => false,
+     'nullable' => true,
+     'onDelete' => NULL,
+     'columnDefinition' => NULL,
+     'fieldName' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654654499;
+$data['createdOn'] = 1697782165;

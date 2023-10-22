@@ -1,17 +1,30 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\calendar\calendar$permission_assignments][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-14T10:55:14+09:00 */
+/* Expiration: 2023-10-25T00:06:30+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655171714;
+$expiration = 1698159990;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzozMDoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcT25lVG9NYW55Ijo2OntzOjg6Im1hcHBlZEJ5IjtzOjg6ImNhbGVuZGFyIjtzOjEyOiJ0YXJnZXRFbnRpdHkiO3M6Mjg6IkNhbGVuZGFyUGVybWlzc2lvbkFzc2lnbm1lbnQiO3M6NzoiY2FzY2FkZSI7YToxOntpOjA7czo2OiJyZW1vdmUiO31zOjU6ImZldGNoIjtzOjQ6IkxBWlkiO3M6MTM6Im9ycGhhblJlbW92YWwiO2I6MDtzOjc6ImluZGV4QnkiO047fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\OneToMany::__set_state(array(
+     'mappedBy' => 'calendar',
+     'targetEntity' => 'CalendarPermissionAssignment',
+     'cascade' => 
+    array (
+      0 => 'remove',
+    ),
+     'fetch' => 'LAZY',
+     'orphanRemoval' => false,
+     'indexBy' => NULL,
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654767001;
+$data['createdOn'] = 1697782165;

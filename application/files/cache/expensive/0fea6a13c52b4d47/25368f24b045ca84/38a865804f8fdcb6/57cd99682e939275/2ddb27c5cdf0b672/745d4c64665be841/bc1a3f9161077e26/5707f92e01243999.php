@@ -1,17 +1,79 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\file\file][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T07:55:59+09:00 */
+/* Expiration: 2023-10-27T17:55:25+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655247359;
+$expiration = 1698396925;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czo1OiJGaWxlcyI7czo2OiJzY2hlbWEiO047czo3OiJpbmRleGVzIjthOjQ6e2k6MDtPOjI2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xJbmRleCI6NTp7czo0OiJuYW1lIjtzOjM6InVJRCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjM6InVJRCI7fXM6NjoiZmllbGRzIjtOO3M6NToiZmxhZ3MiO047czo3OiJvcHRpb25zIjtOO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5kZXgiOjU6e3M6NDoibmFtZSI7czo1OiJmc2xJRCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjU6ImZzbElEIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fWk6MjtPOjI2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xJbmRleCI6NTp7czo0OiJuYW1lIjtzOjQ6Im9jSUQiO3M6NzoiY29sdW1ucyI7YToxOntpOjA7czo0OiJvY0lEIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fWk6MztPOjI2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xJbmRleCI6NTp7czo0OiJuYW1lIjtzOjIzOiJmT3ZlcnJpZGVTZXRQZXJtaXNzaW9ucyI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjIzOiJmT3ZlcnJpZGVTZXRQZXJtaXNzaW9ucyI7fXM6NjoiZmllbGRzIjtOO3M6NToiZmxhZ3MiO047czo3OiJvcHRpb25zIjtOO319czoxNzoidW5pcXVlQ29uc3RyYWludHMiO047czo3OiJvcHRpb25zIjthOjA6e319fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'Files',
+     'schema' => NULL,
+     'indexes' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'uID',
+         'columns' => 
+        array (
+          0 => 'uID',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      1 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'fslID',
+         'columns' => 
+        array (
+          0 => 'fslID',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      2 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'ocID',
+         'columns' => 
+        array (
+          0 => 'ocID',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      3 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'fOverrideSetPermissions',
+         'columns' => 
+        array (
+          0 => 'fOverrideSetPermissions',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+    ),
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654870726;
+$data['createdOn'] = 1697977030;

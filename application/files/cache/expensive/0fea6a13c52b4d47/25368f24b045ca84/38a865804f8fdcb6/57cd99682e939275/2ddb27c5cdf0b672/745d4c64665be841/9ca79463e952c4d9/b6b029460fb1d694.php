@@ -1,17 +1,23 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\board\designer\itemselectorcustomelement][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T23:00:33+09:00 */
+/* Expiration: 2023-10-25T06:14:56+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655301633;
+$expiration = 1698182096;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO319'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654870731;
+$data['createdOn'] = 1697782165;

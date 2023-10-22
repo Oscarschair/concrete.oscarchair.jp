@@ -1,17 +1,33 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\attribute\key\userkey][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T19:58:46+09:00 */
+/* Expiration: 2023-10-25T11:34:44+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655290726;
+$expiration = 1698201284;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO3M6NDY6IlxDb25jcmV0ZVxDb3JlXEVudGl0eVxVc2VyXEF0dHJpYnV0ZVJlcG9zaXRvcnkiO3M6ODoicmVhZE9ubHkiO2I6MDt9aToxO086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXFRhYmxlIjo1OntzOjQ6Im5hbWUiO3M6MTc6IlVzZXJBdHRyaWJ1dGVLZXlzIjtzOjY6InNjaGVtYSI7TjtzOjc6ImluZGV4ZXMiO047czoxNzoidW5pcXVlQ29uc3RyYWludHMiO047czo3OiJvcHRpb25zIjthOjA6e319fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => '\\Concrete\\Core\\Entity\\User\\AttributeRepository',
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'UserAttributeKeys',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654902537;
+$data['createdOn'] = 1697782165;

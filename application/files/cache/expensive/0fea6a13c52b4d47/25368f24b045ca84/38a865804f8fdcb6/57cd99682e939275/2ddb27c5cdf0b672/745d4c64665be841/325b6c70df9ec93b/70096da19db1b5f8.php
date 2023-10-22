@@ -1,17 +1,68 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\page\summary\custompagetemplatecollection$templates][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T16:58:50+09:00 */
+/* Expiration: 2023-10-25T13:12:10+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655279930;
+$expiration = 1698207130;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzozMToiRG9jdHJpbmVcT1JNXE1hcHBpbmdcTWFueVRvTWFueSI6Nzp7czoxMjoidGFyZ2V0RW50aXR5IjtzOjM3OiJDb25jcmV0ZVxDb3JlXEVudGl0eVxTdW1tYXJ5XFRlbXBsYXRlIjtzOjg6Im1hcHBlZEJ5IjtOO3M6MTA6ImludmVyc2VkQnkiO047czo3OiJjYXNjYWRlIjtOO3M6NToiZmV0Y2giO3M6NDoiTEFaWSI7czoxMzoib3JwaGFuUmVtb3ZhbCI7YjowO3M6NzoiaW5kZXhCeSI7Tjt9aToxO086MzA6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEpvaW5UYWJsZSI6NDp7czo0OiJuYW1lIjtzOjQ0OiJQYWdlU3VtbWFyeVRlbXBsYXRlQ3VzdG9tQ29sbGVjdGlvblRlbXBsYXRlcyI7czo2OiJzY2hlbWEiO047czoxMToiam9pbkNvbHVtbnMiO2E6MTp7aTowO086MzE6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEpvaW5Db2x1bW4iOjc6e3M6NDoibmFtZSI7czozOiJjSUQiO3M6MjA6InJlZmVyZW5jZWRDb2x1bW5OYW1lIjtzOjM6ImNJRCI7czo2OiJ1bmlxdWUiO2I6MDtzOjg6Im51bGxhYmxlIjtiOjE7czo4OiJvbkRlbGV0ZSI7TjtzOjE2OiJjb2x1bW5EZWZpbml0aW9uIjtOO3M6OToiZmllbGROYW1lIjtOO319czoxODoiaW52ZXJzZUpvaW5Db2x1bW5zIjthOjE6e2k6MDtPOjMxOiJEb2N0cmluZVxPUk1cTWFwcGluZ1xKb2luQ29sdW1uIjo3OntzOjQ6Im5hbWUiO3M6MTE6InRlbXBsYXRlX2lkIjtzOjIwOiJyZWZlcmVuY2VkQ29sdW1uTmFtZSI7czoyOiJpZCI7czo2OiJ1bmlxdWUiO2I6MDtzOjg6Im51bGxhYmxlIjtiOjE7czo4OiJvbkRlbGV0ZSI7TjtzOjE2OiJjb2x1bW5EZWZpbml0aW9uIjtOO3M6OToiZmllbGROYW1lIjtOO319fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\ManyToMany::__set_state(array(
+     'targetEntity' => 'Concrete\\Core\\Entity\\Summary\\Template',
+     'mappedBy' => NULL,
+     'inversedBy' => NULL,
+     'cascade' => NULL,
+     'fetch' => 'LAZY',
+     'orphanRemoval' => false,
+     'indexBy' => NULL,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\JoinTable::__set_state(array(
+     'name' => 'PageSummaryTemplateCustomCollectionTemplates',
+     'schema' => NULL,
+     'joinColumns' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\JoinColumn::__set_state(array(
+         'name' => 'cID',
+         'referencedColumnName' => 'cID',
+         'unique' => false,
+         'nullable' => true,
+         'onDelete' => NULL,
+         'columnDefinition' => NULL,
+         'fieldName' => NULL,
+         'options' => 
+        array (
+        ),
+      )),
+    ),
+     'inverseJoinColumns' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\JoinColumn::__set_state(array(
+         'name' => 'template_id',
+         'referencedColumnName' => 'id',
+         'unique' => false,
+         'nullable' => true,
+         'onDelete' => NULL,
+         'columnDefinition' => NULL,
+         'fieldName' => NULL,
+         'options' => 
+        array (
+        ),
+      )),
+    ),
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654911347;
+$data['createdOn'] = 1697782165;

@@ -1,17 +1,25 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\express\control\associationcontrol$association][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-13T11:31:22+09:00 */
+/* Expiration: 2023-10-25T09:44:48+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655087482;
+$expiration = 1698194688;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzozMDoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcTWFueVRvT25lIjo0OntzOjEyOiJ0YXJnZXRFbnRpdHkiO3M6NDE6IlxDb25jcmV0ZVxDb3JlXEVudGl0eVxFeHByZXNzXEFzc29jaWF0aW9uIjtzOjc6ImNhc2NhZGUiO047czo1OiJmZXRjaCI7czo0OiJMQVpZIjtzOjEwOiJpbnZlcnNlZEJ5IjtzOjg6ImNvbnRyb2xzIjt9fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\ManyToOne::__set_state(array(
+     'targetEntity' => '\\Concrete\\Core\\Entity\\Express\\Association',
+     'cascade' => NULL,
+     'fetch' => 'LAZY',
+     'inversedBy' => 'controls',
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654719811;
+$data['createdOn'] = 1697782165;

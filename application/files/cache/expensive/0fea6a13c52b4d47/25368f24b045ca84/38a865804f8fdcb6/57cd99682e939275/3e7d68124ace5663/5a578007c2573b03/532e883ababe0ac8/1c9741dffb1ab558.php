@@ -1,12 +1,12 @@
 <?php 
 /* Cachekey: cache/stash_default/laminas/laminas_feed_reader_92c683203f7a1a27f695649e8b46f3c5/ */
 /* Type: array */
-/* Expiration: 2022-06-13T14:55:18+09:00 */
+/* Expiration: 2023-10-22T19:16:26+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655099718;
+$expiration = 1697969786;
 
 $data = array();
 
@@ -18,6 +18,62 @@ $data['return'] = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <description>Tutorials RSS feed.</description>
     <generator>Laminas_Feed_Writer 2 (https://getlaminas.org)</generator>
     <link>https://documentation.concretecms.org/</link>
+    <item>
+      <title>Using the Concrete Migration Tool Addon</title>
+      <description><![CDATA[How to use the Concrete CMS Migration Tool ]]></description>
+      <pubDate>Thu, 27 Apr 2023 23:43:00 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/using-concrete-migration-tool-addon</link>
+      <guid>https://documentation.concretecms.org/tutorials/using-concrete-migration-tool-addon</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>How To Add Page Last Updated To Your Concrete CMS Pages</title>
+      <description><![CDATA[Concrete CMS has a page attribute you can add to a global area called \"Page Date Modified.\" Here's how to add it]]></description>
+      <pubDate>Tue, 07 Mar 2023 16:33:47 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/how-add-page-last-updated-your-concrete-cms-pages</link>
+      <guid>https://documentation.concretecms.org/tutorials/how-add-page-last-updated-your-concrete-cms-pages</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>How To Exclude Subpages from Navigation</title>
+      <description><![CDATA[How to exclude subpages from navigation - useful for a news or blog link in your main navigation where you don't want all the subpages to appear in a drop down menu.]]></description>
+      <pubDate>Sat, 24 Dec 2022 00:08:48 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/how-exclude-subpages-navigation</link>
+      <guid>https://documentation.concretecms.org/tutorials/how-exclude-subpages-navigation</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>How Can I Change The Maximum Size  Of Uploaded files</title>
+      <description><![CDATA[This tutorial explains how to update your php settings.]]></description>
+      <pubDate>Tue, 13 Dec 2022 22:55:19 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/how-can-i-change-maximum-size-uploaded-files</link>
+      <guid>https://documentation.concretecms.org/tutorials/how-can-i-change-maximum-size-uploaded-files</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Updating Concrete Themes from Version 8 to Version 9</title>
+      <description><![CDATA[This tutorial covers commonly encountered issues when upgrading a Concrete CMS theme from version 8 to version 9]]></description>
+      <pubDate>Thu, 24 Nov 2022 01:46:42 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/updating-concrete-themes-version-8-version-9</link>
+      <guid>https://documentation.concretecms.org/tutorials/updating-concrete-themes-version-8-version-9</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Transferring ownership of an add-on and a theme</title>
+      <description><![CDATA[If you encounter a Concrete CMS add-on or theme that you love but not being maintained, you may want to ask the author to help or take over the add-on or theme. Here is the quick step-by-step guide of how to transfer the ownership.]]></description>
+      <pubDate>Tue, 15 Nov 2022 04:39:07 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/transferring-ownership-your-add-and-theme</link>
+      <guid>https://documentation.concretecms.org/tutorials/transferring-ownership-your-add-and-theme</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>How to update Add-Ons if not on the Update Add-Ons Menu item</title>
+      <description><![CDATA[How to manually download an add-on and update it when your site's core versions isn't considered compatible with the add-on version.]]></description>
+      <pubDate>Mon, 04 Jul 2022 12:57:56 +0000</pubDate>
+      <link>https://documentation.concretecms.org/tutorials/how-update-add-ons-if-not-update-add-ons-menu-item</link>
+      <guid>https://documentation.concretecms.org/tutorials/how-update-add-ons-if-not-update-add-ons-menu-item</guid>
+      <slash:comments>0</slash:comments>
+    </item>
     <item>
       <title>Generate a report with author information and form summaries in Concrete CMS.</title>
       <description><![CDATA[In Concrete CMS, you can use a form to initiate contact between logged-in users and then create helpful reports. After form submissions are collected, they can be searched, sorted, and exported as a spreadsheet. This tutorial will detail how to add author information to a report using the advanced search. 
@@ -119,67 +175,11 @@ There’s no need to edit your theme or install a plugin to add a tracking code 
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Submitting User Interface Pull Requests for concrete5 Version 9</title>
-      <description><![CDATA[In version 9, the process for updating concrete5's JS and CSS files is changing a bit; learn how it works and how you can help us get the interface ready.]]></description>
+      <title>Submitting User Interface Pull Requests for Concrete CMS Version 9</title>
+      <description><![CDATA[In version 9, the process for updating Concrete CMS JS and CSS files is changing a bit; learn how it works and how you can help us get the interface ready.]]></description>
       <pubDate>Thu, 26 Mar 2020 19:18:01 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/submitting-user-interface-pull-requests-for-concrete5-version-9</link>
-      <guid>https://documentation.concretecms.org/tutorials/submitting-user-interface-pull-requests-for-concrete5-version-9</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Basic Workflow Full Working Example</title>
-      <description><![CDATA[How to use workflows to set up a group of users so that they can edit a page set up by an admin and then create, publish and edit new pages below that first page.]]></description>
-      <pubDate>Thu, 07 Nov 2019 01:55:00 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/limit-editors-to-a-specific-section-of-your-site</link>
-      <guid>https://documentation.concretecms.org/tutorials/limit-editors-to-a-specific-section-of-your-site</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>How to use Text Helper</title>
-      <description><![CDATA[How to shorten string, convert string to CamelCase, automatically add hyperlinks, etc.]]></description>
-      <pubDate>Thu, 17 Oct 2019 03:51:16 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/how-to-use-text-helper</link>
-      <guid>https://documentation.concretecms.org/tutorials/how-to-use-text-helper</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>How to add, replace or remove Middleware</title>
-      <description><![CDATA[How to use app.middleware configuration]]></description>
-      <pubDate>Fri, 04 Oct 2019 05:21:06 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/how-to-add-replace-or-remove-middleware</link>
-      <guid>https://documentation.concretecms.org/tutorials/how-to-add-replace-or-remove-middleware</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>How users can reset their own password</title>
-      <description><![CDATA[If you need help resetting your password, this tutorial explains how to reset passwords by sending a link to reset it.]]></description>
-      <pubDate>Tue, 25 Jun 2019 15:15:58 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/how-users-can-reset-their-own-password</link>
-      <guid>https://documentation.concretecms.org/tutorials/how-users-can-reset-their-own-password</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Session handling and GDPR</title>
-      <description><![CDATA[How to get work with sessions without creating unnecessary cookies]]></description>
-      <pubDate>Wed, 24 Apr 2019 09:59:43 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/session-handling-and-gdpr</link>
-      <guid>https://documentation.concretecms.org/tutorials/session-handling-and-gdpr</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Using vue.js with concrete5</title>
-      <description><![CDATA[This simple tutorial explains how you can use vue.js with concrete5.]]></description>
-      <pubDate>Wed, 17 Apr 2019 07:39:33 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/using-vuejs-with-concrete5</link>
-      <guid>https://documentation.concretecms.org/tutorials/using-vuejs-with-concrete5</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Reset Concrete CMS Password Manually</title>
-      <description><![CDATA[Reset your Concrete CMS password manually with FTP access.]]></description>
-      <pubDate>Sat, 02 Mar 2019 13:33:34 +0000</pubDate>
-      <link>https://documentation.concretecms.org/tutorials/reset-password-manually</link>
-      <guid>https://documentation.concretecms.org/tutorials/reset-password-manually</guid>
+      <link>https://documentation.concretecms.org/tutorials/submitting-user-interface-pull-requests-for-concrete-cms-version-9</link>
+      <guid>https://documentation.concretecms.org/tutorials/submitting-user-interface-pull-requests-for-concrete-cms-version-9</guid>
       <slash:comments>0</slash:comments>
     </item>
   </channel>
@@ -187,4 +187,4 @@ There’s no need to edit your theme or install a plugin to add a tracking code 
 ";
 
 /* Child Type: integer */
-$data['createdOn'] = 1654696561;
+$data['createdOn'] = 1697968195;

@@ -1,12 +1,12 @@
 <?php 
 /* Cachekey: cache/stash_default/laminas/laminas_feed_reader_5705364cb662e5eb5616013f59736289/ */
 /* Type: array */
-/* Expiration: 2022-06-13T01:22:56+09:00 */
+/* Expiration: 2023-10-22T19:15:50+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655050976;
+$expiration = 1697969750;
 
 $data = array();
 
@@ -19,166 +19,165 @@ $data['return'] = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
     <generator>Laminas_Feed_Writer 2 (https://getlaminas.org)</generator>
     <link>https://www.concretecms.com/</link>
     <item>
-      <title>Real World Examples of Intranets vs. Extranets</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/9916/5452/6386/intranet_blog_head.jpg\" /></p>As the internet becomes more and more commonplace in business, many organizations are turning to Intranet and Extranet solutions to streamline communication. But what exactly is the difference between these two terms?]]></description>
-      <pubDate>Mon, 06 Jun 2022 14:13:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/real-world-examples-intranets-vs-extranets</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/real-world-examples-intranets-vs-extranets</guid>
+      <title>Must-Have Features for Your Online Store</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/8216/6688/0030/ecommerce.jpeg\" /></p>Explore the essential features your online store should have for success. Learn about product management, secure payment gateways, mobile optimization, customer reviews, and more.]]></description>
+      <pubDate>Wed, 18 Oct 2023 16:41:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/digital-business/must-have-features-for-your-online-store</link>
+      <guid>https://www.concretecms.com/about/blog/digital-business/must-have-features-for-your-online-store</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Build a better business by embracing entirely virtual workplaces</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/1416/5403/0103/online-communication-virtual.jpg\" /></p>It's been a while since you and your team have gone entirely virtual. It doesn't feel like it's going back any time soon, and it's kind of working at least okay. You see the potential, but is there room for improvement?]]></description>
-      <pubDate>Mon, 06 Jun 2022 08:46:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/build-better-business-embracing-entirely-virtual-workplaces</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/build-better-business-embracing-entirely-virtual-workplaces</guid>
+      <title>Tips to Curate Effective Brand Archetypes For Your Business</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/4816/9705/2891/archetypes-thumbnail-resource.jpg\" /></p>Brand archetypes (or personalities) can be crucial when it comes to establishing emotional relationships with your audience ]]></description>
+      <pubDate>Wed, 11 Oct 2023 19:33:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/digital-business/tips-to-curate-effective-brand-archetypes-for-your-business</link>
+      <guid>https://www.concretecms.com/about/blog/digital-business/tips-to-curate-effective-brand-archetypes-for-your-business</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>4 ways to get your team posting their own content faster</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/9516/5350/2564/content_management.jpeg\" /></p>One of the easiest ways to share great ideas is through digital content creation. Bottlenecks in the publishing workflow force ideas to remain in people's minds instead of on a website. With the right tools and processes you can have everyone on your team contributing their own content to their own parts of the website easily.]]></description>
-      <pubDate>Tue, 31 May 2022 05:46:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/4-ways-get-your-team-posting-their-own-content-faster</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/4-ways-get-your-team-posting-their-own-content-faster</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>6 Tips to Make Employees Love Your Intranet</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/5216/5359/8752/reasons_to_love_intranets.jpg\" /></p>If you're striving to establish a positive and productive workplace with your web company, we have five tips to make your employee love your intranet.
+      <title>Unlocking Intranet Success: A Guide to Metrics and Matomo at MatomoCamp 2023</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/7316/9582/5585/matomo-camp.png\" /></p>Join us at MatomoCamp 2023 for an insightful presentation on optimizing intranet success through key metrics and Matomo Analytics. Learn how to identify, capture, and analyze data for actionable insights. Don't miss this opportunity to elevate your intranet's performance!
 ]]></description>
-      <pubDate>Mon, 30 May 2022 07:18:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/6-tips-make-employees-love-your-intranet</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/6-tips-make-employees-love-your-intranet</guid>
+      <pubDate>Wed, 04 Oct 2023 14:26:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/news/unlocking-intranet-success-a-guide-to-metrics-and-matomo-at-matomocamp-2023</link>
+      <guid>https://www.concretecms.com/about/blog/news/unlocking-intranet-success-a-guide-to-metrics-and-matomo-at-matomocamp-2023</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Concrete CMS 9.1.1 is now Available!</title>
-      <description><![CDATA[No Content.]]></description>
-      <pubDate>Wed, 25 May 2022 21:10:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/core-releases/concrete-cms-911-now-available</link>
-      <guid>https://www.concretecms.com/about/blog/core-releases/concrete-cms-911-now-available</guid>
+      <title>Seeking Concrete CMS Case Studies &amp; Partners</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/1516/9625/6302/Case_Study_Header.jpeg\" /></p>We're actively seeking Concrete CMS case studies and exploring potential partnerships to strengthen our offerings and provide valuable insights to our community.]]></description>
+      <pubDate>Mon, 02 Oct 2023 14:17:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/news/seeking-concrete-cms-case-studies-and-partners</link>
+      <guid>https://www.concretecms.com/about/blog/news/seeking-concrete-cms-case-studies-and-partners</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>What is PCI Compliance?</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/8316/5272/9185/pci_compliance.jpeg\" /></p>The Payment Card Industry Data Security Standard (PCI DSS) is a set of security requirements created to ensure that companies that store and process credit card information maintain a safe environment and protect the data they are entrusted with. ]]></description>
-      <pubDate>Wed, 25 May 2022 20:16:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/what-pci-compliance</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/what-pci-compliance</guid>
+      <title>Unleash the Power of a Magical UX: A Journey with Chiara Aliotta</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/7516/9575/3839/a_cartoon_character_holding_a_laptop.jpg\" /></p>Explore the enchanting world of User Experience (UX) through storytelling in this captivating video presentation by Chiara Aliotta. Discover the secrets to creating engaging and user-centric digital experiences. Join us as we delve into the realm of UX magic, bridging the gap between technology and human emotion.]]></description>
+      <pubDate>Tue, 26 Sep 2023 18:30:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/web-design/unleash-the-power-of-a-magical-ux-a-journey-with-chiara-aliotta</link>
+      <guid>https://www.concretecms.com/about/blog/web-design/unleash-the-power-of-a-magical-ux-a-journey-with-chiara-aliotta</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Supply Chain Hack - phpass repo-jacking</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/1416/5350/7967/Security_Announcement.png\" /></p>We are normally informed about supply chain hacks like this one from sources such as US-CERT (Homeland Security), DoD ARCYBER, SANS and the like. Official sources like these are important to follow to stay current, but yesterday we saw one happen more or less in real time.]]></description>
-      <pubDate>Wed, 25 May 2022 18:37:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/security/supply-chain-hack-phpass-repo-jacking</link>
-      <guid>https://www.concretecms.com/about/blog/security/supply-chain-hack-phpass-repo-jacking</guid>
+      <title>How to Get Started With Web Automation</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/5616/5773/7543/automation.jpg\" /></p>How and why to carry out web automation with examples.]]></description>
+      <pubDate>Wed, 20 Sep 2023 16:03:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/devops/how-to-get-started-with-web-automation</link>
+      <guid>https://www.concretecms.com/about/blog/devops/how-to-get-started-with-web-automation</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>The Best Grammar and Spelling Tools</title>
-      <description><![CDATA[This guide will lay out what to look for when searching for the best grammar checker and compare the best available options.]]></description>
-      <pubDate>Fri, 20 May 2022 22:22:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/best-grammar-and-spelling-tools</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/best-grammar-and-spelling-tools</guid>
+      <title>Find Out Friday - Views and Controllers</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/5716/9480/5146/fof_thumbnail_views_controllers.jpg\" /></p>Learn about Views and Controllers during Find Out Friday]]></description>
+      <pubDate>Fri, 15 Sep 2023 19:10:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/web-design/find-out-friday-views-and-controllers</link>
+      <guid>https://www.concretecms.com/about/blog/web-design/find-out-friday-views-and-controllers</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Getting into the Groove of Weekly Check-Ins with Clients</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/8116/5272/9185/Client_relationships.jpeg\" /></p>The weekly check-ins can bridge communication pieces together to resolve questions and receive feedback from the client. These check-ins can help introduce big projects and move the needle toward making something out of nothing. What is intangible at the idea phase will become tangible over time as the project comes to life.
+      <title>What is Web Accessibility and Why it Matters for Better Business Visibility</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/2216/9454/8293/Yellow_Accessibility.png\" /></p>Ever wondered: what is web accessibility? Our guide right here has all the answers you need to help you make web pages easier to use and navigate.]]></description>
+      <pubDate>Tue, 12 Sep 2023 19:36:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/web-design/what-is-web-accessibility-and-why-it-matters-for-better-business-visibility</link>
+      <guid>https://www.concretecms.com/about/blog/web-design/what-is-web-accessibility-and-why-it-matters-for-better-business-visibility</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>12 Website Performance Optimization Hacks To Enhance UX</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/6716/6320/0058/Development_Operations.jpg\" /></p>In today's fast-paced digital landscape, website performance optimization stands as the cornerstone of online success. It's not just about rapid page load speeds; it's about delivering an unforgettable user experience that entices and retains prospects. ]]></description>
+      <pubDate>Thu, 07 Sep 2023 18:07:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/devops/12-website-performance-optimization-hacks-to-enhance-ux</link>
+      <guid>https://www.concretecms.com/about/blog/devops/12-website-performance-optimization-hacks-to-enhance-ux</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Back to School with Concrete CMS - Unveiling Concrete-Powered School Websites</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/7316/9394/3161/Education_Concrete_CMS.png\" /></p>Discover the transformative power of Concrete CMS in the education sector as we explore a selection of school websites crafted using this platform. Explore how these Concrete-powered sites enhance communication, engagement, and community involvement on the first day of school and beyond.]]></description>
+      <pubDate>Tue, 05 Sep 2023 19:38:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/web-design/back-to-school-with-concrete-cms-unveiling-concrete-powered-school-websites</link>
+      <guid>https://www.concretecms.com/about/blog/web-design/back-to-school-with-concrete-cms-unveiling-concrete-powered-school-websites</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Data Management Process: Ensuring Your Company Has Access to Accurate Data</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/3116/9289/0151/Searching_for_Data.jpg\" /></p>How you manage your data is integral to business success. An efficient data management process can help ensure you always have access to accurate data.]]></description>
+      <pubDate>Thu, 24 Aug 2023 15:09:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/devops/data-management-process-ensuring-your-company-has-access-to-accurate-data</link>
+      <guid>https://www.concretecms.com/about/blog/devops/data-management-process-ensuring-your-company-has-access-to-accurate-data</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Explore Three Concrete CMS-Powered Marriott Bonvoy Hotels</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/7816/9219/5740/Marriott_Bonvoy_and_Concrete.jpg\" /></p>Discover the allure of luxury and functionality with three premier Marriott Bonvoy hotels, each elegantly showcased through the power of Concrete CMS. ]]></description>
+      <pubDate>Wed, 16 Aug 2023 14:22:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/web-design/concrete-cms-powered-marriott-bonvoy-hotels</link>
+      <guid>https://www.concretecms.com/about/blog/web-design/concrete-cms-powered-marriott-bonvoy-hotels</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>Switching to Matomo: A Game-Changer for Our Analytics Needs</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/3716/9160/3810/Matomo.jpg\" /></p>Discover why we switched to Matomo (formerly Piwik) for web analytics. Explore the features we love, including Content Tracking, Transitions, Heatmaps, and Session Recordings, that have transformed our analytical insights.]]></description>
+      <pubDate>Wed, 09 Aug 2023 17:55:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/digital-business/switching-to-matomo-a-game-changer-for-our-analytics-needs</link>
+      <guid>https://www.concretecms.com/about/blog/digital-business/switching-to-matomo-a-game-changer-for-our-analytics-needs</guid>
+      <slash:comments>0</slash:comments>
+    </item>
+    <item>
+      <title>An Introductory Guide to Multi-Site Management</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/4916/9098/7274/Header_for_Multi-Site.png\" /></p>An effective multi-site management strategy can ensure that your websites remain efficient and up to date 
 ]]></description>
-      <pubDate>Tue, 17 May 2022 20:05:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/getting-groove-weekly-check-ins-clients</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/getting-groove-weekly-check-ins-clients</guid>
+      <pubDate>Wed, 02 Aug 2023 14:39:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/devops/an-introductory-guide-to-multi-site-management</link>
+      <guid>https://www.concretecms.com/about/blog/devops/an-introductory-guide-to-multi-site-management</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Concrete CMS Named FrontRunner for Content Management</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/6116/5273/4432/SA_Badge_FrontRunners_2022_FullColor.png\" /></p>Concrete CMS Named FrontRunner for Content Management Software Portland, OR May 2022 — Concrete CMS announced today it was named a FrontRunner for Content management software by Software Advice.]]></description>
-      <pubDate>Mon, 16 May 2022 20:51:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/news/concrete-cms-named-frontrunner-content-management</link>
-      <guid>https://www.concretecms.com/about/blog/news/concrete-cms-named-frontrunner-content-management</guid>
+      <title>What is Data-Driven Website Development?</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/5116/9038/6324/Searching_for_Data.jpg\" /></p>Discover how using data to drive your website development can improve user experience, increase conversion rates, enhance performance, and reduce costs. ]]></description>
+      <pubDate>Wed, 26 Jul 2023 15:17:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/digital-business/what-is-data-driven-website-development</link>
+      <guid>https://www.concretecms.com/about/blog/digital-business/what-is-data-driven-website-development</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>15 ways to go about CSS optimization</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/3116/5273/0900/dreamers_compiled.jpg\" /></p>Slow-loading websites are often due to bloated code; reducing your CSS stylesheet's file size by even a few kilobytes can usually help usability. To help with the task, we have compiled fifteen ways to go about CSS optimization:]]></description>
-      <pubDate>Mon, 16 May 2022 19:40:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/15-ways-go-about-css-optimization</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/15-ways-go-about-css-optimization</guid>
+      <title>Boosting Content Team Productivity Using Incentives</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/6716/8329/9802/HR.jpg\" /></p>Boosting your content team’s productivity can improve content quality, job satisfaction, and growth. Learn to use assessment and incentives to do just that.]]></description>
+      <pubDate>Thu, 20 Jul 2023 14:58:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/digital-business/boosting-content-team-productivity-using-incentives</link>
+      <guid>https://www.concretecms.com/about/blog/digital-business/boosting-content-team-productivity-using-incentives</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Concrete CMS 2022 Digital Experience Software Gold Medalists</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/5116/5246/8478/SoftwareReviews_The_Best_Digital_Experience_Platforms_of_the_Yea.jpeg\" /></p>The 2022 Midmarket Digital Experience Software Gold Medalist is - Concrete CMS, 8.7 CS, for its management interface.]]></description>
-      <pubDate>Fri, 13 May 2022 17:51:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/news/concrete-cms-2022-digital-experience-software-gold-medalists</link>
-      <guid>https://www.concretecms.com/about/blog/news/concrete-cms-2022-digital-experience-software-gold-medalists</guid>
+      <title>Concrete CMS Wins the Summer 2023 Leader Award in Content Management Systems from SourceForge</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/9816/8970/7227/Award_Winner.png\" /></p>Concrete CMS is proud to be a winner of the Leader award from SourceForge, the world’s largest software reviews and comparison website.]]></description>
+      <pubDate>Tue, 18 Jul 2023 19:06:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/news/concrete-cms-wins-the-summer-2023-leader-award-in-content-management-systems-from-sourceforge</link>
+      <guid>https://www.concretecms.com/about/blog/news/concrete-cms-wins-the-summer-2023-leader-award-in-content-management-systems-from-sourceforge</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Concrete CMS 9.1.0 is Now Available!</title>
-      <description><![CDATA[We are very excited to that Concrete CMS 9.1.0 is now available! 9.1.0 features many improvements, new features and bug fixes.]]></description>
-      <pubDate>Thu, 12 May 2022 18:57:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/core-releases/concrete-cms-910-now-available</link>
-      <guid>https://www.concretecms.com/about/blog/core-releases/concrete-cms-910-now-available</guid>
+      <title>Concrete CMS has been mentioned in a super cool list for Best CMS Blog!</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/2316/6809/5936/Community_1920_x_1080.jpg\" /></p>Woohoo! We've got some amazing news to share! Concrete CMS has been mentioned in a super cool post by our friends Feedspot. ]]></description>
+      <pubDate>Tue, 11 Jul 2023 18:42:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/news/concrete-cms-has-been-mentioned-in-a-super-cool-list-for-best-cms-blog</link>
+      <guid>https://www.concretecms.com/about/blog/news/concrete-cms-has-been-mentioned-in-a-super-cool-list-for-best-cms-blog</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Why is WordPress’s market share shrinking, and what does that mean for Concrete CMS?</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/9516/5333/4363/concrete_websites.jpg\" /></p>Why WordPress is going to have a hard time being everything to everyone for ever.]]></description>
-      <pubDate>Thu, 12 May 2022 18:25:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/news/why-wordpresss-market-share-shrinking-and-what-does-mean-concrete-cms</link>
-      <guid>https://www.concretecms.com/about/blog/news/why-wordpresss-market-share-shrinking-and-what-does-mean-concrete-cms</guid>
+      <title>Website Content Monitoring: How to Track Changes in Your Site</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/5416/7111/8961/Public_Relations_1920_x_1080.jpg\" /></p>Ensure the integrity of your website with effective website content monitoring. Track & stay informed of site changes for improved accuracy and security.]]></description>
+      <pubDate>Tue, 11 Jul 2023 18:08:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/web-design/website-content-monitoring-how-to-track-changes-in-your-site</link>
+      <guid>https://www.concretecms.com/about/blog/web-design/website-content-monitoring-how-to-track-changes-in-your-site</guid>
       <slash:comments>0</slash:comments>
     </item>
     <item>
-      <title>Security Support for Concrete CMS 8.5.x continues through end of 2022</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/1416/5350/7967/Security_Announcement.png\" /></p>Please do upgrade to v9, but we're still watching your back if you're on v8 this year.]]></description>
-      <pubDate>Tue, 03 May 2022 17:46:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/security/security-support-concrete-cms-85x-continues-through-end-2022</link>
-      <guid>https://www.concretecms.com/about/blog/security/security-support-concrete-cms-85x-continues-through-end-2022</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Concrete CMS Recognized as a 2022 Leader in Content Management Systems by SourceForge</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/6616/5119/2248/2022_Leader_in_Content_Management_Systems.jpg\" /></p>Concrete CMS is proud to be a winner of the LeaderLeader in Content Management Systems award from SourceForge, the world’s largest software reviews and comparison website.
-]]></description>
-      <pubDate>Fri, 29 Apr 2022 00:30:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/news/concrete-cms-recognized-2022-leader-content-management-systems-sourceforge</link>
-      <guid>https://www.concretecms.com/about/blog/news/concrete-cms-recognized-2022-leader-content-management-systems-sourceforge</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>May 2022 Town Hall</title>
-      <description><![CDATA[Join us for our May 2022 town hall: 10 May @ 09:30 PDT]]></description>
-      <pubDate>Thu, 28 Apr 2022 01:23:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/totally-random-web-show/may-2022-town-hall</link>
-      <guid>https://www.concretecms.com/about/blog/totally-random-web-show/may-2022-town-hall</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Concrete CMS 9.1.0RC1 Now Available!</title>
-      <description><![CDATA[We're happy to announce that the first release candidate for Concrete CMS 9.1.0 is now available! 9.1.0 features many improvements, new features and bug fixes.]]></description>
-      <pubDate>Thu, 14 Apr 2022 21:58:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/core-releases/concrete-cms-910rc1-now-available</link>
-      <guid>https://www.concretecms.com/about/blog/core-releases/concrete-cms-910rc1-now-available</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>Why Content Is Essential For Growth?</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/9516/5333/4363/concrete_websites.jpg\" /></p>Online content can help any business steadily grow and increase its audience while retaining loyalty from existing consumers. However, it's important to note that not all content is equal for business growth.]]></description>
-      <pubDate>Fri, 08 Apr 2022 18:57:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/why-content-essential-growth</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/why-content-essential-growth</guid>
-      <slash:comments>0</slash:comments>
-    </item>
-    <item>
-      <title>7 Reasons Why SSL Is Important For Your Website</title>
-      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/1416/5350/7967/Security_Announcement.png\" /></p>In this article, we will explain what SSL certificates are, their types, how they are important, and who needs to use an SSL certificate.]]></description>
-      <pubDate>Wed, 30 Mar 2022 14:47:00 +0000</pubDate>
-      <link>https://www.concretecms.com/about/blog/community-blog/7-reasons-why-ssl-important-your-website</link>
-      <guid>https://www.concretecms.com/about/blog/community-blog/7-reasons-why-ssl-important-your-website</guid>
+      <title>Thrilled to be Published on Digital.gov!</title>
+      <description><![CDATA[<p><img src=\"https://www.concretecms.com/application/files/9716/7940/6638/intranet_hero_lady.jpg\" /></p>We are proud to have our blog post on intranet metric selection featured on Digital.gov, a leading platform for government digital influencers. ]]></description>
+      <pubDate>Wed, 14 Jun 2023 15:31:00 +0000</pubDate>
+      <link>https://www.concretecms.com/about/blog/news/thrilled-to-be-published-on-digitalgov</link>
+      <guid>https://www.concretecms.com/about/blog/news/thrilled-to-be-published-on-digitalgov</guid>
       <slash:comments>0</slash:comments>
     </item>
   </channel>
@@ -186,4 +185,4 @@ $data['return'] = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 ";
 
 /* Child Type: integer */
-$data['createdOn'] = 1654654509;
+$data['createdOn'] = 1697968199;

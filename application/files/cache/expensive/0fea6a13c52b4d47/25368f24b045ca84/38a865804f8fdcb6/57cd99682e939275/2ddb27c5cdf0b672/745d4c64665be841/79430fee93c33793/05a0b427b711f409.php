@@ -1,17 +1,48 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\calendar\calendareventoccurrence][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-11T16:06:07+09:00 */
+/* Expiration: 2023-10-24T21:46:43+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1654931167;
+$expiration = 1698151603;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czoyNDoiQ2FsZW5kYXJFdmVudE9jY3VycmVuY2VzIjtzOjY6InNjaGVtYSI7TjtzOjc6ImluZGV4ZXMiO2E6MTp7aTowO086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEluZGV4Ijo1OntzOjQ6Im5hbWUiO3M6MTA6ImV2ZW50ZGF0ZXMiO3M6NzoiY29sdW1ucyI7YTozOntpOjA7czoxMjoib2NjdXJyZW5jZUlEIjtpOjE7czo5OiJzdGFydFRpbWUiO2k6MjtzOjc6ImVuZFRpbWUiO31zOjY6ImZpZWxkcyI7TjtzOjU6ImZsYWdzIjtOO3M6Nzoib3B0aW9ucyI7Tjt9fXM6MTc6InVuaXF1ZUNvbnN0cmFpbnRzIjtOO3M6Nzoib3B0aW9ucyI7YTowOnt9fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'CalendarEventOccurrences',
+     'schema' => NULL,
+     'indexes' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'eventdates',
+         'columns' => 
+        array (
+          0 => 'occurrenceID',
+          1 => 'startTime',
+          2 => 'endTime',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+    ),
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654500308;
+$data['createdOn'] = 1697782165;

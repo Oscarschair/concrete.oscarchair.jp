@@ -1,17 +1,18 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\user\loginattemptrepository][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T23:45:47+09:00 */
+/* Expiration: 2023-10-25T14:18:30+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655304347;
+$expiration = 1698211110;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YTowOnt9'));
+$data['return'] = array (
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654902537;
+$data['createdOn'] = 1697782165;

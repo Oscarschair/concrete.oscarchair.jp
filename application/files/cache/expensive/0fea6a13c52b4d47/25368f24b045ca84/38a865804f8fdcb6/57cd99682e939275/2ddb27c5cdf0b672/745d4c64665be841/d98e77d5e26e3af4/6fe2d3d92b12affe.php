@@ -1,17 +1,33 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\oauth\accesstoken][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-13T07:01:15+09:00 */
+/* Expiration: 2023-10-25T10:02:37+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655071275;
+$expiration = 1698195757;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO3M6MjE6IkFjY2Vzc1Rva2VuUmVwb3NpdG9yeSI7czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czoxNzoiT0F1dGgyQWNjZXNzVG9rZW4iO3M6Njoic2NoZW1hIjtOO3M6NzoiaW5kZXhlcyI7TjtzOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX19'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => 'AccessTokenRepository',
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'OAuth2AccessToken',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654654499;
+$data['createdOn'] = 1697782165;

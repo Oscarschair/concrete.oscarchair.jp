@@ -1,17 +1,68 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\file\version][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-16T08:35:55+09:00 */
+/* Expiration: 2023-10-25T04:56:44+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655336155;
+$expiration = 1698177404;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czoxMjoiRmlsZVZlcnNpb25zIjtzOjY6InNjaGVtYSI7TjtzOjc6ImluZGV4ZXMiO2E6Mzp7aTowO086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEluZGV4Ijo1OntzOjQ6Im5hbWUiO3M6MTA6ImZ2RmlsZW5hbWUiO3M6NzoiY29sdW1ucyI7YToxOntpOjA7czoxMDoiZnZGaWxlbmFtZSI7fXM6NjoiZmllbGRzIjtOO3M6NToiZmxhZ3MiO047czo3OiJvcHRpb25zIjtOO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5kZXgiOjU6e3M6NDoibmFtZSI7czoxMToiZnZFeHRlbnNpb24iO3M6NzoiY29sdW1ucyI7YToxOntpOjA7czoxMToiZnZFeHRlbnNpb24iO31zOjY6ImZpZWxkcyI7TjtzOjU6ImZsYWdzIjtOO3M6Nzoib3B0aW9ucyI7Tjt9aToyO086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEluZGV4Ijo1OntzOjQ6Im5hbWUiO3M6NjoiZnZUeXBlIjtzOjc6ImNvbHVtbnMiO2E6MTp7aTowO3M6NjoiZnZUeXBlIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fX1zOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX19'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'FileVersions',
+     'schema' => NULL,
+     'indexes' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'fvFilename',
+         'columns' => 
+        array (
+          0 => 'fvFilename',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      1 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'fvExtension',
+         'columns' => 
+        array (
+          0 => 'fvExtension',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      2 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'fvType',
+         'columns' => 
+        array (
+          0 => 'fvType',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+    ),
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654914667;
+$data['createdOn'] = 1697782165;

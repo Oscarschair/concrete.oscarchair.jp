@@ -1,17 +1,33 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\page\summary\custompagetemplatecollection][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T07:11:57+09:00 */
+/* Expiration: 2023-10-25T02:31:29+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655244717;
+$expiration = 1698168689;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czozNToiUGFnZVN1bW1hcnlUZW1wbGF0ZUN1c3RvbUNvbGxlY3Rpb24iO3M6Njoic2NoZW1hIjtOO3M6NzoiaW5kZXhlcyI7TjtzOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX19'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'PageSummaryTemplateCustomCollection',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654870731;
+$data['createdOn'] = 1697782165;

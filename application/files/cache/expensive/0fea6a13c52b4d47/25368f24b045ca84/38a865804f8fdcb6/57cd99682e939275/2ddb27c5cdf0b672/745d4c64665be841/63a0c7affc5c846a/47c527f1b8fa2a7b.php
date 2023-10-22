@@ -1,17 +1,68 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\attribute\category$types][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T07:20:34+09:00 */
+/* Expiration: 2023-10-25T09:51:05+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655245234;
+$expiration = 1698195065;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToyOntpOjA7TzozMToiRG9jdHJpbmVcT1JNXE1hcHBpbmdcTWFueVRvTWFueSI6Nzp7czoxMjoidGFyZ2V0RW50aXR5IjtzOjQ6IlR5cGUiO3M6ODoibWFwcGVkQnkiO047czoxMDoiaW52ZXJzZWRCeSI7czoxMDoiY2F0ZWdvcmllcyI7czo3OiJjYXNjYWRlIjtOO3M6NToiZmV0Y2giO3M6NDoiTEFaWSI7czoxMzoib3JwaGFuUmVtb3ZhbCI7YjowO3M6NzoiaW5kZXhCeSI7Tjt9aToxO086MzA6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEpvaW5UYWJsZSI6NDp7czo0OiJuYW1lIjtzOjIzOiJBdHRyaWJ1dGVUeXBlQ2F0ZWdvcmllcyI7czo2OiJzY2hlbWEiO047czoxMToiam9pbkNvbHVtbnMiO2E6MTp7aTowO086MzE6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEpvaW5Db2x1bW4iOjc6e3M6NDoibmFtZSI7czoxMjoiYWtDYXRlZ29yeUlEIjtzOjIwOiJyZWZlcmVuY2VkQ29sdW1uTmFtZSI7czoxMjoiYWtDYXRlZ29yeUlEIjtzOjY6InVuaXF1ZSI7YjowO3M6ODoibnVsbGFibGUiO2I6MTtzOjg6Im9uRGVsZXRlIjtOO3M6MTY6ImNvbHVtbkRlZmluaXRpb24iO047czo5OiJmaWVsZE5hbWUiO047fX1zOjE4OiJpbnZlcnNlSm9pbkNvbHVtbnMiO2E6MTp7aTowO086MzE6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEpvaW5Db2x1bW4iOjc6e3M6NDoibmFtZSI7czo0OiJhdElEIjtzOjIwOiJyZWZlcmVuY2VkQ29sdW1uTmFtZSI7czo0OiJhdElEIjtzOjY6InVuaXF1ZSI7YjowO3M6ODoibnVsbGFibGUiO2I6MTtzOjg6Im9uRGVsZXRlIjtOO3M6MTY6ImNvbHVtbkRlZmluaXRpb24iO047czo5OiJmaWVsZE5hbWUiO047fX19fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\ManyToMany::__set_state(array(
+     'targetEntity' => 'Type',
+     'mappedBy' => NULL,
+     'inversedBy' => 'categories',
+     'cascade' => NULL,
+     'fetch' => 'LAZY',
+     'orphanRemoval' => false,
+     'indexBy' => NULL,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\JoinTable::__set_state(array(
+     'name' => 'AttributeTypeCategories',
+     'schema' => NULL,
+     'joinColumns' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\JoinColumn::__set_state(array(
+         'name' => 'akCategoryID',
+         'referencedColumnName' => 'akCategoryID',
+         'unique' => false,
+         'nullable' => true,
+         'onDelete' => NULL,
+         'columnDefinition' => NULL,
+         'fieldName' => NULL,
+         'options' => 
+        array (
+        ),
+      )),
+    ),
+     'inverseJoinColumns' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\JoinColumn::__set_state(array(
+         'name' => 'atID',
+         'referencedColumnName' => 'atID',
+         'unique' => false,
+         'nullable' => true,
+         'onDelete' => NULL,
+         'columnDefinition' => NULL,
+         'fieldName' => NULL,
+         'options' => 
+        array (
+        ),
+      )),
+    ),
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654859213;
+$data['createdOn'] = 1697782165;

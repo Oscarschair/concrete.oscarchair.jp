@@ -1,17 +1,18 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\statistics\usagetracker\fileusagerepository][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T18:21:42+09:00 */
+/* Expiration: 2023-10-25T10:30:26+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655284902;
+$expiration = 1698197426;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YTowOnt9'));
+$data['return'] = array (
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654870731;
+$data['createdOn'] = 1697782165;

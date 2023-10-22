@@ -1,17 +1,36 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\user\user$udatelastupdated][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-16T10:56:05+09:00 */
+/* Expiration: 2023-10-25T02:26:37+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655344565;
+$expiration = 1698168397;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YToxOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcQ29sdW1uIjoxMzp7czo0OiJuYW1lIjtOO3M6NDoidHlwZSI7czo4OiJkYXRldGltZSI7czo2OiJsZW5ndGgiO047czo5OiJwcmVjaXNpb24iO047czo1OiJzY2FsZSI7TjtzOjY6InVuaXF1ZSI7YjowO3M6ODoibnVsbGFibGUiO2I6MTtzOjEwOiJpbnNlcnRhYmxlIjtiOjE7czo5OiJ1cGRhdGFibGUiO2I6MTtzOjg6ImVudW1UeXBlIjtOO3M6Nzoib3B0aW9ucyI7YTowOnt9czoxNjoiY29sdW1uRGVmaW5pdGlvbiI7TjtzOjk6ImdlbmVyYXRlZCI7Tjt9fQ=='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Column::__set_state(array(
+     'name' => NULL,
+     'type' => 'datetime',
+     'length' => NULL,
+     'precision' => NULL,
+     'scale' => NULL,
+     'unique' => false,
+     'nullable' => true,
+     'insertable' => true,
+     'updatable' => true,
+     'enumType' => NULL,
+     'options' => 
+    array (
+    ),
+     'columnDefinition' => NULL,
+     'generated' => NULL,
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654933480;
+$data['createdOn'] = 1697782165;

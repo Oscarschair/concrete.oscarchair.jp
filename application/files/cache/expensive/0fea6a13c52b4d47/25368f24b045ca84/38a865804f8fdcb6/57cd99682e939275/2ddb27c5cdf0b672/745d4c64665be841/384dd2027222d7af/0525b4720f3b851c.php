@@ -1,17 +1,75 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\express\entry][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-11T12:59:42+09:00 */
+/* Expiration: 2023-10-25T07:56:29+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1654919982;
+$expiration = 1698188189;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YTozOntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO3M6NDU6IlxDb25jcmV0ZVxDb3JlXEVudGl0eVxFeHByZXNzXEVudHJ5UmVwb3NpdG9yeSI7czo4OiJyZWFkT25seSI7YjowO31pOjE7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcVGFibGUiOjU6e3M6NDoibmFtZSI7czoyMDoiRXhwcmVzc0VudGl0eUVudHJpZXMiO3M6Njoic2NoZW1hIjtOO3M6NzoiaW5kZXhlcyI7YTozOntpOjA7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5kZXgiOjU6e3M6NDoibmFtZSI7czoxMzoicmVzdWx0c05vZGVJRCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjEzOiJyZXN1bHRzTm9kZUlEIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fWk6MTtPOjI2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xJbmRleCI6NTp7czo0OiJuYW1lIjtzOjExOiJjcmVhdGVkU29ydCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjE4OiJleEVudHJ5RGF0ZUNyZWF0ZWQiO31zOjY6ImZpZWxkcyI7TjtzOjU6ImZsYWdzIjtOO3M6Nzoib3B0aW9ucyI7Tjt9aToyO086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXEluZGV4Ijo1OntzOjQ6Im5hbWUiO3M6MTI6Im1vZGlmaWVkU29ydCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjE5OiJleEVudHJ5RGF0ZU1vZGlmaWVkIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fX1zOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX1pOjI7TzozNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5TGlzdGVuZXJzIjoxOntzOjU6InZhbHVlIjthOjE6e2k6MDtzOjM3OiJcQ29uY3JldGVcQ29yZVxFeHByZXNzXEVudHJ5XExpc3RlbmVyIjt9fX0='));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => '\\Concrete\\Core\\Entity\\Express\\EntryRepository',
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'ExpressEntityEntries',
+     'schema' => NULL,
+     'indexes' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'resultsNodeID',
+         'columns' => 
+        array (
+          0 => 'resultsNodeID',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      1 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'createdSort',
+         'columns' => 
+        array (
+          0 => 'exEntryDateCreated',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      2 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'modifiedSort',
+         'columns' => 
+        array (
+          0 => 'exEntryDateModified',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+    ),
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+  2 => 
+  Doctrine\ORM\Mapping\EntityListeners::__set_state(array(
+     'value' => 
+    array (
+      0 => '\\Concrete\\Core\\Express\\Entry\\Listener',
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654528605;
+$data['createdOn'] = 1697782165;

@@ -1,17 +1,98 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\attribute\key\key][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T10:18:16+09:00 */
+/* Expiration: 2023-10-25T10:49:45+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655255896;
+$expiration = 1698198585;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YTo1OntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzozNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5oZXJpdGFuY2VUeXBlIjoxOntzOjU6InZhbHVlIjtzOjY6IkpPSU5FRCI7fWk6MjtPOjQwOiJEb2N0cmluZVxPUk1cTWFwcGluZ1xEaXNjcmltaW5hdG9yQ29sdW1uIjo1OntzOjQ6Im5hbWUiO3M6MTA6ImFrQ2F0ZWdvcnkiO3M6NDoidHlwZSI7czo2OiJzdHJpbmciO3M6NjoibGVuZ3RoIjtOO3M6OToiZmllbGROYW1lIjtOO3M6MTY6ImNvbHVtbkRlZmluaXRpb24iO047fWk6MztPOjM2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xFbnRpdHlMaXN0ZW5lcnMiOjE6e3M6NToidmFsdWUiO2E6MTp7aTowO3M6Mzc6IlxDb25jcmV0ZVxDb3JlXEF0dHJpYnV0ZVxLZXlcTGlzdGVuZXIiO319aTo0O086MjY6IkRvY3RyaW5lXE9STVxNYXBwaW5nXFRhYmxlIjo1OntzOjQ6Im5hbWUiO3M6MTM6IkF0dHJpYnV0ZUtleXMiO3M6Njoic2NoZW1hIjtOO3M6NzoiaW5kZXhlcyI7YToxOntpOjA7TzoyNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5kZXgiOjU6e3M6NDoibmFtZSI7czo1OiJwa2dJRCI7czo3OiJjb2x1bW5zIjthOjE6e2k6MDtzOjU6InBrZ0lEIjt9czo2OiJmaWVsZHMiO047czo1OiJmbGFncyI7TjtzOjc6Im9wdGlvbnMiO047fX1zOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX19'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\InheritanceType::__set_state(array(
+     'value' => 'JOINED',
+  )),
+  2 => 
+  Doctrine\ORM\Mapping\DiscriminatorColumn::__set_state(array(
+     'name' => 'akCategory',
+     'type' => 'string',
+     'length' => NULL,
+     'columnDefinition' => NULL,
+     'enumType' => NULL,
+  )),
+  3 => 
+  Doctrine\ORM\Mapping\EntityListeners::__set_state(array(
+     'value' => 
+    array (
+      0 => '\\Concrete\\Core\\Attribute\\Key\\Listener',
+    ),
+  )),
+  4 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'AttributeKeys',
+     'schema' => NULL,
+     'indexes' => 
+    array (
+      0 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'pkgID',
+         'columns' => 
+        array (
+          0 => 'pkgID',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      1 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'akHandle',
+         'columns' => 
+        array (
+          0 => 'akHandle',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      2 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'akIsSearchable',
+         'columns' => 
+        array (
+          0 => 'akIsSearchable',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+      3 => 
+      Doctrine\ORM\Mapping\Index::__set_state(array(
+         'name' => 'akIsInternal',
+         'columns' => 
+        array (
+          0 => 'akIsInternal',
+        ),
+         'fields' => NULL,
+         'flags' => NULL,
+         'options' => NULL,
+      )),
+    ),
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654839495;
+$data['createdOn'] = 1697782165;

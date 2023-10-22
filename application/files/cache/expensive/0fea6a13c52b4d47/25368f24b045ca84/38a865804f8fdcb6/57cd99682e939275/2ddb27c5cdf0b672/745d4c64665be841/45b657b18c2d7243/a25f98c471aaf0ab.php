@@ -1,17 +1,45 @@
 <?php 
 /* Cachekey: cache/stash_default/doctrine/[concrete\core\entity\express\entry\association][1]/ */
 /* Type: array */
-/* Expiration: 2022-06-15T23:33:46+09:00 */
+/* Expiration: 2023-10-25T01:48:33+09:00 */
 
 
 
 $loaded = true;
-$expiration = 1655303626;
+$expiration = 1698166113;
 
 $data = array();
 
 /* Child Type: array */
-$data['return'] = unserialize(base64_decode('YTo0OntpOjA7TzoyNzoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRW50aXR5IjoyOntzOjE1OiJyZXBvc2l0b3J5Q2xhc3MiO047czo4OiJyZWFkT25seSI7YjowO31pOjE7TzozNjoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcSW5oZXJpdGFuY2VUeXBlIjoxOntzOjU6InZhbHVlIjtzOjEyOiJTSU5HTEVfVEFCTEUiO31pOjI7Tzo0MDoiRG9jdHJpbmVcT1JNXE1hcHBpbmdcRGlzY3JpbWluYXRvckNvbHVtbiI6NTp7czo0OiJuYW1lIjtzOjQ6InR5cGUiO3M6NDoidHlwZSI7czo2OiJzdHJpbmciO3M6NjoibGVuZ3RoIjtOO3M6OToiZmllbGROYW1lIjtOO3M6MTY6ImNvbHVtbkRlZmluaXRpb24iO047fWk6MztPOjI2OiJEb2N0cmluZVxPUk1cTWFwcGluZ1xUYWJsZSI6NTp7czo0OiJuYW1lIjtzOjMwOiJFeHByZXNzRW50aXR5RW50cnlBc3NvY2lhdGlvbnMiO3M6Njoic2NoZW1hIjtOO3M6NzoiaW5kZXhlcyI7TjtzOjE3OiJ1bmlxdWVDb25zdHJhaW50cyI7TjtzOjc6Im9wdGlvbnMiO2E6MDp7fX19'));
+$data['return'] = array (
+  0 => 
+  Doctrine\ORM\Mapping\Entity::__set_state(array(
+     'repositoryClass' => NULL,
+     'readOnly' => false,
+  )),
+  1 => 
+  Doctrine\ORM\Mapping\InheritanceType::__set_state(array(
+     'value' => 'SINGLE_TABLE',
+  )),
+  2 => 
+  Doctrine\ORM\Mapping\DiscriminatorColumn::__set_state(array(
+     'name' => 'type',
+     'type' => 'string',
+     'length' => NULL,
+     'columnDefinition' => NULL,
+     'enumType' => NULL,
+  )),
+  3 => 
+  Doctrine\ORM\Mapping\Table::__set_state(array(
+     'name' => 'ExpressEntityEntryAssociations',
+     'schema' => NULL,
+     'indexes' => NULL,
+     'uniqueConstraints' => NULL,
+     'options' => 
+    array (
+    ),
+  )),
+);
 
 /* Child Type: integer */
-$data['createdOn'] = 1654914667;
+$data['createdOn'] = 1697782165;
