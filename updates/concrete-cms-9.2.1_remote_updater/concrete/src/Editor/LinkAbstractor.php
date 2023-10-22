@@ -103,9 +103,6 @@ class LinkAbstractor extends ConcreteObject
             return $text;
         }
 
-        echo '<script>';
-        echo 'console.log("iam here : "'.$text.')';
-        echo '</script>';
         $app = Application::getFacadeApplication();
 
         $resolver = $app->make(ResolverManagerInterface::class);
@@ -120,6 +117,10 @@ class LinkAbstractor extends ConcreteObject
             $text
         );
 
+        echo '<script>';
+        echo 'console.log("iam here : "'.$text.')';
+        echo '</script>';
+        
         // now we add in support for the links
         $text = static::replacePlaceholder(
             $text,
