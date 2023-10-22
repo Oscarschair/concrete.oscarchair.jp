@@ -10,7 +10,6 @@
     <div class="row pb-4 mb-4">
         <div class="col-md-12 blog-featured-post">
         <script>
-            console.log('Console slot: <?=$slot?>' );
             console.log('Console2: <?=$link?>' );
         </script>
             <?php
