@@ -7,7 +7,3 @@ defined('C5_EXECUTE') or die("Access Denied.");
  */
 
 $slot->display(1);
-
-echo '<script>';
-echo 'console.log("CARD")';
-echo '</script>';
