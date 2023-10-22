@@ -84,6 +84,9 @@ class LinkAbstractor extends ConcreteObject
                 $text
             );
         }
+        echo '<script>';
+        echo 'console.log("iam here : 3")';
+        echo '</script>';
 
         return (string) $text;
     }
@@ -118,7 +121,7 @@ class LinkAbstractor extends ConcreteObject
         );
 
         echo '<script>';
-        echo 'console.log("iam here : ")';
+        echo 'console.log("iam here : 1")';
         echo '</script>';
 
         // now we add in support for the links
@@ -284,6 +287,10 @@ class LinkAbstractor extends ConcreteObject
             ],
             $text
         );
+
+        echo '<script>';
+        echo 'console.log("iam here : 2")';
+        echo '</script>';
 
         //page links...
         $text = preg_replace(
