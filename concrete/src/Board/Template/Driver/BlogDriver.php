@@ -16,6 +16,9 @@ class BlogDriver implements DriverInterface
 
     public function getLayoutPlanner(): ?PlannerInterface
     {
+        echo '<script>';
+        echo 'console.log("iam here : 2")';
+        echo '</script>';
         return new SlotLayoutPlanner([
             '1' => ['blog_image_left']
         ]);
