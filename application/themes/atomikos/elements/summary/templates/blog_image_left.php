@@ -5,7 +5,10 @@ $view->setViewTheme('atomik');
 
 ?>
 
-<script>console.log('Console: <?=$link?>' );</script>
+<script>
+    console.log('Console: <?=$this?>' );
+    console.log('Console: <?=$link?>' );
+</script>
 
 <div class="ccm-summary-template-blog-image-left mb-3 mb-md-0 blog-box">
     <div class="row">
