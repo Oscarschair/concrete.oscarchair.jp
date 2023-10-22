@@ -1,0 +1,22 @@
+{
+    "name": "concrete5cojp/oscss_ga",
+    "description": "Get detailed statistics from GA4 and summarizes.",
+    "type": "concrete5-package",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "concrete5/core": "^8.5"
+    },
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Concrete\\Package\\OscssGa\\Src\\": "src/"
+        }
+    }
+}
