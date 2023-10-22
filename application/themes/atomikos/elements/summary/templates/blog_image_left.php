@@ -6,7 +6,6 @@ $view->setViewTheme('atomik');
 ?>
 
 <script>
-    console.log('Console: <?=$this?>' );
     console.log('Console: <?=$link?>' );
 </script>
 
