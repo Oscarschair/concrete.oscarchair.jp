@@ -1,6 +1,7 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 
 <script>
+    console.log('前Consolethis: <?=$this?>' );
     console.log('前Console: <?=$link?>' );
 </script>
 
