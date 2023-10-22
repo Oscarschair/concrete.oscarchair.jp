@@ -98,8 +98,10 @@ class LinkAbstractor extends ConcreteObject
      */
     public static function translateFrom($text)
     {
+        if (($text = (string) $text) === '') {
+            return $text;
+        }
         $app = Application::getFacadeApplication();
-        $entityManager = $app->make(EntityManagerInterface::class);
         $resolver = $app->make(ResolverManagerInterface::class);
 
         $text = preg_replace(
@@ -201,9 +203,13 @@ class LinkAbstractor extends ConcreteObject
         $text = static::replacePlaceholder(
             $text,
             '{CCM:FID_([a-f0-9-]{36}|[0-9]+)}',
-            function ($fID) use ($entityManager) {
-                if ($fID > 0) {
-                    $f = $entityManager->find(File::class, $fID);
+            function ($fID) {
+                if ($fID) {
+                    if (uuid_is_valid($fID)) {
+                        $f = \Concrete\Core\File\File::getByUUID($fID);
+                    } else {
+                        $f = \Concrete\Core\File\File::getByID($fID);
+                    }
                     if ($f !== null) {
                         return $f->getURL();
                     }
@@ -382,7 +388,6 @@ class LinkAbstractor extends ConcreteObject
     public static function export($text)
     {
         $app = Application::getFacadeApplication();
-        $entityManager = $app->make(EntityManagerInterface::class);
 
         $text = static::replacePlaceholder(
             $text,
@@ -403,6 +408,7 @@ class LinkAbstractor extends ConcreteObject
         $dom = new HtmlDomParser();
         $r = $dom->str_get_html($text, true, true, DEFAULT_TARGET_CHARSET, false);
         if (is_object($r)) {
+            $entityManager = $app->make(EntityManagerInterface::class);
             foreach ($r->find('concrete-picture') as $picture) {
                 $fID = $picture->fid;
                 $f = $entityManager->find(File::class, $fID);
