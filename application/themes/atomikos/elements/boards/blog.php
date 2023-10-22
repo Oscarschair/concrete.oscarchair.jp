@@ -8,7 +8,7 @@
 
 <div class="container ccm-board-blog">
     <div class="row pb-4 mb-4">
-        <div class="col-md-12 blog-featured-post a">
+        <div class="col-md-12 blog-featured-post">
             <?php
             $slot->display(1);
             ?>
