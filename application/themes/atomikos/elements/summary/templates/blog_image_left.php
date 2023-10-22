@@ -1,7 +1,7 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 <?php
 $view = new \Concrete\Core\View\View();
-//$view->setViewTheme('atomik');
+$view->setViewTheme('atomikos');
 
 ?>
 
