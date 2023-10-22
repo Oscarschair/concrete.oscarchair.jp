@@ -1,7 +1,7 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 
 <script>
-    console.log('前Console: <?=$link.get_parent_class()?>' );
+    console.log('前Console: <?=$link?>' );
 </script>
 
 <?php
