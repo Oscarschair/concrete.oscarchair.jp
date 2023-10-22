@@ -1,8 +1,7 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 
 <script>
-    console.log('前Consolethis: <?=(string)$this?>' );
-    console.log('前Console: <?=$link?>' );
+    console.log('前Console: <?=$link?>' );//Concrete\Core\Summary\Template\Renderer
 </script>
 
 <?php
