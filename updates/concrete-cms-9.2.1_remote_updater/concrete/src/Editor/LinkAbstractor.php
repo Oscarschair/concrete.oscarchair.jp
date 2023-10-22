@@ -99,9 +99,9 @@ class LinkAbstractor extends ConcreteObject
     public static function translateFrom($text)
     {
 
-        if (($text = (string) $text) === '') {
-            return $text;
-        }
+        // if (($text = (string) $text) === '') {
+        //     return $text;
+        // }
 
         $app = Application::getFacadeApplication();
 
