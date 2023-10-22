@@ -98,20 +98,19 @@ class LinkAbstractor extends ConcreteObject
      */
     public static function translateFrom($text)
     {
+        echo '<script>';
+        echo 'console.log("iam here")';
+        echo '</script>';
         if (($text = (string) $text) === '') {
             return $text;
         }
         $app = Application::getFacadeApplication();
 
-
-
-
-        
         $resolver = $app->make(ResolverManagerInterface::class);
 
         $text = preg_replace(
             [
-                '/{CCM:BASE_URL}/i',//ここ
+                '/{CCM:BASE_URL}/i',//ここ?
             ],
             [
                 Application::getApplicationURL(),
