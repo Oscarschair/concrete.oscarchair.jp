@@ -98,12 +98,14 @@ class LinkAbstractor extends ConcreteObject
      */
     public static function translateFrom($text)
     {
-        echo '<script>';
-        echo 'console.log("iam here : "'.$text.')';
-        echo '</script>';
+
         if (($text = (string) $text) === '') {
             return $text;
         }
+
+        echo '<script>';
+        echo 'console.log("iam here : "'.$text.')';
+        echo '</script>';
         $app = Application::getFacadeApplication();
 
         $resolver = $app->make(ResolverManagerInterface::class);
