@@ -251,7 +251,7 @@ class LinkAbstractor extends ConcreteObject
             }
         }
 
-        return $text."HERE";
+        return $text;
     }
 
     /**
