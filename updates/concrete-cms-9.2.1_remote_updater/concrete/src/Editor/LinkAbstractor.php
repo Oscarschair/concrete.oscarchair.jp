@@ -118,9 +118,9 @@ class LinkAbstractor extends ConcreteObject
         );
 
         echo '<script>';
-        echo 'console.log("iam here : "'.$text.')';
+        echo 'console.log("iam here : ")';
         echo '</script>';
-        
+
         // now we add in support for the links
         $text = static::replacePlaceholder(
             $text,
