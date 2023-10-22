@@ -106,14 +106,16 @@ class LinkAbstractor extends ConcreteObject
 
         $text = preg_replace(
             [
-                '/{CCM:BASE_URL}/i',
+                '/{CCM:BASE_URL}/i',//ここ?
             ],
             [
                 Application::getApplicationURL(),
             ],
             $text
         );
-
+        echo '<script>';
+        echo 'console.log("iam here : 2")';
+        echo '</script>';
         // now we add in support for the links
         $text = static::replacePlaceholder(
             $text,
