@@ -79,7 +79,7 @@ class LinkAbstractor extends ConcreteObject
                 [
                     '{CCM:CID_\\1}',
                     '{CCM:FID_DL_\\1}',
-                    '{CCM:BASE_URL}a',
+                    '{CCM:BASE_URL}',
                 ],
                 $text
             );
@@ -106,7 +106,7 @@ class LinkAbstractor extends ConcreteObject
 
         $text = preg_replace(
             [
-                '/{CCM:BASE_URL}b/i',
+                '/{CCM:BASE_URL}/i',
             ],
             [
                 Application::getApplicationURL(),
@@ -270,7 +270,7 @@ class LinkAbstractor extends ConcreteObject
 
         $text = preg_replace(
             [
-                '/{CCM:BASE_URL}c/i',
+                '/{CCM:BASE_URL}/i',
             ],
             [
                 $appUrl,
