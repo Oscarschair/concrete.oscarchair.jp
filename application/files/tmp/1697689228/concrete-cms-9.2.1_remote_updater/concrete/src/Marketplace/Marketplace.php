@@ -319,7 +319,9 @@ class Marketplace implements ApplicationAwareInterface
                 // this used to be the BASE_URL and not BASE_URL . DIR_REL but I don't have a method for that
                 // and honestly I'm not sure why it needs to be that way
                 $csiBaseURL = $csiURL;
-
+                echo '<script>';
+                echo 'console.log("where?")';
+                echo '</script>';
                 if ($this->hasConnectionError()) {
                     if ($this->connectionError == self::E_DELETED_SITE_TOKEN) {
                         $connectMethod = 'view';
