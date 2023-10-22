@@ -100,6 +100,9 @@ class Message implements MessageInterface
     public function addLearnMoreLink($link)
     {
         $this->link = $link;
+        echo '<script>';
+        echo 'console.log("CHECKER1")';
+        echo '</script>';
     }
 
     public function getLink(): ?string

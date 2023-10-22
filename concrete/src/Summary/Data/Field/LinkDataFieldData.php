@@ -33,6 +33,9 @@ class LinkDataFieldData implements DataFieldDataInterface
     {
         $abstractor = new LinkAbstractor();
         $this->link = $abstractor->translateTo((string) $link);
+        echo '<script>';
+        echo 'console.log("CHECKER8")';
+        echo '</script>';
     }
     
     public function __toString()
