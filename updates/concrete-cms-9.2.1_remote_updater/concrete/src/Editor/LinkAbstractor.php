@@ -112,7 +112,7 @@ class LinkAbstractor extends ConcreteObject
                 Application::getApplicationURL(),
             ],
             $text
-        )."HERE";
+        );
 
         // now we add in support for the links
         $text = static::replacePlaceholder(
@@ -251,7 +251,7 @@ class LinkAbstractor extends ConcreteObject
             }
         }
 
-        return $text;
+        return $text."HERE";
     }
 
     /**
