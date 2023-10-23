@@ -144,7 +144,6 @@ class DefaultRunner implements RunInterface, ApplicationAwareInterface
     {
         if (!defined('BASE_URL')) {
             $resolver = $this->getUrlResolver();
-
             try {
                 $url = rtrim((string) $resolver->resolve([]), '/');
                 define('BASE_URL', $url);

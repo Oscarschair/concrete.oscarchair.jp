@@ -26,9 +26,6 @@ class LinkDataFieldData implements DataFieldDataInterface
     public function setData($link): void
     {
         $this->link = $link;
-        echo '<script>';
-        echo 'console.log("CHECKER12:'.$link.'")';
-        echo '</script>';
     }
     
     public function __toString()
@@ -47,9 +44,6 @@ class LinkDataFieldData implements DataFieldDataInterface
     
     public function denormalize(DenormalizerInterface $denormalizer, $data, $format = null, array $context = [])
     {
-        echo '<script>';
-        echo 'console.log("CHECKER11:'.$data['link'].'")';
-        echo '</script>';
         if (isset($data['link'])) {
             $this->setData($data['link']);
         }

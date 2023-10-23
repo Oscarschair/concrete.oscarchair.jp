@@ -9,10 +9,6 @@
 <div class="container ccm-board-blog">
     <div class="row pb-4 mb-4">
         <div class="col-md-12 blog-featured-post">
-        <script>
-//            console.log('Console slotでない' ); 
-            console.log('Console2: <?=$link?>' );//ここはリンクがない
-        </script>
             <?php
             $slot->display(1);
             ?>
