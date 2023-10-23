@@ -153,6 +153,7 @@ class DefaultRunner implements RunInterface, ApplicationAwareInterface
             }
             echo '<script>';
             echo 'console.log("'.BASE_URL.'")';
+            echo 'console.log("bbc")';
             echo '</script>';
         }
     }
