@@ -144,15 +144,16 @@ class DefaultRunner implements RunInterface, ApplicationAwareInterface
     {
         if (!defined('BASE_URL')) {
             $resolver = $this->getUrlResolver();
-            echo '<script>';
-            echo 'console.log("pppppppppppppppppppppppppppppppppppppppppppppppppppp")';
-            echo '</script>';
+
             try {
                 $url = rtrim((string) $resolver->resolve([]), '/');
                 define('BASE_URL', $url);
             } catch (Exception $x) {
                 return new Response($x->getMessage(), 500);
             }
+            echo '<script>';
+            echo 'console.log("'.BASE_URL.'")';
+            echo '</script>';
         }
     }
 
