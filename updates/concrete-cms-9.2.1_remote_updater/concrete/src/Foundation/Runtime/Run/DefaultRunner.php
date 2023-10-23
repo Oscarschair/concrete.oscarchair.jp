@@ -151,10 +151,6 @@ class DefaultRunner implements RunInterface, ApplicationAwareInterface
             } catch (Exception $x) {
                 return new Response($x->getMessage(), 500);
             }
-            echo '<script>';
-            echo 'console.log("'.BASE_URL.'")';
-            echo 'console.log("bbc")';
-            echo '</script>';
         }
     }
 
