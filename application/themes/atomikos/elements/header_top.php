@@ -20,11 +20,11 @@
     <script>
         window.dataLayer = window.dataLayer || [];
         dataLayer.push({
-            'ip_address' : '<?=$get_ip?>',
-            'blog_topic' : <?php
+            'ip_address' : '<?=$get_ip?>'<?php
             if (isset($topics) && count($topics)) {
                 foreach ($topics as $topic) {
-            ?>'<?=$topic->getTreeNodeDisplayName()?>'
+            ?>,
+            'blog_topic' : '<?=$topic->getTreeNodeDisplayName()?>'
             <?php
                 }
             }
