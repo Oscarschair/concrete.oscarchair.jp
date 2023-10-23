@@ -360,9 +360,7 @@ if($C['abs_url']){
   }
  }
 }
-echo '<script>';
-echo 'console.log("pppppppppppppppppppppppppppppppppppppppppppppppppppp")';
-echo '</script>';
+
 return "{$b}{$p}{$a}";
 }
 
