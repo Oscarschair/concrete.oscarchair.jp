@@ -1,9 +1,5 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 
-<script>
-    console.log('前Console: <?=$link?>' );//Concrete\Core\Summary\Template\Renderer
-</script>
-
 <?php
 $view = new \Concrete\Core\View\View();
 $view->setViewTheme('atomik');
