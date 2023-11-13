@@ -1,7 +1,7 @@
 <?php
 
 namespace Application\Block\Form;
-namespace Application\Block\Testimonial;
+//namespace Application\Block\Testimonial;
 use Concrete\Block\Form\Controller as FormBlockController;
 
 
