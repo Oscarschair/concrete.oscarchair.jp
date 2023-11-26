@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if( target_contents != null ){
         var matches = document.querySelectorAll( target_headline );
+        var h2 = document.createElement('h2');
+        h2.innerHTML("もくじ")
+        target_contents.appendChild(h2);
         var ol = document.createElement('ol');
         matches.forEach( function (value, i) {
             i++;
