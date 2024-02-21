@@ -37,7 +37,8 @@
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
     <script>
         gtag('config','G-3E1MHVDB8S',{
-            'test_dimension': 'test_data'
+            'test_dimension': 'test_data',       
+            'campaign_name': 'spring_sale'
         });
     </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
