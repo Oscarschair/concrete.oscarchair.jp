@@ -35,12 +35,7 @@
 
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
-    <script>
-        gtag('event','send_test',{
-            'test_dimension': 'test_data',       
-            'campaign_name': 'spring_sale'
-        });
-    </script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?=$view->getThemeStyles()?>
     <?php
