@@ -36,7 +36,7 @@
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
     <script>
-        gtag('config','G-3E1MHVDB8S',{
+        gtag('event','send_test',{
             'test_dimension': 'test_data',       
             'campaign_name': 'spring_sale'
         });
