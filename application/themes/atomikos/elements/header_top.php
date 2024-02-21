@@ -35,6 +35,14 @@
 
     <?= Core::make('site')->getSite()->getAttribute('GTM_head'); ?>
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
+    <script>
+        gtag('config','G-3E1MHVDB8S',{
+            'custom_map':{
+                'dimension1': 'test_dimension'
+            },
+            'test_dimension': 'test_data'
+        });
+    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?=$view->getThemeStyles()?>
     <?php
