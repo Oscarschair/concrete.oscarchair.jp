@@ -37,9 +37,6 @@
     <?= Core::make('site')->getSite()->getAttribute('adsense_auto'); ?>
     <script>
         gtag('config','G-3E1MHVDB8S',{
-            'custom_map':{
-                'dimension1': 'test_dimension'
-            },
             'test_dimension': 'test_data'
         });
     </script>
