@@ -51,8 +51,13 @@ if (!$result) {
     die("データ取得エラー: " . $concrete_db->error);
 }
 
+
+echo "データ移行前。\n";
+
 // 4. データをWordPressにインポート
 while ($row = $result->fetch_assoc()) {
+    echo "データ移行中。\n";
+
     // Concrete CMSデータ
     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
     $content = $wp_db->real_escape_string($row['content']); // 記事本文
