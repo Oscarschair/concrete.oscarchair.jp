@@ -52,24 +52,24 @@ if (!$result) {
 }
 
 // 4. データをWordPressにインポート
-// while ($row = $result->fetch_assoc()) {
-//     // Concrete CMSデータ
-//     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
-//     $content = $wp_db->real_escape_string($row['cDescription']); // 記事本文
-//     $date = $row['cDateAdded']; // 公開日時
+while ($row = $result->fetch_assoc()) {
+    // Concrete CMSデータ
+    $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
+    $content = $wp_db->real_escape_string($row['content']); // 記事本文
+    $date = $row['cDatePublic']; // 公開日時
 
-//     // WordPressの投稿用クエリ
-//     $insert_query = "
-//         INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
-//         VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
-//     ";
+    // WordPressの投稿用クエリ
+    $insert_query = "
+            INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
+            VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
+        ";
 
-//     if (!$wp_db->query($insert_query)) {
-//         error_log("記事挿入エラー: " . $wp_db->error);
-//     } else {
-//         echo "記事「{$title}」をインポートしました。\n";
-//     }
-// }
+    if (!$wp_db->query($insert_query)) {
+        error_log("記事挿入エラー: " . $wp_db->error);
+    } else {
+        echo "記事「{$title}」をインポートしました。\n";
+    }
+}
 
 // 5. データベース接続を閉じる
 $concrete_db->close();
