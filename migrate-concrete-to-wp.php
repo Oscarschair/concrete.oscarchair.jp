@@ -28,9 +28,22 @@ if ($wp_db->connect_error) {
 }
 
 // 3. Concrete CMSから記事データを取得
-$query = "SELECT cID, cName, cDescription, cDateAdded 
-          FROM Pages 
-          WHERE cIsActive = 1 AND cIsSystemPage = 0";
+$query = "SELECT 
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    psi.content, 
+    psi.cPath, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
+    p.cParentID, 
+    p.cIsActive
+FROM 
+    PageSearchIndex psi
+JOIN 
+    Pages p ON psi.cID = p.cID
+WHERE 
+    psi.cPath LIKE '%blog%';";
 
 $result = $concrete_db->query($query);
 
@@ -39,24 +52,24 @@ if (!$result) {
 }
 
 // 4. データをWordPressにインポート
-while ($row = $result->fetch_assoc()) {
-    // Concrete CMSデータ
-    $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
-    $content = $wp_db->real_escape_string($row['cDescription']); // 記事本文
-    $date = $row['cDateAdded']; // 公開日時
+// while ($row = $result->fetch_assoc()) {
+//     // Concrete CMSデータ
+//     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
+//     $content = $wp_db->real_escape_string($row['cDescription']); // 記事本文
+//     $date = $row['cDateAdded']; // 公開日時
 
-    // WordPressの投稿用クエリ
-    $insert_query = "
-        INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
-        VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
-    ";
+//     // WordPressの投稿用クエリ
+//     $insert_query = "
+//         INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
+//         VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
+//     ";
 
-    if (!$wp_db->query($insert_query)) {
-        error_log("記事挿入エラー: " . $wp_db->error);
-    } else {
-        echo "記事「{$title}」をインポートしました。\n";
-    }
-}
+//     if (!$wp_db->query($insert_query)) {
+//         error_log("記事挿入エラー: " . $wp_db->error);
+//     } else {
+//         echo "記事「{$title}」をインポートしました。\n";
+//     }
+// }
 
 // 5. データベース接続を閉じる
 $concrete_db->close();
