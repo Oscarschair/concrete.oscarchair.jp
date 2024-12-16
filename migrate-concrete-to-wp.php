@@ -60,6 +60,10 @@ while ($row = $result->fetch_assoc()) {
 
     // Concrete CMSデータ
     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
+
+    echo "cName:$row['cName'] \n\n\n";
+    echo "Title:$title \n\n\n";
+
     $content = $wp_db->real_escape_string($row['content']); // 記事本文
     $date = $row['cDatePublic']; // 公開日時
 
