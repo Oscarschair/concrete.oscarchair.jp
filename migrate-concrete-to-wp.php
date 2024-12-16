@@ -56,7 +56,7 @@ echo "データ移行前。\n";
 
 // 4. データをWordPressにインポート
 while ($row = $result->fetch_assoc()) {
-    echo "データ移行中。\n";
+    echo "データ移行中。$row \n\n\n";
 
     // Concrete CMSデータ
     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
