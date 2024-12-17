@@ -82,7 +82,7 @@ while ($row = $result->fetch_assoc()) {
     echo "cID:$cID <br>";
     echo "Title:$title <br>";
     echo "cDescription:$cDescription <br>";
-    echo "content:$content <br>";
+    //echo "content:$content <br>";
     echo "cPath:$cPath <br>";
     echo "slug:$slug <br>";
     echo "cDatePublic:$cDatePublic <br>";
@@ -90,21 +90,21 @@ while ($row = $result->fetch_assoc()) {
     echo "cIsActive:$cIsActive <br>";
 
     // WordPressの投稿用クエリ
-    //     $insert_query = "
-    //     INSERT INTO wp20241216115717_posts (
-    //         post_author, post_date, post_date_gmt, post_content, post_title, 
-    //         post_excerpt, post_status, post_type, post_name, post_modified, post_modified_gmt
-    //     ) VALUES (
-    //         1, '$cDatePublic', '$cDatePublic', '$content', '$title', 
-    //         '$cDescription', 'publish', 'post', '$slug', '$cDateLastIndexed', '$cDateLastIndexed'
-    //     )";
+    $insert_query = "
+        INSERT INTO wp20241216115717_posts (
+            post_author, post_date, post_date_gmt, post_content, post_title, 
+            post_excerpt, post_status, post_type, post_name, post_modified, post_modified_gmt
+        ) VALUES (
+            1, '$cDatePublic', '$cDatePublic', '$content', '$title', 
+            '$cDescription', 'publish', 'post', '$slug', '$cDateLastIndexed', '$cDateLastIndexed'
+        )";
 
 
-    //     if (!$wp_db->query($insert_query)) {
-    //         error_log("記事挿入エラー: " . $wp_db->error);
-    //     } else {
-    //         echo "記事「{$title}」をインポートしました。<br>";
-    //     }
+    if (!$wp_db->query($insert_query)) {
+        error_log("記事挿入エラー: " . $wp_db->error);
+    } else {
+        echo "記事「{$title}」をインポートしました。<br>";
+    }
 }
 
 // 5. データベース接続を閉じる
