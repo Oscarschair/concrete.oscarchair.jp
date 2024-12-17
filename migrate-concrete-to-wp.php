@@ -62,16 +62,34 @@ if (!$result) {
 }
 
 
-echo "データ移行前。\n";
+echo "データ移行前。<br>";
 
 // 4. データをWordPressにインポート
 while ($row = $result->fetch_assoc()) {
-    echo "データ移行中。 \n\n\n";
+    echo "データ移行中。 <br><br><br>";
 
     // Concrete CMSデータ
+    $cID = $wp_db->real_escape_string($row['cID']); // 記事タイトル
     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
+    $cDescription = $wp_db->real_escape_string($row['cDescription']); // 記事タイトル
+    $content = $wp_db->real_escape_string($row['content']); // 記事タイトル
+    $cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
+    $cDatePublic = $wp_db->real_escape_string($row['cDatePublic']); // 記事タイトル
+    $cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
+    $cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
+    $treeNodeID = $wp_db->real_escape_string($row['treeNodeID']); // 記事タイトル
+    $treeNodeName = $wp_db->real_escape_string($row['treeNodeName']); // 記事タイトル
 
-    echo "Title:$title \n\n\n";
+    echo "Title:$title <br>";
+    echo "cID:$cID <br>";
+    echo "cDescription:$cDescription <br>";
+    echo "content:$content <br>";
+    echo "cPath:$cPath <br>";
+    echo "cDatePublic:$cDatePublic <br>";
+    echo "cDateLastIndexed:$cDateLastIndexed <br>";
+    echo "cIsActive:$cIsActive <br>";
+    echo "treeNodeID:$treeNodeID <br>";
+    echo "treeNodeName:$treeNodeName <br>";
 
     $content = $wp_db->real_escape_string($row['content']); // 記事本文
     $date = $row['cDatePublic']; // 公開日時
@@ -85,7 +103,7 @@ while ($row = $result->fetch_assoc()) {
     if (!$wp_db->query($insert_query)) {
         error_log("記事挿入エラー: " . $wp_db->error);
     } else {
-        echo "記事「{$title}」をインポートしました。\n";
+        echo "記事「{$title}」をインポートしました。<br>";
     }
 }
 
@@ -93,4 +111,4 @@ while ($row = $result->fetch_assoc()) {
 $concrete_db->close();
 $wp_db->close();
 
-echo "データ移行が完了しました。\n";
+echo "データ移行が完了しました。<br>";
