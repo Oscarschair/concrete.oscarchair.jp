@@ -28,7 +28,8 @@ if ($wp_db->connect_error) {
 }
 
 // 3. Concrete CMSから記事データを取得
-$query = "SELECT 
+$query =
+    "SELECT 
     psi.cID, 
     psi.cName, 
     psi.cDescription, 
@@ -36,32 +37,23 @@ $query = "SELECT
     psi.cPath, 
     psi.cDatePublic, 
     psi.cDateLastIndexed, 
-    p.cParentID, 
-    p.cIsActive
+    p.cIsActive,
+    tn.treeNodeID,
+    tn.treeNodeName
 FROM 
     PageSearchIndex psi
 JOIN 
     Pages p ON psi.cID = p.cID
+LEFT JOIN 
+    CollectionAttributeValues cav ON p.cID = cav.cID
+LEFT JOIN 
+    AttributeKeys ak ON cav.akID = ak.akID AND ak.akHandle = 'topics'
+LEFT JOIN 
+    TreeNodes tn ON cav.avID = tn.treeNodeID
 WHERE 
-    p.cIsActive = 1 AND psi.cPath LIKE '%/blog/%' 
-    AND p.cParentID != 0;";
+    psi.cPath LIKE '%blog%';";
 
-// $query = "SELECT 
-//     psi.cID, 
-//     psi.cName, 
-//     psi.cDescription, 
-//     psi.content, 
-//     psi.cPath, 
-//     psi.cDatePublic, 
-//     psi.cDateLastIndexed, 
-//     p.cParentID, 
-//     p.cIsActive
-// FROM 
-//     PageSearchIndex psi
-// JOIN 
-//     Pages p ON psi.cID = p.cID
-// WHERE 
-//     psi.cPath LIKE '%blog%';";
+
 
 $result = $concrete_db->query($query);
 
