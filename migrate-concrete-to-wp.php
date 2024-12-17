@@ -51,7 +51,7 @@ LEFT JOIN
 LEFT JOIN 
     TreeNodes tn ON cav.avID = tn.treeNodeID
 WHERE 
-    psi.cPath LIKE '%blog%';";
+    psi.cPath LIKE '%/blog/%';";
 
 
 
