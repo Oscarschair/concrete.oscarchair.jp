@@ -45,8 +45,6 @@ JOIN
 WHERE 
     psi.cPath LIKE '%/blog/%';";
 
-
-
 $result = $concrete_db->query($query);
 
 if (!$result) {
@@ -87,16 +85,16 @@ while ($row = $result->fetch_assoc()) {
     $date = $row['cDatePublic']; // 公開日時
 
     // WordPressの投稿用クエリ
-    // $insert_query = "
-    //         INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
-    //         VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
-    //     ";
+    $insert_query = "
+            INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
+            VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
+        ";
 
-    // if (!$wp_db->query($insert_query)) {
-    //     error_log("記事挿入エラー: " . $wp_db->error);
-    // } else {
-    //     echo "記事「{$title}」をインポートしました。<br>";
-    // }
+    if (!$wp_db->query($insert_query)) {
+        error_log("記事挿入エラー: " . $wp_db->error);
+    } else {
+        echo "記事「{$title}」をインポートしました。<br>";
+    }
 }
 
 // 5. データベース接続を閉じる
