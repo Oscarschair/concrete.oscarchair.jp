@@ -35,6 +35,7 @@ $query =
     psi.cDescription, 
     psi.content, 
     psi.cPath, 
+    SUBSTRING_INDEX(psi.cPath, '/', -1) AS slug, -- スラッグを取得
     psi.cDatePublic, 
     psi.cDateLastIndexed, 
     p.cIsActive
@@ -61,34 +62,36 @@ while ($row = $result->fetch_assoc()) {
     // Concrete CMSデータ
     $cID = $wp_db->real_escape_string($row['cID']); // 記事タイトル
     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
-    // $cDescription = $wp_db->real_escape_string($row['cDescription']); // 記事タイトル
-    // $content = $wp_db->real_escape_string($row['content']); // 記事タイトル
-    // $cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
-    // $cDatePublic = $wp_db->real_escape_string($row['cDatePublic']); // 記事タイトル
-    // $cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
-    // $cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
-    // $treeNodeID = $wp_db->real_escape_string($row['treeNodeID']); // 記事タイトル
-    // $treeNodeName = $wp_db->real_escape_string($row['treeNodeName']); // 記事タイトル
+    $cDescription = $wp_db->real_escape_string($row['cDescription']); // 記事タイトル
+    $content = $wp_db->real_escape_string($row['content']); // 記事タイトル
+    $cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
+    $slug = $wp_db->real_escape_string($row['slug']); // 記事タイトル
+    $cDatePublic = $wp_db->real_escape_string($row['cDatePublic']); // 記事タイトル
+    $cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
+    $cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
 
     echo "cID:$cID <br>";
     echo "Title:$title <br>";
-    // echo "cDescription:$cDescription <br>";
-    // echo "content:$content <br>";
-    // echo "cPath:$cPath <br>";
-    // echo "cDatePublic:$cDatePublic <br>";
-    // echo "cDateLastIndexed:$cDateLastIndexed <br>";
-    // echo "cIsActive:$cIsActive <br>";
-    // echo "treeNodeID:$treeNodeID <br>";
-    // echo "treeNodeName:$treeNodeName <br>";
-
-    $content = $wp_db->real_escape_string($row['content']); // 記事本文
-    $date = $row['cDatePublic']; // 公開日時
+    echo "cDescription:$cDescription <br>";
+    echo "content:$content <br>";
+    echo "cPath:$cPath <br>";
+    echo "slug:$slug <br>";
+    echo "cDatePublic:$cDatePublic <br>";
+    echo "cDateLastIndexed:$cDateLastIndexed <br>";
+    echo "cIsActive:$cIsActive <br>";
+    echo "treeNodeID:$treeNodeID <br>";
+    echo "treeNodeName:$treeNodeName <br>";
 
     // WordPressの投稿用クエリ
     $insert_query = "
-            INSERT INTO wp_posts (post_title, post_content, post_status, post_type, post_date, post_date_gmt)
-            VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
-        ";
+    INSERT INTO wp_posts (
+        post_author, post_date, post_date_gmt, post_content, post_title, 
+        post_excerpt, post_status, post_type, post_name, post_modified, post_modified_gmt
+    ) VALUES (
+        1, '$cDatePublic', '$cDatePublic', '$content', '$title', 
+        '$cDescription', 'publish', 'post', '$slug', '$cDateLastIndexed', '$cDateLastIndexed'
+    )";
+
 
     if (!$wp_db->query($insert_query)) {
         error_log("記事挿入エラー: " . $wp_db->error);
