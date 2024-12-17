@@ -82,7 +82,7 @@ while ($row = $result->fetch_assoc()) {
 
     // WordPressの投稿用クエリ
     $insert_query = "
-    INSERT INTO wp_posts (
+    INSERT INTO wp20241216115717_posts (
         post_author, post_date, post_date_gmt, post_content, post_title, 
         post_excerpt, post_status, post_type, post_name, post_modified, post_modified_gmt
     ) VALUES (
