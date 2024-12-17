@@ -80,8 +80,8 @@ while ($row = $result->fetch_assoc()) {
     // $treeNodeID = $wp_db->real_escape_string($row['treeNodeID']); // 記事タイトル
     // $treeNodeName = $wp_db->real_escape_string($row['treeNodeName']); // 記事タイトル
 
-    echo "Title:$title <br>";
-    // echo "cID:$cID <br>";
+    echo "cID:$cID <br>";
+    // echo "Title:$title <br>";
     // echo "cDescription:$cDescription <br>";
     // echo "content:$content <br>";
     // echo "cPath:$cPath <br>";
