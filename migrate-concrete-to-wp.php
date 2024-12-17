@@ -79,8 +79,6 @@ while ($row = $result->fetch_assoc()) {
     echo "cDatePublic:$cDatePublic <br>";
     echo "cDateLastIndexed:$cDateLastIndexed <br>";
     echo "cIsActive:$cIsActive <br>";
-    echo "treeNodeID:$treeNodeID <br>";
-    echo "treeNodeName:$treeNodeName <br>";
 
     // WordPressの投稿用クエリ
     $insert_query = "
