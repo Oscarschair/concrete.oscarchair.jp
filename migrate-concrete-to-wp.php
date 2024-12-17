@@ -37,19 +37,11 @@ $query =
     psi.cPath, 
     psi.cDatePublic, 
     psi.cDateLastIndexed, 
-    p.cIsActive,
-    tn.treeNodeID,
-    tn.treeNodeName
+    p.cIsActive
 FROM 
     PageSearchIndex psi
 JOIN 
     Pages p ON psi.cID = p.cID
-LEFT JOIN 
-    CollectionAttributeValues cav ON p.cID = cav.cID
-LEFT JOIN 
-    AttributeKeys ak ON cav.akID = ak.akID AND ak.akHandle = 'topics'
-LEFT JOIN 
-    TreeNodes tn ON cav.avID = tn.treeNodeID
 WHERE 
     psi.cPath LIKE '%/blog/%';";
 
@@ -100,11 +92,11 @@ while ($row = $result->fetch_assoc()) {
     //         VALUES ('$title', '$content', 'publish', 'post', '$date', '$date')
     //     ";
 
-    if (!$wp_db->query($insert_query)) {
-        error_log("記事挿入エラー: " . $wp_db->error);
-    } else {
-        echo "記事「{$title}」をインポートしました。<br>";
-    }
+    // if (!$wp_db->query($insert_query)) {
+    //     error_log("記事挿入エラー: " . $wp_db->error);
+    // } else {
+    //     echo "記事「{$title}」をインポートしました。<br>";
+    // }
 }
 
 // 5. データベース接続を閉じる
