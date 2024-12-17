@@ -70,7 +70,7 @@ while ($row = $result->fetch_assoc()) {
 
     // Concrete CMSデータ
     $cID = $wp_db->real_escape_string($row['cID']); // 記事タイトル
-    // $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
+    $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
     // $cDescription = $wp_db->real_escape_string($row['cDescription']); // 記事タイトル
     // $content = $wp_db->real_escape_string($row['content']); // 記事タイトル
     // $cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
@@ -81,7 +81,7 @@ while ($row = $result->fetch_assoc()) {
     // $treeNodeName = $wp_db->real_escape_string($row['treeNodeName']); // 記事タイトル
 
     echo "cID:$cID <br>";
-    // echo "Title:$title <br>";
+    echo "Title:$title <br>";
     // echo "cDescription:$cDescription <br>";
     // echo "content:$content <br>";
     // echo "cPath:$cPath <br>";
