@@ -29,14 +29,19 @@ if ($wp_db->connect_error) {
 
 // 3. Concrete CMSから記事データを取得
 $query = "SELECT 
-    p.cID, 
-    p.cName AS category_name, 
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    psi.content, 
+    psi.cPath, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
     p.cParentID, 
-    pp.cPath AS category_path
+    p.cIsActive
 FROM 
-    Pages p
+    PageSearchIndex psi
 JOIN 
-    PagePaths pp ON p.cID = pp.cID
+    Pages p ON psi.cID = p.cID
 WHERE 
     p.cIsActive = 1 AND pp.cPath LIKE '%/blog/%' 
     AND p.cParentID != 0;";
