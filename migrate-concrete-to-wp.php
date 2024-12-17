@@ -32,11 +32,11 @@ if ($wp_db->connect_error) {
 
 // 3. Concrete CMSから記事データを取得
 $query =
-    "SELECT DISTINCT
+    "SELECT 
     psi.cID, 
     psi.cName, 
     psi.cDescription, 
-    btl.content AS html_content, -- HTMLコンテンツ
+    GROUP_CONCAT(DISTINCT btl.content SEPARATOR '\n') AS html_content, -- 複数のHTMLを1つにまとめる
     psi.cPath, 
     SUBSTRING_INDEX(psi.cPath, '/', -1) AS slug, 
     psi.cDatePublic, 
@@ -53,7 +53,15 @@ JOIN
 JOIN 
     btContentLocal btl ON b.bID = btl.bID
 WHERE 
-    psi.cPath LIKE '%/blog/%';";
+    psi.cPath LIKE '%/blog/%'
+GROUP BY 
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    psi.cPath, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
+    p.cIsActive;";
 
 $result = $concrete_db->query($query);
 
@@ -90,21 +98,21 @@ while ($row = $result->fetch_assoc()) {
     echo "cIsActive:$cIsActive <br>";
 
     // WordPressの投稿用クエリ
-    $insert_query = "
-        INSERT INTO wp20241216115717_posts (
-            post_author, post_date, post_date_gmt, post_content, post_title, 
-            post_excerpt, post_status, post_type, post_name, post_modified, post_modified_gmt
-        ) VALUES (
-            1, '$cDatePublic', '$cDatePublic', '$content', '$title', 
-            '$cDescription', 'publish', 'post', '$slug', '$cDateLastIndexed', '$cDateLastIndexed'
-        )";
+    // $insert_query = "
+    //     INSERT INTO wp20241216115717_posts (
+    //         post_author, post_date, post_date_gmt, post_content, post_title, 
+    //         post_excerpt, post_status, post_type, post_name, post_modified, post_modified_gmt
+    //     ) VALUES (
+    //         1, '$cDatePublic', '$cDatePublic', '$content', '$title', 
+    //         '$cDescription', 'publish', 'post', '$slug', '$cDateLastIndexed', '$cDateLastIndexed'
+    //     )";
 
 
-    if (!$wp_db->query($insert_query)) {
-        error_log("記事挿入エラー: " . $wp_db->error);
-    } else {
-        echo "記事「{$title}」をインポートしました。<br>";
-    }
+    // if (!$wp_db->query($insert_query)) {
+    //     error_log("記事挿入エラー: " . $wp_db->error);
+    // } else {
+    //     echo "記事「{$title}」をインポートしました。<br>";
+    // }
 }
 
 // 5. データベース接続を閉じる
