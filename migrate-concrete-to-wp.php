@@ -29,7 +29,7 @@ if ($wp_db->connect_error) {
 
 // 3. Concrete CMSから記事データを取得
 $query =
-    "SELECT 
+    "SELECT DISTINCT
     psi.cID, 
     psi.cName, 
     psi.cDescription, 
