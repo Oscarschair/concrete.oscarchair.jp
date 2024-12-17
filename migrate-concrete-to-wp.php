@@ -43,7 +43,7 @@ FROM
 JOIN 
     Pages p ON psi.cID = p.cID
 WHERE 
-    p.cIsActive = 1 AND pp.cPath LIKE '%/blog/%' 
+    p.cIsActive = 1 AND psi.cPath LIKE '%/blog/%' 
     AND p.cParentID != 0;";
 
 // $query = "SELECT 
