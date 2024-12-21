@@ -47,7 +47,17 @@ FROM
 JOIN 
     Pages p ON psi.cID = p.cID
 JOIN 
-    CollectionVersionBlocks cvb ON p.cID = cvb.cID
+    (
+        SELECT 
+            cvb.cID, 
+            MAX(cvb.bID) AS max_bID
+        FROM 
+            CollectionVersionBlocks cvb
+        GROUP BY 
+            cvb.cID
+    ) cvb_max ON p.cID = cvb_max.cID
+JOIN 
+    CollectionVersionBlocks cvb ON cvb.cID = cvb_max.cID AND cvb.bID = cvb_max.max_bID
 JOIN 
     Blocks b ON cvb.bID = b.bID
 JOIN 
