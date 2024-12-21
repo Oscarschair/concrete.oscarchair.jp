@@ -87,10 +87,12 @@ while ($row = $result->fetch_assoc()) {
     //$cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
     //$cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
 
+    $LENcontent = strlen($content);
+
     //echo "cID:$cID <br>";
     echo "Title:$title <br>";
     echo "cDescription:$cDescription <br>";
-    echo "content長さ:strlen($content; <br>";
+    echo "content長さ:$LENcontent <br>";
     //echo "cPath:$cPath <br>";
     echo "slug:$slug <br>";
     //echo "cDatePublic:$cDatePublic <br>";
