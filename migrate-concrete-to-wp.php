@@ -33,27 +33,35 @@ $concrete_db->query("SET SESSION group_concat_max_len = 1000000");
 // 4. Concrete CMSから記事データを取得
 $query = "
     SELECT 
-        psi.cID, 
-        psi.cName, 
-        psi.cDescription, 
-        btl.content AS html_content, 
-        psi.cPath, 
-        SUBSTRING_INDEX(psi.cPath, '/', -1) AS slug, 
-        psi.cDatePublic, 
-        psi.cDateLastIndexed, 
-        p.cIsActive
-    FROM 
-        PageSearchIndex psi
-    JOIN 
-        Pages p ON psi.cID = p.cID
-    JOIN 
-        CollectionVersionBlocks cvb ON p.cID = cvb.cID
-    JOIN 
-        Blocks b ON cvb.bID = b.bID
-    JOIN 
-        btContentLocal btl ON b.bID = btl.bID
-    WHERE 
-        psi.cPath LIKE '%/blog/%'";
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    GROUP_CONCAT(DISTINCT btl.content SEPARATOR '\n') AS html_content, 
+    psi.cPath, 
+    SUBSTRING_INDEX(psi.cPath, '/', -1) AS slug, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
+    p.cIsActive
+FROM 
+    PageSearchIndex psi
+JOIN 
+    Pages p ON psi.cID = p.cID
+JOIN 
+    CollectionVersionBlocks cvb ON p.cID = cvb.cID
+JOIN 
+    Blocks b ON cvb.bID = b.bID
+JOIN 
+    btContentLocal btl ON b.bID = btl.bID
+WHERE 
+    psi.cPath LIKE '%/blog/%'
+GROUP BY 
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    psi.cPath, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
+    p.cIsActive;";
 
 $result = $concrete_db->query($query);
 if (!$result) {
