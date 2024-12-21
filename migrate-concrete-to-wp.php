@@ -83,7 +83,15 @@ while ($row = $result->fetch_assoc()) {
             'is_active' => $row['cIsActive'],
         ];
     }
+    // コンテンツを結合
     $articles[$cID]['content'] .= $row['html_content'] . "\n";
+
+    // 置換処理
+    $articles[$cID]['content'] = str_replace(
+        '/application/files/7616/5064/4524/my-icon.jpg',
+        'wp-content/uploads/2024/12/my-icon.svg',
+        $articles[$cID]['content']
+    );
 }
 
 echo "データ移行前。<br>";
@@ -103,8 +111,14 @@ foreach ($articles as $article) {
     // デバッグ用表示
     //echo "Title: $title<br>";
     //echo "Description: $description<br>";
-    echo "Content Length: $content_length<br>";
-    echo "Slug: $slug<br>";
+    if ($slug == "where-is-the-source-media-in-ga4") {
+        echo "Slug: $slug<br>";
+        echo "Content Length: $content_length<br>";
+        echo "Content: $content<br>";
+    }
+
+
+
     //echo "Date Public: $date_public<br>";
     //echo "Date Last Indexed: $date_last_indexed<br>";
     //echo "Is Active: $is_active<br>";
