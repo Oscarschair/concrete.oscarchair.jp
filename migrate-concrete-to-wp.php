@@ -82,49 +82,39 @@ echo "データ移行前。<br>";
 
 // 5. WordPressにデータをインポート
 foreach ($articles as $article) {
-    $title = $wp_db->real_escape_string($article['title']);
-    $description = $wp_db->real_escape_string($article['description']);
+    //$title = $wp_db->real_escape_string($article['title']);
+    //$description = $wp_db->real_escape_string($article['description']);
     $content = $wp_db->real_escape_string($article['content']);
     $slug = $wp_db->real_escape_string($article['slug']);
-    $date_public = $wp_db->real_escape_string($article['date_public']);
-    $date_last_indexed = $wp_db->real_escape_string($article['date_last_indexed']);
-    $is_active = (int)$article['is_active'];
+    //$date_public = $wp_db->real_escape_string($article['date_public']);
+    //$date_last_indexed = $wp_db->real_escape_string($article['date_last_indexed']);
+    //$is_active = (int)$article['is_active'];
 
     $content_length = strlen($content);
 
     // デバッグ用表示
-    echo "Title: $title<br>";
-    echo "Description: $description<br>";
+    //echo "Title: $title<br>";
+    //echo "Description: $description<br>";
     echo "Content Length: $content_length<br>";
     echo "Slug: $slug<br>";
-    echo "Date Public: $date_public<br>";
-    echo "Date Last Indexed: $date_last_indexed<br>";
-    echo "Is Active: $is_active<br>";
+    //echo "Date Public: $date_public<br>";
+    //echo "Date Last Indexed: $date_last_indexed<br>";
+    //echo "Is Active: $is_active<br>";
 
     // WordPressの投稿用クエリ
-    // $insert_query = "
-    //     INSERT INTO wp_posts (
-    //         post_author, 
-    //         post_date, 
-    //         post_date_gmt, 
-    //         post_content, 
-    //         post_title, 
-    //         post_excerpt, 
-    //         post_status, 
-    //         post_type, 
-    //         post_name, 
-    //         post_modified, 
-    //         post_modified_gmt
-    //     ) VALUES (
-    //         1, '$date_public', '$date_public', '$content', '$title', 
-    //         '$description', 'publish', 'post', '$slug', '$date_last_indexed', '$date_last_indexed'
-    //     )";
+    $insert_query = "
+        UPDATE wp20241216115717_posts 
+    SET post_content = '$content', 
+        post_modified = NOW(), 
+        post_modified_gmt = UTC_TIMESTAMP()
+    WHERE post_name = '$slug';
+";
 
-    // if (!$wp_db->query($insert_query)) {
-    //     error_log("記事挿入エラー: " . $wp_db->error);
-    // } else {
-    //     echo "記事「{$title}」をインポートしました。<br>";
-    // }
+    if (!$wp_db->query($insert_query)) {
+        error_log("記事挿入エラー: " . $wp_db->error);
+    } else {
+        echo "記事「{$title}」をインポートしました。<br>";
+    }
 }
 
 
