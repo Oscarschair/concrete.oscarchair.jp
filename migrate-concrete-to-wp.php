@@ -33,17 +33,35 @@ if ($wp_db->connect_error) {
 // 3. Concrete CMSから記事データを取得
 $query =
     "SELECT 
-    CollectionVersions.cvHandle AS slug, 
-    CollectionVersionBlocks.html_content 
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    GROUP_CONCAT(DISTINCT btl.content SEPARATOR '\n') AS html_content, -- 複数のHTMLを1つにまとめる
+    psi.cPath, 
+    SUBSTRING_INDEX(psi.cPath, '/', -1) AS slug, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
+    p.cIsActive
 FROM 
-    Pages 
-INNER JOIN 
-    CollectionVersions ON Pages.cID = CollectionVersions.cID 
-INNER JOIN 
-    CollectionVersionBlocks ON Pages.cID = CollectionVersionBlocks.cID 
+    PageSearchIndex psi
+JOIN 
+    Pages p ON psi.cID = p.cID
+JOIN 
+    CollectionVersionBlocks cvb ON p.cID = cvb.cID
+JOIN 
+    Blocks b ON cvb.bID = b.bID
+JOIN 
+    btContentLocal btl ON b.bID = btl.bID
 WHERE 
-    CollectionVersions.cvIsApproved = 1 
-    AND Pages.cIsActive = 1;";
+    psi.cPath LIKE '%/blog/%'
+GROUP BY 
+    psi.cID, 
+    psi.cName, 
+    psi.cDescription, 
+    psi.cPath, 
+    psi.cDatePublic, 
+    psi.cDateLastIndexed, 
+    p.cIsActive;";
 
 $result = $concrete_db->query($query);
 
@@ -59,11 +77,25 @@ while ($row = $result->fetch_assoc()) {
     echo "データ移行中。 <br><br><br>";
 
     // Concrete CMSデータ
-    $slug = $wp_db->real_escape_string($row['slug']); // 記事slug
+    $cID = $wp_db->real_escape_string($row['cID']); // 記事タイトル
+    $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
+    $cDescription = $wp_db->real_escape_string($row['cDescription']); // 記事タイトル
     $content = $wp_db->real_escape_string($row['html_content']); // 記事タイトル
+    $cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
+    $slug = $wp_db->real_escape_string($row['slug']); // 記事タイトル
+    $cDatePublic = $wp_db->real_escape_string($row['cDatePublic']); // 記事タイトル
+    $cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
+    $cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
 
+    echo "cID:$cID <br>";
+    echo "Title:$title <br>";
+    echo "cDescription:$cDescription <br>";
+    //echo "content:$content <br>";
+    echo "cPath:$cPath <br>";
     echo "slug:$slug <br>";
-    echo "content:$content <br>";
+    echo "cDatePublic:$cDatePublic <br>";
+    echo "cDateLastIndexed:$cDateLastIndexed <br>";
+    echo "cIsActive:$cIsActive <br>";
 
     //     // WordPressの投稿用クエリ
     //     $insert_query = "
@@ -76,11 +108,11 @@ while ($row = $result->fetch_assoc()) {
     //         )";
 
 
-    //     if (!$wp_db->query($insert_query)) {
-    //         error_log("記事挿入エラー: " . $wp_db->error);
-    //     } else {
-    //         echo "記事「{$title}」をインポートしました。<br>";
-    //     }
+    if (!$wp_db->query($insert_query)) {
+        error_log("記事挿入エラー: " . $wp_db->error);
+    } else {
+        echo "記事「{$title}」をインポートしました。<br>";
+    }
 }
 
 // // 5. データベース接続を閉じる
