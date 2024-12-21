@@ -89,7 +89,7 @@ while ($row = $result->fetch_assoc()) {
     // 置換処理
     $articles[$cID]['content'] = str_replace(
         '/application/files/7616/5064/4524/my-icon.jpg',
-        'wp-content/uploads/2024/12/my-icon.svg',
+        '/wp-content/uploads/2024/12/my-icon.svg',
         $articles[$cID]['content']
     );
 }
