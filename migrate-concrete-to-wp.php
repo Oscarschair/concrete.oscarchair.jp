@@ -121,7 +121,7 @@ foreach ($articles as $article) {
     if (!$wp_db->query($insert_query)) {
         error_log("記事挿入エラー: " . $wp_db->error);
     } else {
-        echo "記事「{$title}」をインポートしました。<br>";
+        echo "記事「{$slug}」をインポートしました。<br>";
     }
 }
 
