@@ -77,25 +77,25 @@ while ($row = $result->fetch_assoc()) {
     echo "データ移行中。 <br><br><br>";
 
     // Concrete CMSデータ
-    $cID = $wp_db->real_escape_string($row['cID']); // 記事タイトル
+    //$cID = $wp_db->real_escape_string($row['cID']); // 記事タイトル
     $title = $wp_db->real_escape_string($row['cName']); // 記事タイトル
     $cDescription = $wp_db->real_escape_string($row['cDescription']); // 記事タイトル
     $content = $wp_db->real_escape_string($row['html_content']); // 記事タイトル
-    $cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
+    //$cPath = $wp_db->real_escape_string($row['cPath']); // 記事タイトル
     $slug = $wp_db->real_escape_string($row['slug']); // 記事タイトル
-    $cDatePublic = $wp_db->real_escape_string($row['cDatePublic']); // 記事タイトル
-    $cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
-    $cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
+    //$cDatePublic = $wp_db->real_escape_string($row['cDatePublic']); // 記事タイトル
+    //$cDateLastIndexed = $wp_db->real_escape_string($row['cDateLastIndexed']); // 記事タイトル
+    //$cIsActive = $wp_db->real_escape_string($row['cIsActive']); // 記事タイトル
 
-    echo "cID:$cID <br>";
+    //echo "cID:$cID <br>";
     echo "Title:$title <br>";
     echo "cDescription:$cDescription <br>";
-    //echo "content:$content <br>";
-    echo "cPath:$cPath <br>";
+    echo "content長さ:strlen($content; <br>";
+    //echo "cPath:$cPath <br>";
     echo "slug:$slug <br>";
-    echo "cDatePublic:$cDatePublic <br>";
-    echo "cDateLastIndexed:$cDateLastIndexed <br>";
-    echo "cIsActive:$cIsActive <br>";
+    //echo "cDatePublic:$cDatePublic <br>";
+    //echo "cDateLastIndexed:$cDateLastIndexed <br>";
+    //echo "cIsActive:$cIsActive <br>";
 
     //     // WordPressの投稿用クエリ
     //     $insert_query = "
