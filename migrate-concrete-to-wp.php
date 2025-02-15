@@ -50,9 +50,10 @@ if ($post_results->num_rows > 0) {
         if (!empty($matches[0])) {
             echo "<strong>見つかった concrete-picture タグ:</strong><br>";
             foreach ($matches[0] as $match) {
-                echo htmlspecialchars($match) . "<br>"; // HTMLエスケープして表示
-                // 3. fID を取得
-                if (preg_match('/fID="(\d+)"/i', $match, $fid_match)) {
+                echo "タグ: " . htmlspecialchars($match) . "<br>";
+
+                // 3. fID（UUID対応）を取得
+                if (preg_match('/fID="([a-f0-9\-]+)"/i', $match, $fid_match)) {
                     $fid = $fid_match[1]; // fID の値
                     echo "fID: " . htmlspecialchars($fid) . "<br>";
                 } else {
