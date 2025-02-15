@@ -108,22 +108,18 @@ if ($post_results->num_rows > 0) {
 
                             // 10. post_content を更新（concrete-picture を img に置換）
                             $updated_content = str_replace($match, $img_tag, $updated_content);
-
-                            echo "updated_content:$updated_content<br>";
                         } else {
                             echo "fID: $fID の画像パスが見つかりませんでした。<br>";
                         }
-
                         $stmt->close();
                     } else {
                         echo "fUUID: $fUUID に対応する fID が見つかりませんでした。<br>";
                     }
-
-                    $stmt->close();
                 } else {
                     echo "fUUID が見つかりませんでした。<br>";
                 }
             }
+            echo "updated_content:$updated_content<br>";
 
 
             // 11. WordPress の post_content を更新
@@ -137,7 +133,7 @@ if ($post_results->num_rows > 0) {
             //     echo "投稿ID $post_id の更新に失敗しました: " . $stmt->error . "<br>";
             // }
 
-            $stmt->close();
+            // $stmt->close();
         } else {
             echo "concrete-picture タグが見つかりませんでした。<br>";
         }
