@@ -81,27 +81,27 @@ if (!$result) {
 // データをグループ化し、PHP側で結合
 $articles = [];
 while ($row = $result->fetch_assoc()) {
-    $cID = $row['cID'];
-    if (!isset($articles[$cID])) {
-        $articles[$cID] = [
-            'title' => $row['cName'],
-            'description' => $row['cDescription'],
-            'content' => '',
-            'slug' => $row['slug'],
-            'date_public' => $row['cDatePublic'],
-            'date_last_indexed' => $row['cDateLastIndexed'],
-            'is_active' => $row['cIsActive'],
-        ];
-    }
-    // コンテンツを結合
-    $articles[$cID]['content'] .= $row['html_content'] . "\n";
+    // $cID = $row['cID'];
+    // if (!isset($articles[$cID])) {
+    //     $articles[$cID] = [
+    //         'title' => $row['cName'],
+    //         'description' => $row['cDescription'],
+    //         'content' => '',
+    //         'slug' => $row['slug'],
+    //         'date_public' => $row['cDatePublic'],
+    //         'date_last_indexed' => $row['cDateLastIndexed'],
+    //         'is_active' => $row['cIsActive'],
+    //     ];
+    // }
+    // // コンテンツを結合
+    // $articles[$cID]['content'] .= $row['html_content'] . "\n";
 
-    // 置換処理
-    $articles[$cID]['content'] = str_replace(
-        '/application/files/7616/5064/4524/my-icon.jpg',
-        '/wp-content/uploads/2024/12/my-icon.svg',
-        $articles[$cID]['content']
-    );
+    // // 置換処理
+    // $articles[$cID]['content'] = str_replace(
+    //     '/application/files/7616/5064/4524/my-icon.jpg',
+    //     '/wp-content/uploads/2024/12/my-icon.svg',
+    //     $articles[$cID]['content']
+    // );
 }
 
 echo "データ移行前。<br>";
@@ -110,22 +110,22 @@ echo "データ移行前。<br>";
 foreach ($articles as $article) {
     //$title = $wp_db->real_escape_string($article['title']);
     //$description = $wp_db->real_escape_string($article['description']);
-    $content = $wp_db->real_escape_string($article['content']);
-    $slug = $wp_db->real_escape_string($article['slug']);
+    // $content = $wp_db->real_escape_string($article['content']);
+    // $slug = $wp_db->real_escape_string($article['slug']);
     //$date_public = $wp_db->real_escape_string($article['date_public']);
     //$date_last_indexed = $wp_db->real_escape_string($article['date_last_indexed']);
     //$is_active = (int)$article['is_active'];
 
-    $content_length = strlen($content);
+    // $content_length = strlen($content);
 
     // デバッグ用表示
     //echo "Title: $title<br>";
     //echo "Description: $description<br>";
-    if ($slug == "where-is-the-source-media-in-ga4") {
-        echo "Slug: $slug<br>";
-        echo "Content Length: $content_length<br>";
-        echo "Content: $content<br>";
-    }
+    // if ($slug == "where-is-the-source-media-in-ga4") {
+    //     echo "Slug: $slug<br>";
+    //     echo "Content Length: $content_length<br>";
+    //     echo "Content: $content<br>";
+    // }
 
 
 
@@ -134,19 +134,19 @@ foreach ($articles as $article) {
     //echo "Is Active: $is_active<br>";
 
     // WordPressの投稿用クエリ
-    $insert_query = "
-        UPDATE wp20241216115717_posts 
-    SET post_content = '$content', 
-        post_modified = NOW(), 
-        post_modified_gmt = UTC_TIMESTAMP()
-    WHERE post_name = '$slug';
-";
+    //     $insert_query = "
+    //         UPDATE wp20241216115717_posts 
+    //     SET post_content = '$content', 
+    //         post_modified = NOW(), 
+    //         post_modified_gmt = UTC_TIMESTAMP()
+    //     WHERE post_name = '$slug';
+    // ";
 
-    if (!$wp_db->query($insert_query)) {
-        error_log("記事挿入エラー: " . $wp_db->error);
-    } else {
-        echo "記事「{$slug}」をインポートしました。<br>";
-    }
+    //     if (!$wp_db->query($insert_query)) {
+    //         error_log("記事挿入エラー: " . $wp_db->error);
+    //     } else {
+    //         echo "記事「{$slug}」をインポートしました。<br>";
+    //     }
 }
 
 
