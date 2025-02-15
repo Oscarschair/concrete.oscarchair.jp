@@ -46,23 +46,23 @@ if ($post_results->num_rows > 0) {
 
         // 2. concrete-picture タグを解析し、fid を取得
         preg_match_all('/<concrete-picture[^>]+fid="(\d+)"[^>]*>/', $post_content, $matches);
-
         if (!empty($matches[1])) {
+            echo "MATCHES!!!";
             $fid_list = array_unique($matches[1]); // 重複削除
+            $fid_url_map = [];
 
-            echo "fid_list:$fid_list<br>";
-            //         $fid_url_map = [];
+            // 3. fid に対応する画像URLを取得
+            foreach ($fid_list as $fid) {
 
-            //         // 3. fid に対応する画像URLを取得
-            //         foreach ($fid_list as $fid) {
-            //             $fid = (int) $fid; // セキュリティのため整数型にキャスト
-            //             $file_query = "SELECT fvFilename, fvPath FROM FileVersions WHERE fID = $fid ORDER BY fvID DESC LIMIT 1";
-            //             $file_result = $concrete_db->query($file_query);
+                echo "fid:$fid<br>";
+                //             $fid = (int) $fid; // セキュリティのため整数型にキャスト
+                //             $file_query = "SELECT fvFilename, fvPath FROM FileVersions WHERE fID = $fid ORDER BY fvID DESC LIMIT 1";
+                //             $file_result = $concrete_db->query($file_query);
 
-            //             if ($file_result && $file_row = $file_result->fetch_assoc()) {
-            //                 $file_url = str_replace("/application/", "/wp-content/", $file_row['fvPath']);
-            //                 $fid_url_map[$fid] = $file_url;
-            //             }
+                //             if ($file_result && $file_row = $file_result->fetch_assoc()) {
+                //                 $file_url = str_replace("/application/", "/wp-content/", $file_row['fvPath']);
+                //                 $fid_url_map[$fid] = $file_url;
+            }
         }
 
         //         // 4. post_content 内の <concrete-picture> を <img> に変換
