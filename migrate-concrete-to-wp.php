@@ -15,6 +15,7 @@ $concrete_db = new mysqli($concrete_db_host, $concrete_db_user, $concrete_db_pas
 if ($concrete_db->connect_error) {
     die("Concrete CMS DB接続失敗: " . $concrete_db->connect_error);
 }
+$concrete_db->set_charset("utf8mb4");
 
 // 2. WordPress データベース接続設定
 $wp_db_host = 'mysql309.phy.lolipop.lan'; // WordPressのDBホスト
@@ -27,131 +28,68 @@ $wp_db = new mysqli($wp_db_host, $wp_db_user, $wp_db_pass, $wp_db_name);
 if ($wp_db->connect_error) {
     die("WordPress DB接続失敗: " . $wp_db->connect_error);
 }
-// 3. GROUP_CONCAT制限の拡張
-$concrete_db->query("SET SESSION group_concat_max_len = 1000000");
+$wp_db->set_charset("utf8mb4");
 
-// 4. Concrete CMSから記事データを取得
-$query = "
-    SELECT 
-    psi.cID, 
-    psi.cName, 
-    psi.cDescription, 
-    GROUP_CONCAT(DISTINCT btl.content SEPARATOR '\n') AS html_content, 
-    psi.cPath, 
-    SUBSTRING_INDEX(psi.cPath, '/', -1) AS slug, 
-    psi.cDatePublic, 
-    psi.cDateLastIndexed, 
-    p.cIsActive
-FROM 
-    PageSearchIndex psi
-JOIN 
-    Pages p ON psi.cID = p.cID
-JOIN 
-    (
-        SELECT 
-            cvb.cID, 
-            MAX(cvb.bID) AS max_bID
-        FROM 
-            CollectionVersionBlocks cvb
-        GROUP BY 
-            cvb.cID
-    ) cvb_max ON p.cID = cvb_max.cID
-JOIN 
-    CollectionVersionBlocks cvb ON cvb.cID = cvb_max.cID AND cvb.bID = cvb_max.max_bID
-JOIN 
-    Blocks b ON cvb.bID = b.bID
-JOIN 
-    btContentLocal btl ON b.bID = btl.bID
-WHERE 
-    psi.cPath LIKE '%/blog/%'
-GROUP BY 
-    psi.cID, 
-    psi.cName, 
-    psi.cDescription, 
-    psi.cPath, 
-    psi.cDatePublic, 
-    psi.cDateLastIndexed, 
-    p.cIsActive;";
+// 1. WordPressの投稿データを取得
+$post_query = "SELECT ID ,post_name ,post_content FROM wp20241216115717_posts WHERE post_content LIKE '%<concrete-picture%'";
+$post_results = $wp_db->query($post_query);
 
-$result = $concrete_db->query($query);
-if (!$result) {
-    die("データ取得エラー: " . $concrete_db->error);
+if ($post_results->num_rows > 0) {
+    while ($post = $post_results->fetch_assoc()) {
+        $post_id = $post['ID'];
+        $post_name = $post['post_name'];
+        $post_content = $post['post_content'];
+
+        echo "ID:$post_id<br>";
+        echo "post_name:$post_name<br>";
+        echo "post_content:$post_content<br>";
+
+        //     // 2. concrete-picture タグを解析し、fid を取得
+        //     preg_match_all('/<concrete-picture[^>]+fid="(\d+)"[^>]*>/', $post_content, $matches);
+
+        //     if (!empty($matches[1])) {
+        //         $fid_list = array_unique($matches[1]); // 重複削除
+        //         $fid_url_map = [];
+
+        //         // 3. fid に対応する画像URLを取得
+        //         foreach ($fid_list as $fid) {
+        //             $fid = (int) $fid; // セキュリティのため整数型にキャスト
+        //             $file_query = "SELECT fvFilename, fvPath FROM FileVersions WHERE fID = $fid ORDER BY fvID DESC LIMIT 1";
+        //             $file_result = $concrete_db->query($file_query);
+
+        //             if ($file_result && $file_row = $file_result->fetch_assoc()) {
+        //                 $file_url = str_replace("/application/", "/wp-content/", $file_row['fvPath']);
+        //                 $fid_url_map[$fid] = $file_url;
+        //             }
+        //         }
+
+        //         // 4. post_content 内の <concrete-picture> を <img> に変換
+        //         foreach ($fid_url_map as $fid => $url) {
+        //             $post_content = preg_replace(
+        //                 '/<concrete-picture[^>]+fid="' . $fid . '"[^>]*>/',
+        //                 '<img src="' . $url . '" alt="Image">',
+        //                 $post_content
+        //             );
+        //         }
+
+        //         // 5. WordPressの投稿データを更新
+        //         $update_query = "UPDATE wp20241216115717_posts SET post_content = ? WHERE ID = ?";
+        //         $stmt = $wp_db->prepare($update_query);
+        //         $stmt->bind_param("si", $post_content, $post_id);
+        //         if ($stmt->execute()) {
+        //             echo "投稿ID $post_id の画像を変換しました。<br>";
+        //         } else {
+        //             echo "投稿ID $post_id の更新に失敗しました: " . $stmt->error . "<br>";
+        //         }
+        //         $stmt->close();
+        //     }
+    }
+} else {
+    echo "対象の投稿が見つかりませんでした。<br>";
 }
 
-// データをグループ化し、PHP側で結合
-$articles = [];
-while ($row = $result->fetch_assoc()) {
-    // $cID = $row['cID'];
-    // if (!isset($articles[$cID])) {
-    //     $articles[$cID] = [
-    //         'title' => $row['cName'],
-    //         'description' => $row['cDescription'],
-    //         'content' => '',
-    //         'slug' => $row['slug'],
-    //         'date_public' => $row['cDatePublic'],
-    //         'date_last_indexed' => $row['cDateLastIndexed'],
-    //         'is_active' => $row['cIsActive'],
-    //     ];
-    // }
-    // // コンテンツを結合
-    // $articles[$cID]['content'] .= $row['html_content'] . "\n";
-
-    // // 置換処理
-    // $articles[$cID]['content'] = str_replace(
-    //     '/application/files/7616/5064/4524/my-icon.jpg',
-    //     '/wp-content/uploads/2024/12/my-icon.svg',
-    //     $articles[$cID]['content']
-    // );
-}
-
-echo "データ移行前。<br>";
-
-// 5. WordPressにデータをインポート
-foreach ($articles as $article) {
-    //$title = $wp_db->real_escape_string($article['title']);
-    //$description = $wp_db->real_escape_string($article['description']);
-    // $content = $wp_db->real_escape_string($article['content']);
-    // $slug = $wp_db->real_escape_string($article['slug']);
-    //$date_public = $wp_db->real_escape_string($article['date_public']);
-    //$date_last_indexed = $wp_db->real_escape_string($article['date_last_indexed']);
-    //$is_active = (int)$article['is_active'];
-
-    // $content_length = strlen($content);
-
-    // デバッグ用表示
-    //echo "Title: $title<br>";
-    //echo "Description: $description<br>";
-    // if ($slug == "where-is-the-source-media-in-ga4") {
-    //     echo "Slug: $slug<br>";
-    //     echo "Content Length: $content_length<br>";
-    //     echo "Content: $content<br>";
-    // }
-
-
-
-    //echo "Date Public: $date_public<br>";
-    //echo "Date Last Indexed: $date_last_indexed<br>";
-    //echo "Is Active: $is_active<br>";
-
-    // WordPressの投稿用クエリ
-    //     $insert_query = "
-    //         UPDATE wp20241216115717_posts 
-    //     SET post_content = '$content', 
-    //         post_modified = NOW(), 
-    //         post_modified_gmt = UTC_TIMESTAMP()
-    //     WHERE post_name = '$slug';
-    // ";
-
-    //     if (!$wp_db->query($insert_query)) {
-    //         error_log("記事挿入エラー: " . $wp_db->error);
-    //     } else {
-    //         echo "記事「{$slug}」をインポートしました。<br>";
-    //     }
-}
-
-
-// 6. データベース接続を閉じる
+// データベース接続を閉じる
 $concrete_db->close();
 $wp_db->close();
 
-echo "データ移行が完了しました。<br>";
+echo "データ変換が完了しました。<br>";
