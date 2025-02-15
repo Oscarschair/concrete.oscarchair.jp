@@ -105,6 +105,9 @@ if ($post_results->num_rows > 0) {
 
                             // 10. post_content を更新（concrete-picture を img に置換）
                             $updated_content = str_replace($match, $img_tag, $updated_content);
+
+
+                            echo "updated_content:$updated_content<br>";
                         } else {
                             echo "fID: $fID の画像パスが見つかりませんでした。<br>";
                         }
