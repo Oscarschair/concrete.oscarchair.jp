@@ -31,7 +31,7 @@ if ($wp_db->connect_error) {
 $wp_db->set_charset("utf8mb4");
 
 // 1. WordPressの投稿データを取得
-$post_query = "SELECT ID ,post_name ,post_content FROM wp20241216115717_posts WHERE post_content LIKE '%<concrete-picture%' Limit 1";
+$post_query = "SELECT ID ,post_name ,post_content FROM wp20241216115717_posts WHERE post_content LIKE '%<concrete-picture%'";
 $post_results = $wp_db->query($post_query);
 
 if ($post_results->num_rows > 0) {
