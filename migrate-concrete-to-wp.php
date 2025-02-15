@@ -123,17 +123,17 @@ if ($post_results->num_rows > 0) {
 
 
             // 11. WordPress の post_content を更新
-            // $update_query = "UPDATE wp20241216115717_posts SET post_content = ? WHERE ID = ?";
-            // $stmt = $wp_db->prepare($update_query);
-            // $stmt->bind_param("si", $updated_content, $post_id);
+            $update_query = "UPDATE wp20241216115717_posts SET post_content = ? WHERE ID = ?";
+            $stmt = $wp_db->prepare($update_query);
+            $stmt->bind_param("si", $updated_content, $post_id);
 
-            // if ($stmt->execute()) {
-            //     echo "投稿ID $post_id の内容を更新しました。<br>";
-            // } else {
-            //     echo "投稿ID $post_id の更新に失敗しました: " . $stmt->error . "<br>";
-            // }
+            if ($stmt->execute()) {
+                echo "投稿ID $post_id の内容を更新しました。<br>";
+            } else {
+                echo "投稿ID $post_id の更新に失敗しました: " . $stmt->error . "<br>";
+            }
 
-            // $stmt->close();
+            $stmt->close();
         } else {
             echo "concrete-picture タグが見つかりませんでした。<br>";
         }
