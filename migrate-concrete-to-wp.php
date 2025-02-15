@@ -87,12 +87,16 @@ if ($post_results->num_rows > 0) {
 
                         if ($file_row = $file_result->fetch_assoc()) {
                             $filename = $file_row['fvFilename'];
+                            $prefix = $file_row['fvPrefix'];
 
-                            // 6. ファイルのフルパスを構築
-                            $original_path = "/application/files/" . $filename;
+                            // 6. fvPrefix を 4桁ごとに "/" を入れる
+                            $prefix_split = implode("/", str_split($prefix, 4));
+
+                            // 7. ファイルのフルパスを構築
+                            $original_path = "/application/files/$prefix_split/$filename";
                             echo "元の画像パス: " . htmlspecialchars($original_path) . "<br>";
 
-                            // 7. パスを変換（/application/ → /wp-content/）
+                            // 8. パスを変換（/application/ → /wp-content/）
                             $new_path = str_replace("/application/", "/wp-content/", $original_path);
                             echo "変換後の画像パス: " . htmlspecialchars($new_path) . "<br>";
                         } else {
