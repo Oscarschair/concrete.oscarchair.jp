@@ -40,6 +40,9 @@ if ($post_results->num_rows > 0) {
         $post_name = $post['post_name'];
         $post_content = $post['post_content'];
 
+        // 変換用の変数を初期化（**修正点**）
+        $updated_content = $post_content;
+
         echo "ID:$post_id<br>";
         echo "post_name:$post_name<br>";
         // echo "post_content:$post_content<br>";
@@ -106,7 +109,6 @@ if ($post_results->num_rows > 0) {
                             // 10. post_content を更新（concrete-picture を img に置換）
                             $updated_content = str_replace($match, $img_tag, $updated_content);
 
-
                             echo "updated_content:$updated_content<br>";
                         } else {
                             echo "fID: $fID の画像パスが見つかりませんでした。<br>";
@@ -124,7 +126,6 @@ if ($post_results->num_rows > 0) {
             }
 
 
-            echo "updated_content:$updated_content<br>";
             // 11. WordPress の post_content を更新
             // $update_query = "UPDATE wp20241216115717_posts SET post_content = ? WHERE ID = ?";
             // $stmt = $wp_db->prepare($update_query);
@@ -140,41 +141,6 @@ if ($post_results->num_rows > 0) {
         } else {
             echo "concrete-picture タグが見つかりませんでした。<br>";
         }
-
-        // 3. fid に対応する画像URLを取得
-        // foreach ($fid_list as $fid) {
-
-        // echo "fid:$fid<br>";
-        //             $fid = (int) $fid; // セキュリティのため整数型にキャスト
-        //             $file_query = "SELECT fvFilename, fvPath FROM FileVersions WHERE fID = $fid ORDER BY fvID DESC LIMIT 1";
-        //             $file_result = $concrete_db->query($file_query);
-
-        //             if ($file_result && $file_row = $file_result->fetch_assoc()) {
-        //                 $file_url = str_replace("/application/", "/wp-content/", $file_row['fvPath']);
-        //                 $fid_url_map[$fid] = $file_url;
-        // }
-        // }
-
-        //         // 4. post_content 内の <concrete-picture> を <img> に変換
-        //         foreach ($fid_url_map as $fid => $url) {
-        //             $post_content = preg_replace(
-        //                 '/<concrete-picture[^>]+fid="' . $fid . '"[^>]*>/',
-        //                 '<img src="' . $url . '" alt="Image">',
-        //                 $post_content
-        //             );
-        //         }
-
-        //         // 5. WordPressの投稿データを更新
-        //         $update_query = "UPDATE wp20241216115717_posts SET post_content = ? WHERE ID = ?";
-        //         $stmt = $wp_db->prepare($update_query);
-        //         $stmt->bind_param("si", $post_content, $post_id);
-        //         if ($stmt->execute()) {
-        //             echo "投稿ID $post_id の画像を変換しました。<br>";
-        //         } else {
-        //             echo "投稿ID $post_id の更新に失敗しました: " . $stmt->error . "<br>";
-        //         }
-        //         $stmt->close();
-        //     }
     }
 } else {
     echo "対象の投稿が見つかりませんでした。<br>";
