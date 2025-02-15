@@ -56,6 +56,26 @@ if ($post_results->num_rows > 0) {
                 if (preg_match('/fID="([a-f0-9\-]+)"/i', $match, $fid_match)) {
                     $fid = $fid_match[1]; // fID の値
                     echo "fID: " . htmlspecialchars($fid) . "<br>";
+
+                    // 4. Concrete CMS のDBから画像のパスを取得
+                    $file_query = "SELECT fvPath FROM FileVersions WHERE fID = ? ORDER BY fvID DESC LIMIT 1";
+                    $stmt = $concrete_db->prepare($file_query);
+                    $stmt->bind_param("s", $fid); // UUID なので文字列扱い
+                    $stmt->execute();
+                    $file_result = $stmt->get_result();
+
+                    if ($file_row = $file_result->fetch_assoc()) {
+                        $original_path = $file_row['fvPath'];
+                        echo "元の画像パス: " . htmlspecialchars($original_path) . "<br>";
+
+                        // 5. パスを変換（/application/ → /wp-content/）
+                        $new_path = str_replace("/application/", "/wp-content/", $original_path);
+                        echo "変換後の画像パス: " . htmlspecialchars($new_path) . "<br>";
+                    } else {
+                        echo "fID: $fid の画像パスが見つかりませんでした。<br>";
+                    }
+
+                    $stmt->close();
                 } else {
                     echo "fID が見つかりませんでした。<br>";
                 }
