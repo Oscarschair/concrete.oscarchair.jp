@@ -60,6 +60,12 @@ if ($post_results->num_rows > 0) {
                     // 4. Concrete CMS のDBから画像のパスを取得
                     $file_query = "SELECT fvPath FROM FileVersions WHERE fID = ? ORDER BY fvID DESC LIMIT 1";
                     $stmt = $concrete_db->prepare($file_query);
+
+                    // prepare() の失敗をチェック
+                    if (!$stmt) {
+                        die("SQLエラー: " . $concrete_db->error);
+                    }
+
                     $stmt->bind_param("s", $fid); // UUID なので文字列扱い
                     $stmt->execute();
                     $file_result = $stmt->get_result();
