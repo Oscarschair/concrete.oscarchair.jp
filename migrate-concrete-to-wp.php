@@ -69,10 +69,37 @@ if ($post_results->num_rows > 0) {
                     $stmt->execute();
                     $fid_result = $stmt->get_result();
 
-
                     if ($fid_row = $fid_result->fetch_assoc()) {
                         $fID = $fid_row['fID'];
                         echo "取得した fID: " . htmlspecialchars($fID) . "<br>";
+
+                        // 5. fID を使って FileVersions から画像のファイル名を取得
+                        $file_query = "SELECT fvFilename FROM FileVersions WHERE fID = ? ORDER BY fvID DESC LIMIT 1";
+                        $stmt = $concrete_db->prepare($file_query);
+
+                        if (!$stmt) {
+                            die("SQLエラー (FileVersions): " . $concrete_db->error);
+                        }
+
+                        $stmt->bind_param("i", $fID);
+                        $stmt->execute();
+                        $file_result = $stmt->get_result();
+
+                        if ($file_row = $file_result->fetch_assoc()) {
+                            $filename = $file_row['fvFilename'];
+
+                            // 6. ファイルのフルパスを構築
+                            $original_path = "/application/files/" . $filename;
+                            echo "元の画像パス: " . htmlspecialchars($original_path) . "<br>";
+
+                            // 7. パスを変換（/application/ → /wp-content/）
+                            $new_path = str_replace("/application/", "/wp-content/", $original_path);
+                            echo "変換後の画像パス: " . htmlspecialchars($new_path) . "<br>";
+                        } else {
+                            echo "fID: $fID の画像パスが見つかりませんでした。<br>";
+                        }
+
+                        $stmt->close();
                     } else {
                         echo "fUUID が見つかりませんでした。<br>";
                     }
