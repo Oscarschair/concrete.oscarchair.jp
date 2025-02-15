@@ -99,20 +99,41 @@ if ($post_results->num_rows > 0) {
                             // 8. パスを変換（/application/ → /wp-content/）
                             $new_path = str_replace("/application/", "/wp-content/", $original_path);
                             echo "変換後の画像パス: " . htmlspecialchars($new_path) . "<br>";
+
+                            // 9. img タグを作成
+                            $img_tag = '<img src="' . $new_path . '" alt="Image">';
+
+                            // 10. post_content を更新（concrete-picture を img に置換）
+                            $updated_content = str_replace($match, $img_tag, $updated_content);
                         } else {
                             echo "fID: $fID の画像パスが見つかりませんでした。<br>";
                         }
 
                         $stmt->close();
                     } else {
-                        echo "fUUID が見つかりませんでした。<br>";
+                        echo "fUUID: $fUUID に対応する fID が見つかりませんでした。<br>";
                     }
 
                     $stmt->close();
                 } else {
-                    echo "fID が見つかりませんでした。<br>";
+                    echo "fUUID が見つかりませんでした。<br>";
                 }
             }
+
+
+            echo "updated_content:$updated_content<br>";
+            // 11. WordPress の post_content を更新
+            // $update_query = "UPDATE wp20241216115717_posts SET post_content = ? WHERE ID = ?";
+            // $stmt = $wp_db->prepare($update_query);
+            // $stmt->bind_param("si", $updated_content, $post_id);
+
+            // if ($stmt->execute()) {
+            //     echo "投稿ID $post_id の内容を更新しました。<br>";
+            // } else {
+            //     echo "投稿ID $post_id の更新に失敗しました: " . $stmt->error . "<br>";
+            // }
+
+            $stmt->close();
         } else {
             echo "concrete-picture タグが見つかりませんでした。<br>";
         }
