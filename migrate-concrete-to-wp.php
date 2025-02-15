@@ -52,33 +52,29 @@ if ($post_results->num_rows > 0) {
             foreach ($matches[0] as $match) {
                 echo "タグ: " . htmlspecialchars($match) . "<br>";
 
-                // 3. fID（UUID対応）を取得
-                if (preg_match('/fID="([a-f0-9\-]+)"/i', $match, $fid_match)) {
-                    $fid = $fid_match[1]; // fID の値
-                    echo "fID: " . htmlspecialchars($fid) . "<br>";
+                // 3. fUUID（UUID対応）を取得
+                if (preg_match('/fID="([a-f0-9\-]+)"/i', $match, $fuuid_match)) {
+                    $fUUID = $fuuid_match[1]; // fUUID の値
+                    echo "fUUID: " . htmlspecialchars($fUUID) . "<br>";
 
-                    // 4. Concrete CMS のDBから画像のパスを取得
-                    $file_query = "SELECT fvPath FROM FileVersions WHERE fID = ? ORDER BY fvID DESC LIMIT 1";
-                    $stmt = $concrete_db->prepare($file_query);
+                    // 4. fUUID から fID を取得
+                    $fid_query = "SELECT fID FROM Files WHERE fUUID = ?";
+                    $stmt = $concrete_db->prepare($fid_query);
 
-                    // prepare() の失敗をチェック
                     if (!$stmt) {
-                        die("SQLエラー: " . $concrete_db->error);
+                        die("SQLエラー (Files): " . $concrete_db->error);
                     }
 
-                    $stmt->bind_param("s", $fid); // UUID なので文字列扱い
+                    $stmt->bind_param("s", $fUUID);
                     $stmt->execute();
-                    $file_result = $stmt->get_result();
+                    $fid_result = $stmt->get_result();
 
-                    if ($file_row = $file_result->fetch_assoc()) {
-                        $original_path = $file_row['fvPath'];
-                        echo "元の画像パス: " . htmlspecialchars($original_path) . "<br>";
 
-                        // 5. パスを変換（/application/ → /wp-content/）
-                        $new_path = str_replace("/application/", "/wp-content/", $original_path);
-                        echo "変換後の画像パス: " . htmlspecialchars($new_path) . "<br>";
+                    if ($fid_row = $fid_result->fetch_assoc()) {
+                        $fID = $fid_row['fID'];
+                        echo "取得した fID: " . htmlspecialchars($fID) . "<br>";
                     } else {
-                        echo "fID: $fid の画像パスが見つかりませんでした。<br>";
+                        echo "fUUID が見つかりませんでした。<br>";
                     }
 
                     $stmt->close();
