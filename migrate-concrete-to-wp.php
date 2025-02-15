@@ -51,13 +51,17 @@ if ($post_results->num_rows > 0) {
             echo "<strong>見つかった concrete-picture タグ:</strong><br>";
             foreach ($matches[0] as $match) {
                 echo htmlspecialchars($match) . "<br>"; // HTMLエスケープして表示
+                // 3. fID を取得
+                if (preg_match('/fID="(\d+)"/i', $match, $fid_match)) {
+                    $fid = $fid_match[1]; // fID の値
+                    echo "fID: " . htmlspecialchars($fid) . "<br>";
+                } else {
+                    echo "fID が見つかりませんでした。<br>";
+                }
             }
         } else {
             echo "concrete-picture タグが見つかりませんでした。<br>";
         }
-        // echo "MATCHES!!!";
-        // $fid_list = array_unique($matches[1]); // 重複削除
-        // $fid_url_map = [];
 
         // 3. fid に対応する画像URLを取得
         // foreach ($fid_list as $fid) {
