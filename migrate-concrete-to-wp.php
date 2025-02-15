@@ -74,7 +74,7 @@ if ($post_results->num_rows > 0) {
                         echo "取得した fID: " . htmlspecialchars($fID) . "<br>";
 
                         // 5. fID を使って FileVersions から画像のファイル名を取得
-                        $file_query = "SELECT fvFilename FROM FileVersions WHERE fID = ? ORDER BY fvID DESC LIMIT 1";
+                        $file_query = "SELECT fvFilename, fvPrefix FROM FileVersions WHERE fID = ? ORDER BY fvID DESC LIMIT 1";
                         $stmt = $concrete_db->prepare($file_query);
 
                         if (!$stmt) {
