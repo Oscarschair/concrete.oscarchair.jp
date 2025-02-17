@@ -16,7 +16,7 @@ return [
         'default' => [
             'name' => 'オスカーのポートフォリオサイト',
             'seo' => [
-                'canonical_url' => 'https://oscarchair.jp/',
+                'canonical_url' => 'https://concrete.oscarchair.jp/',
                 'canonical_url_alternative' => '',
                 'canonical_tag' => [
                     'enabled' => true,
